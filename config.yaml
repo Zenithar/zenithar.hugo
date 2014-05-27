@@ -1,0 +1,9 @@
+---
+indexes:
+    tag: "tags"
+    topic: "topics"
+baseurl: "https://blog.zenithar.org/"
+title: "Zenithar'z Blog"
+permalinks:
+  post: /post/:year/:month/:day/:slug
+...
