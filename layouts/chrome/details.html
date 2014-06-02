@@ -1,44 +1,26 @@
 {{ $baseurl := .Site.BaseUrl }}
-    <div>
-        <section id="datecount">
-          <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
-          <h5 id="wc"> {{ .FuzzyWordCount }} Words </h5>
-        </section>
-        <ul id="categories">
-          {{ range .Params.topics }}
-            <li><a href="{{ $baseurl }}/topics/{{ . | urlize }}">{{ . }}</a> </li>
-          {{ end }}
-        </ul>
-        <ul id="tags">
-          {{ range .Params.tags }}
-            <li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> </li>
-          {{ end }}
-        </ul>
-
+    <div class="post-navlinks pure-u-1">
+      &nbsp;{{if .Prev}}<a href="{{.Prev.Permalink}}" title="Previous Post: {{.Prev.Title}}" class="navlinks-prev">&laquo; {{.Prev.Title}}</a>{{end}}
+      &nbsp;{{if .Next}}<a href="{{.Next.Permalink}}" title="Next Post: {{.Next.Title}}" class="navlinks-next">{{.Next.Title}} &raquo;</a>{{end}}
     </div>
 
-    <div>
-        <section id="prev">
-            &nbsp;{{if .Prev}}<a class="previous" href="{{.Prev.Permalink}}"><i class="icon-arrow-left"></i> {{.Prev.Title}}</a><br>{{end}}
-        </section><section id="next">
-            &nbsp;{{if .Next}}<a class="next" href="{{.Next.Permalink}}">{{.Next.Title}} <i class="icon-arrow-right"></i></a>{{end}}
-        </section>
-    </div>
-
-    <div>
+    <div class="post-related pure-u-1">
         <section id="author">
           <h4>Pour un peu plus de lecture ...</h4>
           <ul id="list">
           {{ range first 5 .RelatedPages }}
-          {{ .Render "post/li"}}
+          <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </li>
           {{ end }}
           </ul>
         </section>
     </div>
 
-    <div>
-        <section id="author">
-            <h4>A propos de l'auteur</h4>
-            <a href="http://profiles.google.com/thibault.normand?rel=author" itemprop="name" rel="author">Thibault Normand</a> est un dévéloppeur et un bloggeur enthousiaste, curieux de toutes nouvelles technologies liées à la sécurité, l'architecture, et le web. <a href="http://zenithar.org/" rel="me">Plus d'infos...</a>
-        </section>
+    <div class="post-author pure-u-1" itemprop="author" itemscope itemtype="http://schema.org/Person"> 
+        <h3 class="pure-u-1">A propos de l'auteur</h3>
+        <div class="pure-u-1">
+            <img class="pure-1-6 post-avatar" src="http://www.gravatar.com/avatar/1a2807faf3cca1667ff6f04bf5886eff.png" />
+            <p class="pure-u-4-6"><a href="http://profiles.google.com/thibault.normand?rel=author" itemprop="name" rel="author">Thibault Normand</a> est un dévéloppeur et un bloggeur enthousiaste, curieux de toutes nouvelles technologies liées à la sécurité, l'architecture, et le web. <a href="http://zenithar.org/" rel="me">Plus d'infos...</a></p> 
+        </div>
     </div>

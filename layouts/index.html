@@ -14,16 +14,27 @@
 </head>
 <body lang="fr">
 
-{{ template "chrome/subheader.html" . }}
+<!-- Markup -->
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://whatbrowser.org">Upgrade your browser today</a> to better experience this site.</p>
+<![endif]-->
 
-<section id="main">
-  <div>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar pure-u-1">
+        {{ template "chrome/subheader.html" . }}
+    </div>
+
+    <div class="content pure-u-1">
     {{ range first 10 .Data.Pages }}
         {{ .Render "summary"}}
     {{ end }}
-  </div>
-</section>
+    </div>
 
-<aside id="meta"> </aside>
+    <div class="pure-u-1">
+    {{ template "chrome/footer.html" }}
+    </div>
 
-{{ template "chrome/footer.html" }}
+</div>
+
+</body>
+</html>

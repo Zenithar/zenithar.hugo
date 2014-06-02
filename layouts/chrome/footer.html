@@ -1,14 +1,23 @@
-<footer>
-  <div>
-    <p>
-    &copy; 2013-14 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">Thibault NORMAND.</span></span>
-    <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons Attribution">Some rights reserved</a>; 
-    please attribute properly and link back. <br>
-    Powered by <a href="http://hugo.spf13.com">Hugo</a>.
-    </p>
-  </div>
+<footer class="footer">
+    <div>
+        Unless stated otherwise; all works are Copyright &copy 2005+
+        <a href="http://zenithar.org/" rel="me">Thibault NORMAND</a>
+        and licensed under the <a href="http://creativecommons.org/licenses/MIT/">MIT License</a>
+        for code and the <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
+        for everything else.
+    </div>
+
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <a href="#behind-this-blog" id="behind-this-blog">Behind this blog</a>
+        <a href="#behind-this-blog-show" id="behind-this-blog-show">&nbsp;</a>
+        <ul id="behind-this-blog-list">
+            <li><a href="http://hugo.spf13.com/" rel="nofollow" target="_new" >Powered by Hugo</a></li>
+            <li><a href="http://purecss.io/layouts/blog/" rel="nofollow" target="_new">Theme by Pure</a></li>
+            <li><a href="http://simpleicons.org/" rel="nofollow" target="_new">Icons by Simple Icons</a></li>
+        </ul>
+    </div>
 </footer>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js" data-no-instant></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script type="text/javascript" data-no-instant>
@@ -17,15 +26,11 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-8114245-4', 'zenithar.org');
-
-(function(){var j=function(a,b){return window.getComputedStyle?getComputedStyle(a).getPropertyValue(b):a.currentStyle[b]};var k=function(a,b,c){if(a.addEventListener)a.addEventListener(b,c,false);else a.attachEvent('on'+b,c)};var l=function(a,b){for(key in b)if(b.hasOwnProperty(key))a[key]=b[key];return a};window.fitText=function(d,e,f){var g=l({'minFontSize':-1/0,'maxFontSize':1/0},f);var h=function(a){var b=e||1;var c=function(){a.style.fontSize=Math.max(Math.min(a.clientWidth/(b*10),parseFloat(g.maxFontSize)),parseFloat(g.minFontSize))+'px'};c();k(window,'resize',c)};if(d.length)for(var i=0;i<d.length;i++)h(d[i]);else h(d);return d}})();
-fitText(document.getElementById('title'), 1)
-
-!function(a){a(function(){function b(a){for(var d,b=[],c=a.split(","),e=0;e<c.length;e++)if(d=c[e].split("-"),2===d.length)for(var f=parseInt(d[0],10);f<=d[1];f++)b.push(f);else 1===d.length&&b.push(parseInt(d[0],10));return b}a("[data-gist-id]").each(function(){var d,e,f,g,h,i,j,c=a(this),k={};return c.css("display","block"),d=c.attr("data-gist-id")||"",f=c.attr("data-gist-file"),i="true"===c.attr("data-gist-hide-footer"),j="true"===c.attr("data-gist-hide-line-numbers"),g=(c.attr("data-gist-line")||"").replace(/ /g,""),h=(c.attr("data-gist-highlight-line")||"").replace(/ /g,""),f&&(k.file=f),d?(e="https://gist.github.com/"+d+".json",c.html("Loading gist "+e+(k.file?", file: "+k.file:"")+"..."),a.ajax({url:e,data:k,dataType:"jsonp",timeout:1e4,success:function(d){var f,k,l,m,n;d&&d.div?(d.stylesheet&&0!==d.stylesheet.indexOf("http")&&(0!==d.stylesheet.indexOf("/")&&(d.stylesheet="/"+d.stylesheet),d.stylesheet="https://gist.github.com"+d.stylesheet),d.stylesheet&&0===a('link[href="'+d.stylesheet+'"]').length&&(f=document.createElement("link"),k=document.getElementsByTagName("head")[0],f.type="text/css",f.rel="stylesheet",f.href=d.stylesheet,k.insertBefore(f,k.firstChild)),n=a(d.div),n.removeAttr("id"),c.html("").append(n),g&&(l=b(g),n.find(".line").each(function(b){-1===a.inArray(b+1,l)&&a(this).remove()}),n.find(".line-number").each(function(b){-1===a.inArray(b+1,l)&&a(this).remove()})),i&&n.find(".gist-meta").remove(),j&&n.find(".line-numbers").remove(),h&&(m=b(h),n.find("td.line-data").css({width:"100%"}),n.find(".line").each(function(b){-1!==a.inArray(b+1,m)&&a(this).css({"background-color":"rgb(255, 255, 204)"})}))):c.html("Failed loading gist "+e)},error:function(a,b){c.html("Failed loading gist "+e+": "+b)}}),void 0):!1})})}(Zepto);
+(function(c,f){asyncLoader=function(i,h){i.foreach(function(k,j){e(j,d(j),h)});if(typeof h.callback=="function"){var g=setInterval(function(){if(f.readyState==="complete"){clearInterval(g);h.callback()}},10)}};var d=function(g){var h=g.split(".");return h[h.length-1]},e=function(h,i,g){switch(i){case"js":a(h,g);break;case"css":b(h);break;default:break}},a=function(i,h){var g=document.createElement("script");g.type="text/javascript";g.async=true;g.src=i;document.getElementsByTagName("head")[0].appendChild(g)},b=function(g){var h=document.createElement("link");h.type="text/css";h.rel="stylesheet";h.href=g;document.getElementsByTagName("head")[0].appendChild(h)};Array.prototype.foreach=function(h){for(var g=0;g<this.length;g++){h(g,this[g])}}})(this,document);
+WebFontConfig={google:{families:["Open Sans"]}};asyncLoader(["/css/pure-min.css","/css/style.css","/css/idea.css","//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"],{callback:function(){document.getElementById("post").className+=" load";}})
 InstantClick.on('change', function() {
   ga('send', 'pageview', location.pathname + location.search);
+!function(a){a(function(){function b(a){for(var d,b=[],c=a.split(","),e=0;e<c.length;e++)if(d=c[e].split("-"),2===d.length)for(var f=parseInt(d[0],10);f<=d[1];f++)b.push(f);else 1===d.length&&b.push(parseInt(d[0],10));return b}a("[data-gist-id]").each(function(){var d,e,f,g,h,i,j,c=a(this),k={};return c.css("display","block"),d=c.attr("data-gist-id")||"",f=c.attr("data-gist-file"),i="true"===c.attr("data-gist-hide-footer"),j="true"===c.attr("data-gist-hide-line-numbers"),g=(c.attr("data-gist-line")||"").replace(/ /g,""),h=(c.attr("data-gist-highlight-line")||"").replace(/ /g,""),f&&(k.file=f),d?(e="https://gist.github.com/"+d+".json",c.html("Loading gist "+e+(k.file?", file: "+k.file:"")+"..."),a.ajax({url:e,data:k,dataType:"jsonp",timeout:1e4,success:function(d){var f,k,l,m,n;d&&d.div?(d.stylesheet&&0!==d.stylesheet.indexOf("http")&&(0!==d.stylesheet.indexOf("/")&&(d.stylesheet="/"+d.stylesheet),d.stylesheet="https://gist.github.com"+d.stylesheet),d.stylesheet&&0===a('link[href="'+d.stylesheet+'"]').length&&(f=document.createElement("link"),k=document.getElementsByTagName("head")[0],f.type="text/css",f.rel="stylesheet",f.href=d.stylesheet,k.insertBefore(f,k.firstChild)),n=a(d.div),n.removeAttr("id"),c.html("").append(n),g&&(l=b(g),n.find(".line").each(function(b){-1===a.inArray(b+1,l)&&a(this).remove()}),n.find(".line-number").each(function(b){-1===a.inArray(b+1,l)&&a(this).remove()})),i&&n.find(".gist-meta").remove(),j&&n.find(".line-numbers").remove(),h&&(m=b(h),n.find("td.line-data").css({width:"100%"}),n.find(".line").each(function(b){-1!==a.inArray(b+1,m)&&a(this).css({"background-color":"rgb(255, 255, 204)"})}))):c.html("Failed loading gist "+e)},error:function(a,b){c.html("Failed loading gist "+e+": "+b)}}),void 0):!1})})}(Zepto);
 });
 InstantClick.init();
 </script>
-</body>
-</html>
