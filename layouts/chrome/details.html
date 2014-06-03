@@ -10,7 +10,7 @@
           <ul id="list">
           {{ range first 5 .RelatedPages }}
           <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <a href="{{ .Permalink }}">{{ .Title }} - {{ .ReadingTime }} Minutes</a>
           </li>
           {{ end }}
           </ul>
