@@ -67,10 +67,10 @@ Donc oui c'est gratuit et payant !
 ## Et la légalité dans tout ça ?
 
 Le modèle utilisé est que l'interface ne contient pas les fichiers streamables simplement
-les références. C'est un peut dans la mouvance du private cloud (ownCloud).
+les références. C'est un peu dans la mouvance du private cloud (ownCloud).
 
-Les fichiers sont hébergés par vous ! pour vous (normalement) ! Donc les fichiers
-que vous hébergés sont sous votre responsabilité.
+Les fichiers sont hébergés par vous et pour vous (normalement) ! Donc les fichiers
+que vous hébergez sont sous votre responsabilité.
 
 ## Et par rapport à ma box multimédia ?
 

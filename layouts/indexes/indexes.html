@@ -1,19 +1,44 @@
-{{ template "chrome/header.html" . }}
-<body lang="en">
-{{ template "chrome/subheader.html" . }}
+<!DOCTYPE html>
+<html class="no-js" lang="fr-FR" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
 
-<section id="main">
-  <div>
-   <h1 id="title">{{ .Title }}</h1>
-   <ul>
-   {{ $data := .Data }}
-    {{ range $key,$value := .Data.Index.ByCount }}
-    <li><a href="{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> {{ $value.Count }} </li>
-    {{ end }}
-   </ul>
-  </div>
-</section>
+    {{ template "chrome/meta.html" . }}
 
-<aside id="meta"> </aside>
+    <base href="{{ .Site.BaseUrl }}">
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
-{{ template "chrome/footer.html" }}
+    {{ template "chrome/head_includes.html" . }}
+</head>
+<body lang="fr">
+
+<!-- Markup -->
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://whatbrowser.org">Upgrade your browser today</a> to better experience this site.</p>
+<![endif]-->
+
+<div class="pure-g-r" id="layout">
+    <div class="sidebar pure-u-1">
+        {{ template "chrome/subheader.html" . }}
+    </div>
+
+    <div class="content pure-u-1">
+	   <h1 id="title">{{ .Title }}</h1>
+	   <ul>
+	   {{ $data := .Data }}
+	    {{ range $key,$value := .Data.Index.ByCount }}
+	    <li><a href="{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> {{ $value.Count }} </li>
+	    {{ end }}
+	   </ul>
+    </div>
+    
+    <div class="pure-u-1">
+    {{ template "chrome/footer.html" }}
+    </div>
+
+</div>
+
+</body>
+</html>

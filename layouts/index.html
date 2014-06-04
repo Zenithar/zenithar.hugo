@@ -28,6 +28,8 @@
     {{ range first 10 .Data.Pages }}
         {{ .Render "summary"}}
     {{ end }}
+
+        <a class="pure-button pure-button-xsmall" style="color: white;" href="{{.Site.BaseUrl}}/post/"><nobr>Archives →</nobr></a>
     </div>
 
     <div class="pure-u-1">
