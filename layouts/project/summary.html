@@ -1,11 +1,28 @@
-<article class="post">
-    <header>
-      <h2><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
-      <div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }} </div>
-    </header>
+{{ $color := .Date.Format "2" | colorize16 }}
 
-    {{ .Summary }}
-    <footer>
-        <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
-    </footer>
-</article>
+<section class="post pure-u-1">
+    
+    <div class="post-container" style="border-left: 5px solid {{ $color }};">
+        <header class="post-header">
+
+            <h2 class="post-title pure-u-1">
+                <a class="post-link" href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+            <p class="post-meta pure-u-1">
+                <span property="dc:date dc:created" content="{{ .Date.Format "2006-01-02" }}" datatype="xsd:dateTime" rel="sioc:has_creator">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+                <span>|</span>
+                <span>{{ .FuzzyWordCount }} Mots</span>
+            </p>
+
+        </header>
+
+        <div class="post-description pure-u-1">
+            <p>
+                {{ .Summary }}
+            </p>
+        </div>
+
+    </div>
+    <a class="pure-button pure-button-xsmall" style="color: white; background: {{ $color }};" href="{{ .Permalink }}"><nobr>Suite →</nobr></a>
+
+</section>

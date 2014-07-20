@@ -6,4 +6,5 @@ baseurl: "https://blog.zenithar.org/"
 title: "Zenithar'z Blog"
 permalinks:
   post: /post/:year/:month/:day/:slug
+  project: /project/:year/:month/:day/:slug
 ...
