@@ -18,7 +18,7 @@ Donc voila, j'ai récupéré le plus d'informations nécessaires possible, mon R
 
 Voici le module CoffeeScript que j'ai codé pour calculer la clé.
 
-gist:1597257
+{{% gist 1597257 %}}
 
 ```
 For educational purpose only !
