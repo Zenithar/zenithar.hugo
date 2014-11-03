@@ -18,6 +18,4 @@ Mais il y en beaucoup [d'autres](https://code.google.com/p/protobuf/wiki/ThirdPa
 
 # Code
 
-gist:5215005
-
-
+{{% gist 5215005 %}}

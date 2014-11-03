@@ -15,7 +15,7 @@ Tout d'abord, ça roxe du poney (avis tout à fait objectif !) par rapport au d�
 
 Personnellement, ce que je n'aime pas dans le développement Web, c'est le Web lui même, qui ressemble plus à un ensemble bricolé qui tombait en marche sur tous les navigateurs du marché (sauf un, devinez :-) ).
 
-Beaucoup d'application dites Web 2.0, ne le sont pas ! Notamment, on croit que faire un include de plusieurs librairies JavaScript, permet comme par magie de faire du Web 2.0. Mais j'ai eu l'occasion de découvrir toutes la puissance des "vraies" applications JavaScript via Backbone.js. 
+Beaucoup d'application dites Web 2.0, ne le sont pas ! Notamment, on croit que faire un include de plusieurs librairies JavaScript, permet comme par magie de faire du Web 2.0. Mais j'ai eu l'occasion de découvrir toutes la puissance des "vraies" applications JavaScript via Backbone.js.
 
 # Découverte
 
@@ -27,7 +27,7 @@ Le problème de ces technologies, c'est qu'elles ne sont pas guidées (est-ce vr
   * [jQuery](http://jquery.com/)
   * puis [CoffeeScript](http://coffeescript.org), pour simplifier le JavaScript
   * et enfin [Backbone.js](http://backbonejs.org)
-  
+
 J'ai du me mettre au JS, par nécessité d'interactivité tout simplement, je suis passé du simple `$("#foo").hide()` à une organisation du code en modules, classes, composants.
 
 [jQuery](http://jquery.com/) m'a surtout permit de gérer les problèmes de navigateurs, ainsi que les manipulations DOM; premier plugin un diagramme de Gantt basé sur des `<tr>`, `<td>`, et css (Ouh que c'était dégueulasse !).
@@ -42,9 +42,9 @@ C'est bien beau toutes ces nouvelles technologies, mais comment les intégrer ? 
 
 Un des problèmes majeurs est l'intégration au système de build de l'application Java/J2EE que ce soit Maven ou Ant, il y a un gros vide. J'ai donc pris la décision d'utiliser Node.js dans la chaine de compilation.
 
-## Mise en place d'une architecture orientée service 
+## Mise en place d'une architecture orientée service
 
-Malheureusement, le découplage fonctionnel n'est pas naturel pour tous les développeurs, il a fallut mettre en place par le biais de service Web REST/JSON, une interface d'accès au système. 
+Malheureusement, le découplage fonctionnel n'est pas naturel pour tous les développeurs, il a fallut mettre en place par le biais de service Web REST/JSON, une interface d'accès au système.
 
 Nous avons mis en évidence aussi la présence de fonctionnel métier présent dans la vue (formulaire), ce qui a impliqué une longue phase de refactoring, qui est traitée au fur et à mesure de l'avancement de la migration. Cette phase consiste à déplacer le fonctionnel métier dans un module partagé entre la vue (action struts2) et le service.
 
@@ -56,7 +56,7 @@ L'objectif majeur était d'éliminer les interactions serveurs "inutiles", d'où
 
 ## Sécurité
 
-L'export fonctionnel apporte des problématiques de gestion de la Sécurité (Qui me tient à coeur, car trop souvent négligée !). "Normalement", il y a coté serveur des contrôles d'accès sur les  fonctions, et le code exposé. 
+L'export fonctionnel apporte des problématiques de gestion de la Sécurité (Qui me tient à coeur, car trop souvent négligée !). "Normalement", il y a coté serveur des contrôles d'accès sur les  fonctions, et le code exposé.
 
 En JavaScript, tout est modifiable par l'utilisateur, seule la norme ECMASCRIPT 5 (ça aussi découvert pendant l'apprentissage !) apporte des mécanismes de scellements via `Object.seal`, ou de vérrouillage via `Object.freeze`. Qui plus est beaucoup de développeurs n'utilisent pas les namespaces, et le module pattern pour protéger leurs codes privés. Il devient alors très facile d'écraser un contrôle client, qui n'est pas vérifié coté serveur.
 
@@ -79,12 +79,12 @@ La partie cliente est composée de :
   * Facades
   * Views (Backbone)
   * Templates (Handlebars)
-  * Widgets 
+  * Widgets
   * Services : Pour les communications serveurs hors Backbone.
-  
+
 Le tout articulé via Require.js (AMD), hormis le framework qui est sous la forme d'extension d'espace de nom via le plugin namespace de CoffeeScript simplement concaténé.
 
-gist:2318881
+{{% gist 2318881 %}}
 
 ## Beaucoup de connaissances à acquérir
 
@@ -93,7 +93,7 @@ Qui plus est, liés aux buzzs, beaucoup d'autres choses intéressantes viennent 
 
 # Avantages
 
-Biensur beaucoup d'inconvénients majeurs liés à la migration d'un projet, tout cela ne sont au final que des pré-requis à l'utilisation d'IHM JS, donc effectivement si ce n'est pas le cas, et bien il faut mettre en place l'infrastructure d'accueil.
+Biensûr beaucoup d'inconvénients majeurs liés à la migration d'un projet, tout cela ne sont au final que des pré-requis à l'utilisation d'IHM JS, donc effectivement si ce n'est pas le cas, et bien il faut mettre en place l'infrastructure d'accueil.
 
 ## Modularité et réutilisabilité
 
@@ -122,7 +122,7 @@ Cette approche permet un développement centré sur l'IHM, c-à-d ce qui va êtr
 Ce modèle fait que l'application devient cliente de l'infrastructure, ce qui permet d'avoir une infrastructure ouverte et extensible.
 
 
-J'ai essayé de garder un point objectif sur mon utilisation de Backbone.js, dons le cadre d'une migration de socle applicatif. J'espère vous avoir donné quelques éléments permettant de vous préparer, si comme moi vous êtes aussi fou pour tenter la migration (Mais bon je suis loin d'avoir fini, prochaine étape : les websockets pour élminer le polling !). 
+J'ai essayé de garder un point objectif sur mon utilisation de Backbone.js, dons le cadre d'une migration de socle applicatif. J'espère vous avoir donné quelques éléments permettant de vous préparer, si comme moi vous êtes aussi fou pour tenter la migration (Mais bon je suis loin d'avoir fini, prochaine étape : les websockets pour élminer le polling !).
 
 # Conclusion
 
@@ -130,6 +130,6 @@ La migration d'une application Web 1.5, vers une application Web 2.5 (2.0 + HTML
 
 L'introduction de "Backbone.js And Friends" dans les projets n'est pas simple du fait de la frilosité des entreprises à investir sur des technologies nouvelles. Choses assez paradoxales puisque ces mêmes entreprises vont investir sur le HTML5, qui je rappelle est une technologie encore en cours de spécification. Pour moi, Backbone.js, *.js sont issues de la génèse de HTML5, et je pense qu'on a pas fini d'en voir.
 
-J'avoue être curieux, et admiratif de toutes ces personnalités émérgentes du HTML5 et dérivés, je pense à [Addy Osmani](http://addyosmani.com/blog/) ([Yeoman](http://yeoman.io/) c'est pour quand ?), [Jeremy Ashkenas](https://github.com/jashkenas/), [John Resig](http://ejohn.org/), et bien d'autres. Et je me pose une question simple utilisez vous vos propres technologies ? ou deviennent elles publiques par manquent de confiance de vos sociétés respectives ? (TROOOOOLLLLLLLLLLL) 
+J'avoue être curieux, et admiratif de toutes ces personnalités émérgentes du HTML5 et dérivés, je pense à [Addy Osmani](http://addyosmani.com/blog/) ([Yeoman](http://yeoman.io/) c'est pour quand ?), [Jeremy Ashkenas](https://github.com/jashkenas/), [John Resig](http://ejohn.org/), et bien d'autres. Et je me pose une question simple utilisez vous vos propres technologies ? ou deviennent elles publiques par manquent de confiance de vos sociétés respectives ? (TROOOOOLLLLLLLLLLL)
 
 En tout cas merci !

@@ -10,5 +10,4 @@ tags:
 ---
 Voici une petite astuce pour rendre vos Modèles Backbone.js, navigable depuis le modèle si celui-ci fait partie d'une collection.
 
-gist:3350751
-
+{{% gist 3350751 %}}
