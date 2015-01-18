@@ -1,5 +1,5 @@
 ---
-baseurl: "http://blog.zenithar.org/"
+baseurl: "https://blog.zenithar.org/"
 title: "Zenithar'z Blog"
 summerization: "html_firstparagraph"
 permalinks:
