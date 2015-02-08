@@ -1,0 +1,3 @@
+[submodule "themes/hughostium"]
+	path = themes/hughostium
+	url = https://github.com/Zenithar/hughostium.git
