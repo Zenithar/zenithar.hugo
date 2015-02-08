@@ -1,10 +1,10 @@
 ---
 section: post
 date: "2013-10-19"
-title: "Persistence MongoDB, et indexation ElasticSearch"
+title: "Persistance MongoDB, et indexation ElasticSearch"
 description: "Utilisation du concept des 'rivers' ElasticSearch pour indexer une base MongoDB."
 shorturl: http://goo.gl/iP2KzM
-slug: persistence-mongodb-indexation-elasticsearch
+slug: persistance-mongodb-indexation-elasticsearch
 tags:
  - elasticsearch
  - mongodb
@@ -12,7 +12,7 @@ tags:
 
 ---
 
-Je travaille actuellement sur un projet personnel utilisant [MongoDB](http://www.mongodb.org/) comme base de persistence, et j'ai eu besoin de mettre en place un dispositif de recherche multi-critères (geo, fuzzy, etc.), mon choix c'est tout de suite pencher sur [ElasticSearch](http://www.elasticsearch.org/).
+Je travaille actuellement sur un projet personnel utilisant [MongoDB](http://www.mongodb.org/) comme base de persistance, et j'ai eu besoin de mettre en place un dispositif de recherche multi-critères (geo, fuzzy, etc.), mon choix c'est tout de suite pencher sur [ElasticSearch](http://www.elasticsearch.org/).
 
 ElasticSearch est un moteur de recherche clusterisable, basé sur Lucene. Il fonctionne sous la forme d'un grid d'instance qui équilibre les indexes entre les membres d'un même cluster. 
 
@@ -195,4 +195,4 @@ $ curl http://localhost:9200/blog/articles/<object-id>
 
 Ce concept de `rivers` permet une intégration simple d'ElasticSearch au sein d'une infrastructure. Qui plus est, il est taillé pour le Cloud, et les problèmes de scalabilité, et clusterabilité associés. 
 
-Maintenant pourquoi utiliser ElasticSearch, alors que l'on pourrait faire des recherches directements dans MongoDB avec des `find`, `mapreduce`, etc ? Et bien la réponse est simple, MongoDB assure la persistence de l'information, ElasticSearch est un moteur de recherche, chacun son métier ...
+Maintenant pourquoi utiliser ElasticSearch, alors que l'on pourrait faire des recherches directements dans MongoDB avec des `find`, `mapreduce`, etc ? Et bien la réponse est simple, MongoDB assure la persistance de l'information, ElasticSearch est un moteur de recherche, chacun son métier ...

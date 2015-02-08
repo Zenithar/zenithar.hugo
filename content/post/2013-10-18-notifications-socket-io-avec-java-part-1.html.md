@@ -39,7 +39,7 @@ Fondamentalement, la navigation Internet est synchrone, on envoie une requête, 
 
 Le principe de requètes se fait souvent comme çela :
 
-![Http Polling (version Naheulbeuk)](http://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgSHR0cCBQb2xsaW5nICh2ZXJzaW9uIE5haGV1bGJldWspCgpsb29wIAogICAgQmFyYmFyZS0-TmFpbjogRG9ubmVzIGxhIGNsZWYgIQAfBWFsdCBEb3VsZXVyIDw9IFN1cHBvcnRhYmxlAD4FICAgTmFpbi0tPgBGBzogTm9uADUHAFESRnJhcHBlcgAjGEFpZQBwB2Vsc2UAbwk-AFMkVGllbgCBOAV2b2lsYS4AQAZuZAplbmQK&s=napkin)
+![Http Polling (version Naheulbeuk)](//www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgSHR0cCBQb2xsaW5nICh2ZXJzaW9uIE5haGV1bGJldWspCgpsb29wIAogICAgQmFyYmFyZS0-TmFpbjogRG9ubmVzIGxhIGNsZWYgIQAfBWFsdCBEb3VsZXVyIDw9IFN1cHBvcnRhYmxlAD4FICAgTmFpbi0tPgBGBzogTm9uADUHAFESRnJhcHBlcgAjGEFpZQBwB2Vsc2UAbwk-AFMkVGllbgCBOAV2b2lsYS4AQAZuZAplbmQK&s=napkin)
 
 On appelle ça le "Polling HTTP", le gros problème de ce modèle de communication est le gachis de requêtes (`frapper`) et le temps de traitement qui est perdu pour répondre "Non !".
 
@@ -82,7 +82,7 @@ C'est souvent le protocole de secours le plus utilisé si les WebSockets ne sont
 
 Le principe est comme le polling, mais avec une légère différence :
 
-![Http Long Polling](http://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgSHR0cCBMb25nIFBvbGxpbmcKCmxvb3AgCiAgICBDbGllbnQtPitTZXJ2ZXVyOkNvbm5lY3Rpb24AGwUAEActPgAYCCBBdHRlbmRyZQA6BVByb2R1Y3QAFA5Eb25uw6llcwA0DS0-LQBmBgAWCiArIETDqWMAZwplbmQK&s=napkin)
+![Http Long Polling](//www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgSHR0cCBMb25nIFBvbGxpbmcKCmxvb3AgCiAgICBDbGllbnQtPitTZXJ2ZXVyOkNvbm5lY3Rpb24AGwUAEActPgAYCCBBdHRlbmRyZQA6BVByb2R1Y3QAFA5Eb25uw6llcwA0DS0-LQBmBgAWCiArIETDqWMAZwplbmQK&s=napkin)
 
   * Le Client se connecte au Serveur, et RESTE connecté sans rien attendre.
   * Un producteur de donnée va ordonner le serveur de fermer la connection et donnant les données au client avant la fermeture.
@@ -136,7 +136,7 @@ Et coté client :
 
 Voilà ce cela donne avec un diagramme :
 
-![Socket.io](http://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgU29ja2V0LmlvCgpDbGllbnQtPitTZXJ2ZXVyOiBjb25uZWN0aW9uCgANBy0tPgAhBjogbmV3cyh7aGVsbG86J3dvcmxkJ30pAD0ILT4APAkAHQUoe215OidkYXRhJ30pCgo&s=napkin)
+![Socket.io](//www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgU29ja2V0LmlvCgpDbGllbnQtPitTZXJ2ZXVyOiBjb25uZWN0aW9uCgANBy0tPgAhBjogbmV3cyh7aGVsbG86J3dvcmxkJ30pAD0ILT4APAkAHQUoe215OidkYXRhJ30pCgo&s=napkin)
 
 Socket.io se charge de la selection du transport en fonction des possiblités du navigateur que vous utilisez.
 Il suffit d'enregistrer les traitements aux évènements, puis d'émettre ces évènements depuis le client ou le serveur.
