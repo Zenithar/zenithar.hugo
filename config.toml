@@ -16,6 +16,7 @@ summerization = "html_firstparagraph"
   # Warning Keys are case sensitives
   Subtitle = "Il existe moins bien mais c'est plus cher !"
   Description = "Dévéloppeur, bloggeur enthousiaste, curieux de toutes nouvelles technologies liées à la sécurité, l'architecture, et le web."
+  Cover = "/images/cover.jpg"
 
   # Google analytics
   ga = "UA-8114245-4"
