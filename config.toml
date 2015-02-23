@@ -30,7 +30,10 @@ summerization = "html_firstparagraph"
   gplus = "thibault.normand"
 
 [author]
-  Name = "Thibault NORMAND"
+  FirstName = "Thibault"
+  LastName = "NORMAND"
+  Gender = "male"
+  UserName = "zenithar"
   Image = "//www.gravatar.com/avatar/1a2807faf3cca1667ff6f04bf5886eff.png"
   Bio = "Dévéloppeur, bloggeur enthousiaste, curieux de toutes nouvelles technologies liées à la sécurité, l'architecture, et le web."
   Website = "http://zenithar.org"
