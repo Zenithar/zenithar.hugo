@@ -5,6 +5,7 @@ title: "Migration Yosemite Aïe Aïe Aïe !"
 description: "Après la sortie du nouveau système Apple, j'ai décidé de migrer
 mon portable, non sans mal !"
 slug: migration-yosemite-aie-aie-aie
+image: /images/articles/2014/mac_unity.jpg
 tags:
  - apple
  - yosemite
