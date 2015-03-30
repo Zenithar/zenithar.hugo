@@ -1,14 +1,17 @@
-﻿---
+---
 section: post
 date: "2015-03-30"
 title: "Pourquoi apprendre le Go(lang) ?"
 description: "Retours sur mes expériences, surprises et malheurs à l'utilisation du language Go."
+shorturl: http://goo.gl/33Ouy1
 slug: pourquoi-apprendre-go
-shorturl: http://goo.gl/81E4Ew
+image: /images/articles/2015/gopherbg.v2.png
 tags:
  - golang
+ - google
 
 ---
+
 Déjà un petit moment que je roule ma bosse avec Go, j'avoue qu'aujourd'hui c'est un peu mon python d'avant ^^
 
 Je vais essayer d'être impartial au possible ! Voici les raisons pour lesquelles ce langage fait partie de ma caisse à outils.
@@ -23,7 +26,7 @@ Tout d'abord Go c'est quoi ? C'est un language relativement jeune, comparé au d
 
 Voici l'idée principale derrière la création du Go :
 
-  « Chez Google, nous pensons que la programmation devrait être rapide, productive et surtout, 'fun'. C’est pourquoi nous sommes ravis de proposer ce nouveau langage de programmation expérimental. Les opérations de compilation sont presque instantanées, et le code compilé propose une vitesse de fonctionnement proche de celle du C ».
+> « Chez Google, nous pensons que la programmation devrait être rapide, productive et surtout, 'fun'. C’est pourquoi nous sommes ravis de proposer ce nouveau langage de programmation expérimental. Les opérations de compilation sont presque instantanées, et le code compilé propose une vitesse de fonctionnement proche de celle du C ».
 
 Vous l'aurez deviné Go est un langage Go"ogle".
 
@@ -134,7 +137,7 @@ Le dépendances transitives sont automatiquement téléchargées et compilées. 
 
 Téléchargera les `packages` manquants.
 
-  L'option `-v` permet de voir ce qui est en train d'être téléchargé.
+> L'option `-v` permet de voir ce qui est en train d'être téléchargé.
 
 ## Compilation multiplateforme
 
@@ -208,7 +211,7 @@ type Pcap struct {
 	cptr *C.pcap_t
 }
 ```
-_ https://github.com/akrennmair/gopcap/blob/master/pcap.go _
+[Extrait de gopcap](https://github.com/akrennmair/gopcap/blob/master/pcap.go)
 
 Ce code écrit en Go est un `package` qui fournit les fonctionnalités de la libpcap en Go, il parait évident de ne pas réécrire la librairie en Go, on peut ainsi réutiliser du code C dans le langage Go.
 
