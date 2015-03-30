@@ -149,7 +149,7 @@ Le langage Go est basé sur un runtime qui est codé pour plus de 16 plateformes
   * NetBSD : 386, amd64, arm
   * FreeBSD : 386, adm64, arm
 
-Ce runtime est un ensemble de `package` internes sous la forme de librairies statiques ajoutées à l'utilisation dans votre artefact. Le runtime est déja très complet, il n'est pas rare de voire des applications tourner sans utiliser des librairies externes pour faire :
+Ce runtime est un ensemble de `packages` internes sous la forme de librairies statiques ajoutées à la compilation dans votre artefact. Le runtime est déja très complet, il n'est pas rare de voire des applications tourner sans utiliser des librairies externes pour faire :
 
   * La cryptographie : Génération de clés, chiffrement, déchiffrement, etc.
   * Du réseau : Communication TCP/UDP/Unix, Serveur HTTP embarqué, SSL/TLS, etc.
