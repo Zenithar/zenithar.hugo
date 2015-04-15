@@ -2,7 +2,7 @@
 section: post
 date: "2014-05-25"
 title: "De Docpad à Hugo"
-description: "Je migre mon log vers un autre générateur static appelé Hugo écrit en Go, et surtout 100 fis plus rapide que Docpad."
+description: "Je migre mon blog vers un autre générateur static appelé Hugo écrit en Go, et surtout 100 fois plus rapide que Docpad."
 shorturl: http://goo.gl/33Ouy1
 slug: de-docpad-a-hugo
 tags:
