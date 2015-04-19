@@ -20,8 +20,6 @@ summerization = "html_firstparagraph"
 
   # Google analytics
   ga = "UA-8114245-4"
-
-  # Social accounts
   twitter = "zenithar"
   github = "zenithar"
   facebook = "zenithar"
