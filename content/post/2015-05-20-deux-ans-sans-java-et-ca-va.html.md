@@ -1,5 +1,5 @@
 ---
-saaection: post
+section: post
 date: "2015-05-20"
 title: "Deux ans sans Java et ça va !"
 description: "Deux ans sans faire une seule ligne de Java, comment j'ai fait ? J'ai modernisé ma pile technologique."
