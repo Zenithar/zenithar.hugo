@@ -72,7 +72,7 @@ Il n'est plus rare de nos jours avec l'arrivée du cloud de voir des services/ap
 ## Revenons au sujet
 
 2 ans sans Java ! Pas de maven, ant, war, rien de tout ça !
-Je sais qu'il existe des technologies comme Zookeeper pour le développement d'infrastructure logicielle distribuée, mais avez déjà déployé "ce monstre" ? N'est-il pas surdimensionné au besoin initial ?
+Je sais qu'il existe des technologies comme Zookeeper pour le développement d'infrastructure logicielle distribuée, mais avez vous déjà déployé "ce monstre" ? N'est-il pas surdimensionné au besoin initial ?
 
 Pour informations, j'ai remplacé ZK par un cluster Etcd, plus léger et beaucoup plus simple à mettre en oeuvre et au moins il ne crash pas pour un "fameux" OutOfMemoryException. Et devinez en quoi est fait Etcd ? en Go !
 
@@ -107,4 +107,6 @@ Malgrès cela j'utilise encore des applications Java :
 
 Voilà, l'important à retenir de cet article est qu'il ne faut pas croire que connaître un langage, une technologie fait de vous un développeur meilleur, c'est votre capacité à apprendre et à s'adapter aux besoins qui font de vous un bon développeur / architecte / devops.
 
-Ma vision du métier architecte/devops (et peut mon caractère aussi) impose d'avoir une large connaissance des langages et technologies pour toujours avoir le "[meilleur tournevis](http://zenithar.org)" sous la main quand on en a besoin.
+Ma vision du métier architecte/devops (et peut être mon caractère aussi !) impose d'avoir une large connaissance des langages et technologies pour toujours avoir le "[meilleur tournevis](http://zenithar.org)" sous la main quand on en a besoin.
+
+PS: Merci à [ben2367](https://github.com/bport/), pour les relectures.
