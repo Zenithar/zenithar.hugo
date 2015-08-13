@@ -1,4 +1,4 @@
-baseurl = "https://blog.zenithar.org"
+baseurl = "https://blog.zenithar.org/"
 
 languageCode = "fr-fr"
 title = "Zenithar'z Blog"
