@@ -151,3 +151,67 @@ Vous devriez voir les requêtes ainsi que la résolution DNSSEC effectuée par U
 Vous devriez voir l'adresse IP résolue configurée dans vore zone locale.
 
 Si tout fonctionne bien, votre résolveur DNS local est configuré. Si vous souhaitez définir le résolveur local comme résolveur par défaut pour votre réseau, ce qui rendra votre RPI indispensable à l'infrastructure locale, vous devez configurer votre serveur DHCP (la box) pour fournir en serveur DNS l'adresse IP (au préalable fixée) de votre résolveur local.
+
+# Problèmes
+
+### Vous venez de faire la mise à jour et maintenant DNSCrypt fonctionne avec Systemd ?
+
+Il suffit d'éditer le fichier `/usr/lib/systemd/system/dnscrypt-proxy.socket`
+```conf
+[Unit]
+Description=dnscrypt-proxy listening socket
+After=network.target
+
+[Socket]
+ListenStream=127.0.0.1:9053
+ListenDatagram=127.0.0.1:9053
+
+[Install]
+WantedBy=sockets.target
+```
+
+Ainsi que le fichier de service `/usr/lib/systemd/system/dnscrypt-proxy.service` :
+
+```
+[Unit]
+Description=DNSCrypt client proxy
+Requires=dnscrypt-proxy.socket
+Before=unbound.service
+
+[Install]
+Also=dnscrypt-proxy.socket
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+NonBlocking=true
+ExecStart=/usr/bin/dnscrypt-proxy \
+	       --resolver-name=dnscrypt.org-fr
+```
+
+Un petit reload des services :
+```
+#> systemctl daemon-reload
+#> systemctl restart dnscrypt-proxy
+#> systemctl restart unbound
+```
+
+Et refaire les tests.
+
+### Mon Raspberry n'arrive plus à avoir l'heure correctement au démarrage :
+
+Pour cela, j'ai une solution un peu crade mais elle fonctionne, il faut éditer
+le fichier `/etc/ntp.conf` et y remplacer les DNS par les IPs des pool utilisés :
+
+```conf
+# Associate to Arch's NTP pool
+server 195.154.97.57 # 0.arch.pool.ntp.org
+server 212.83.131.33 # 0.arch.pool.ntp.org
+server 91.121.90.6   # 0.arch.pool.ntp.org
+server 188.165.39.130 # 0.arch.pool.ntp.org
+# Il faudrait le faire pour chaque serveur ...
+```
+
+Ce problème peut aussi être simplement résolu (moyennant finance) par l'achat
+d'une carte d'extension avec une horloge interne - [Avant l’heure, c’est pas l’heure ! Après l’heure… Offrez une horloge temps réel (RTC) à votre Raspberry Pi
+](http://www.framboise314.fr/avant-lheure-cest-pas-lheure-apres-lheure-offrez-une-horloge-temps-reel-rtc-a-votre-raspberry-pi/).
