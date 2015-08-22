@@ -1,5 +1,5 @@
 ---
-saaection: post
+section: post
 date: "2015-08-11"
 title: "Installer un resolveur DNS sur son Raspberry PI"
 description: "Installer unbound + dnscrypt sur son raspberry pi."
