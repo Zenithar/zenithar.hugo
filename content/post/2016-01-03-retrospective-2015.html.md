@@ -7,6 +7,9 @@ slug: retrospective-2015
 tags:
  - life
  - hugo
+ - golang
+ - docker
+ - securite
 ---
 
 Bonne année à toutes et à tous !
@@ -47,9 +50,14 @@ Projets ayant suscité mon intérêt cette année :
 
 # Perspectives
 
+Aujourd'hui, je suis souvent consulté sur des demandes d'architecture logicielle
+et infrastructure pour le traitement de données liées à la sécurité en masse.
 Je souhaite augmenter mes participations à des projets orienté "Sécurité", ainsi
 que dans le domaine du "Data Scientism", pour moi ces deux domaines sont
 complémentaires, mais encore peu offert sur le marché français.
-Peut être dans un autre pays ?
 
-[Mes informations](http://zenithar.org)
+>  Peut être dans un autre pays avec ma future femme ?
+
+Si vous avez des offres concernant ces domaines, voici mon [CV](http://zenithar.org).
+Mais s'il vous plait lisez le bien (Pas de stages, ni de poste d'administrateur
+système / réseau sous prétexte que je connaisse Linux ...).
