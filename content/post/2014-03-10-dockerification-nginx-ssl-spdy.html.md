@@ -5,6 +5,8 @@ title: "Dockerification : NGINX + SSL + SPDY"
 description: "Création d'un container docker contenant NGiNX configuré pour du SSL / SPDY."
 shorturl: http://goo.gl/33Ouy1
 slug: dockerification-nginx-ssl-spdy
+featured: true
+image: /images/docker-1.png
 tags:
  - devops
  - lxc
@@ -44,7 +46,7 @@ Avec l'arrivée des kernels Linux récent (>3.8), nous avons vu l'apparition d'u
 
 ### Qu'est ce que Docker ?
 
-Docker est un outil `user-land` pour gérer les conteneurs LXC. 
+Docker est un outil `user-land` pour gérer les conteneurs LXC.
 
 ## Création du conteneur Docker
 

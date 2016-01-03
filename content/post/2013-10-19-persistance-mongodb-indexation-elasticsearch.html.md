@@ -5,6 +5,8 @@ title: "Persistance MongoDB, et indexation ElasticSearch"
 description: "Utilisation du concept des 'rivers' ElasticSearch pour indexer une base MongoDB."
 shorturl: http://goo.gl/iP2KzM
 slug: persistance-mongodb-indexation-elasticsearch
+featured: true
+image: /images/mongodb-to-elasticsearch2.png
 tags:
  - elasticsearch
  - mongodb
@@ -14,7 +16,7 @@ tags:
 
 Je travaille actuellement sur un projet personnel utilisant [MongoDB](http://www.mongodb.org/) comme base de persistance, et j'ai eu besoin de mettre en place un dispositif de recherche multi-critères (geo, fuzzy, etc.), mon choix c'est tout de suite pencher sur [ElasticSearch](http://www.elasticsearch.org/).
 
-ElasticSearch est un moteur de recherche clusterisable, basé sur Lucene. Il fonctionne sous la forme d'un grid d'instance qui équilibre les indexes entre les membres d'un même cluster. 
+ElasticSearch est un moteur de recherche clusterisable, basé sur Lucene. Il fonctionne sous la forme d'un grid d'instance qui équilibre les indexes entre les membres d'un même cluster.
 
 Il possède beaucoup de plugins, dont quelques uns en particuliers, les plugins 'river' (rivière) ces plugins sont destinés à alimenter le cluster ElasticSearch à partir de sources de données. Il ne s'agit pas içi d'indexation volontaire et explicite des documents comme on le ferait à partir d'un service métier, mais plus d'une indexation de la base de données à la source.
 
@@ -50,7 +52,7 @@ replSet = rs0
 Il faut maintenant [déployer une stratégie de réplication sur MongoDB](http://docs.mongodb.org/manual/tutorial/deploy-replica-set-for-testing/), pour cela connectez vous avec le shell :
 
 ``` bash
-$ mongo 
+$ mongo
 > cfg = { "_id" : "rs0", "version" : 1, "members" : [ { "_id" : 0, "host" : "localhost:27017" } ] }
 > rs.initiate(cfg)
 ```
@@ -76,7 +78,7 @@ Si c'est le cas, vous pouvez passer à la suite.
 [warning]Attention, les versions de MongoDB et d'ElasticSearch doivent correspondre.[/warning]
 
 Vous pouvez installer les plugins ElasticSearch de deux façons différentes :
-  
+
   * En utilisant l'outil de gestion des plugins, `bin/plugin`
   * En téléchargeant les sources, pour générer le package du plugin
 
@@ -132,7 +134,7 @@ $ curl -XPUT "localhost:9200/_river/<index>/_meta" -d '
     "type": "<type>"
   }
 }'
-``` 
+```
 
 Pour plus d'informations sur le `secoondary_read_preference`, [c'est ici](http://mongodb.github.io/node-mongodb-native/driver-articles/anintroductionto1_1and2_2.html).
 
@@ -162,7 +164,7 @@ Vous pouvez commencer à insérer, modifier, supprimer des entrèes dans la base
 
 Par exemple pour une base `blog`, et une collection `articles` :
 
-``` bash 
+``` bash
 $ mongo
 > use blog
 > db.articles.save({author: 'zenithar', content: '...', tags: ['toto', 'tutu', 'titi']})
@@ -193,6 +195,6 @@ $ curl http://localhost:9200/blog/articles/<object-id>
 
 # Conclusion
 
-Ce concept de `rivers` permet une intégration simple d'ElasticSearch au sein d'une infrastructure. Qui plus est, il est taillé pour le Cloud, et les problèmes de scalabilité, et clusterabilité associés. 
+Ce concept de `rivers` permet une intégration simple d'ElasticSearch au sein d'une infrastructure. Qui plus est, il est taillé pour le Cloud, et les problèmes de scalabilité, et clusterabilité associés.
 
 Maintenant pourquoi utiliser ElasticSearch, alors que l'on pourrait faire des recherches directements dans MongoDB avec des `find`, `mapreduce`, etc ? Et bien la réponse est simple, MongoDB assure la persistance de l'information, ElasticSearch est un moteur de recherche, chacun son métier ...

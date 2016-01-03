@@ -3,6 +3,7 @@ baseurl = "https://blog.zenithar.org/"
 languageCode = "fr-fr"
 title = "Zenithar'z Blog"
 summerization = "html_firstparagraph"
+paginate = 9
 
 [permalinks]
   post = "/post/:year/:month/:day/:slug"

@@ -6,6 +6,7 @@ description: "Retours sur mes expériences, surprises et malheurs à l'utilisati
 shorturl: http://goo.gl/33Ouy1
 slug: pourquoi-apprendre-go
 image: /images/articles/2015/gopherbg.v2.png
+featured: true
 tags:
  - golang
  - google

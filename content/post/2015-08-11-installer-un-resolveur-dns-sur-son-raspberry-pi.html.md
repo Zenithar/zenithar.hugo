@@ -5,6 +5,8 @@ title: "Installer un resolveur DNS sur son Raspberry PI"
 description: "Installer unbound + dnscrypt sur son raspberry pi."
 shorturl: http://goo.gl/33Ouy1
 slug: installer-resolveur-dns-raspberry-pi
+featured: true
+image: /images/raspberry-pi-2.jpg
 tags:
  - dns
  - infrastructure
