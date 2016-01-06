@@ -4,6 +4,7 @@ languageCode = "fr-fr"
 title = "Zenithar'z Blog"
 summerization = "html_firstparagraph"
 paginate = 9
+theme = "bleak"
 
 [permalinks]
   post = "/post/:year/:month/:day/:slug"
