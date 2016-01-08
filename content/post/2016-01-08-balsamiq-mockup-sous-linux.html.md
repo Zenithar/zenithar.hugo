@@ -1,15 +1,15 @@
 ---
 section: post
 date: "2016-01-08"
-title: "Blasamiq Mockup sous Linux"
+title: "Balsamiq Mockups sous Linux"
 description: "Découvert après la visite d'un stagiaire en IHM, mais ne fonctionnant pas sous Linux, voici comment résoudre le problème."
-slug: balsamiq-mockup-sous-linux
+slug: balsamiq-mockups-sous-linux
 tags:
  - linux
  - wine
 ---
 
-[Balsamiq Mockup](https://balsamiq.com/products/mockups/) est un outil plus que
+[Balsamiq Mockups](https://balsamiq.com/products/mockups/) est un outil plus que
 sympatique lorsque vous devez concevoir des applications avec une forte
 intéraction utilisateur.
 
@@ -42,7 +42,7 @@ logicielle (AngularJS souvent dans mon cas).
 Au boulot, je fais parti d'un petit nombre d'irréductible Linuxien dans ce monde
 M$, cependant quelques fois c'est un peu `touchy`.
 
-Balsamiq Mockup est une application développée en Adobe AIR, cependant sous
+Balsamiq Mockups est une application développée en Adobe AIR, cependant sous
 Linux, Flash est souvent banni (et franchement je comprends, allez faire un tour
 du côté des CVE Flash Player ^^).
 
@@ -56,7 +56,7 @@ Mais pas de panique, il existe une solution `wine` pour Windows Emulator.
 $ sudo pacman -S wine
 ```
 
-Une fois installé, vous pouvez procéder à l'installation de Blasamiq Mockup
+Une fois installé, vous pouvez procéder à l'installation de Blasamiq Mockups
 comme vous le feriez avec Windows.
 
 Téléchargez l'installeur Windows : [ici](https://balsamiq.com/download/).
