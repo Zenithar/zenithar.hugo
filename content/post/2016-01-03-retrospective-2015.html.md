@@ -42,7 +42,7 @@ Projets ayant suscité mon intérêt cette année :
 
   * [cuckoo-modified](https://github.com/spender-sandbox/cuckoo-modified) : Fork de la sandbox Cuckoo,
   intégrant des fonctionnalités ElasticSearch, MongoDB, Malheur, etc.
-  * [maliceio](malice.io) : Chaîne d'analyse "à la Virus Total" (portage en GO en cours)
+  * [maliceio](https://github.com/maliceio) : Chaîne d'analyse "à la Virus Total" (portage en GO en cours)
   * [hydra](https://github.com/ory-am/hydra) IAM codé en Go
   * [moloch](https://github.com/aol/moloch) Moteur de capture et d'indexation PCAP
   * [h2o](http://h2o.ai/) Serveur de `machine learning`
