@@ -20,7 +20,7 @@ Le serveur, écrit en `golang`, est OpenSource et gratuit, mais la documentation
 n'est pas très simple d'accès. Il existe un `dashboard payant` exploitant les
 données de traffic du reverse-proxy.
 
-Vous pouvez simplement ajouter :
+Avec Tyk, vous pouvez simplement ajouter :
 
   * Des quotas et des limites d'accès en volume ;
   * Des mécanismes d'authentification (Basic, JWT, HMAC, OAUTH 2.0) ;
@@ -48,17 +48,17 @@ Ces analyses vont générer un certains nombre d'informations (signatures, hashe
 Le service est gratuit, mais lorsque l'on souhaite obtenir des accès API
 pour industrialisation il faut payer.
 L'identification se fait à l'aide d'une `API KEY`, sous la forme d'un héxadécimal.
-Cette clé peut être récupérée sur votre profil identifié VirusTotal.
+Cette clé peut être récupérée sur votre profil VirusTotal.
 
-Cette clé est associé à votre compte utilisateur et à la souscription que vous
+Cette clé est associée à votre compte utilisateur et à la souscription que vous
 avez.
 
-> Souscription donnant lieu principalement à une limitation en volume de requête.
+> Souscription donnant lieu principalement à une limitation en volume de requêtes.
 
 Lorsque l'on monte un service en entreprise autour de VirusTotal, vous ne pouvez
 pas donner un compte à tous les utilisateurs API.
 
-Afin de faire des économie de requêtes, ainsi qu'un contrôle d'accès interne,
+Afin de faire des économies de requêtes, ainsi qu'un contrôle d'accès interne,
 je vous propose de mettre en place Tyk comme proxy aux WebServices VirusTotal.
 
 # Configuration
@@ -164,7 +164,7 @@ INFO[0000] --> Listening on port: 8080
 INFO[0010] [HOST CHECK MANAGER] Starting Poller  
 ```
 
-Le service Tyk est fonctionnel, il suffit de requéter le proxy pour consulter
+Le service Tyk est fonctionnel, il suffit de requêter le proxy pour consulter
 VirusTotal.
 
 ```sh
@@ -189,8 +189,11 @@ VirusTotal.
 ```
 
 Notez l'entête `X-Tyk-Cached-Response`, il indique que Tyk a répondu avec une
-réponse en cache.
+réponse mise en cache.
 
-> Attention à la mise ne cache trop importante, vous risquez d'avoir des
+> Attention à la mise en cache trop importante, vous risquez d'avoir des
 problèmes trditionnels aux caches (évictions tardives, données plus valides en
 cache, etc.).
+
+Pour aller plus loin, et comme d'habitude, il faudrait mieux mettre tout cela
+dans un conteneur Docker ...
