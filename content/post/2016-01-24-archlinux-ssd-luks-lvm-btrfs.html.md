@@ -256,12 +256,12 @@ Les partitions sont montées comme sur votre système final. Vous pouvez utilise
 $ genfstab -U -p /mnt >> /mnt/etc/fstab
 ```
 
-Le fichier doit être modifié, seulement pour ajouté de le support SSD.
+Le fichier doit être modifié, seulement pour ajouter le support SSD.
 ```
 /dev/mapper/vg-swap swap  swap  defaults,discard 0 0
 ```
 
-Vous pouvez à présent, démarrer l'installation du système minimal.
+Vous pouvez à présent démarrer l'installation du système minimal.
 
 ```sh
 $ pacstrap /mnt base base-devel btrfs-progs \
@@ -458,9 +458,9 @@ utilisé pour l'installation.
 ```sh
 $ loadkeys fr
 $ cryptsetup luksOpen /dev/sda2 ssd
-$ mount -o defaults,ssd,discard,compress=lzo,subvol=__active/rootvol /dev/mapper/vg-arch /mnt
-$ mount -o defaults,ssd,discard,compress=lzo,subvol=__active/home /dev/mapper/vg-arch /mnt/home
-$ mount -o defaults,ssd,discard,compress=lzo,subvol=__active/var /dev/mapper/vg-arch /mnt/var
+$ mount -o defaults,noatime,ssd,discard,compress=lzo,subvol=__active/rootvol /dev/mapper/vg-arch /mnt
+$ mount -o defaults,noatime,ssd,discard,compress=lzo,subvol=__active/home /dev/mapper/vg-arch /mnt/home
+$ mount -o defaults,noatime,ssd,discard,compress=lzo,subvol=__active/var /dev/mapper/vg-arch /mnt/var
 $ mount /dev/sda1 /mnt/boot/efi
 $ swapon /dev/mapper/vg-swap
 $ arch-chroot /mnt
