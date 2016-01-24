@@ -432,6 +432,13 @@ Cette ligne définit les arguments pour le noyau :
 
 > Pas besoin d'installer le chargeur, il a déjà été lié grâce à `efibootmgr`.
 
+Il faut copier le noyau, et les images depuis `/boot` vers `/boot/efi/EFI` :
+
+```sh
+$ cp /boot/vmlinuz-linux /boot/efi/EFI
+$ cp /boot/*.img /boot/efi/EFI
+```
+
 # Fin d'installation
 
 Il suffit de tout préparer pour le redémarrage :
