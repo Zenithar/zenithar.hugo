@@ -204,7 +204,7 @@ $ lvcreate -l +100%FREE vg -n arch
 # Initialise une partition nommée 'arch' dans le volume group 'vg'
 ```
 
-Le volumes LVM sont créés, vous pouvez procéder au formattage.
+Les volumes LVM sont créés, vous pouvez procéder au formattage.
 
 ```sh
 $ mkswap -L SWAP /dev/mapper/vg-swap
@@ -232,7 +232,7 @@ $ umount /mnt
 ```
 
 J'ai choisi d'activer la compression à la volée `lzo` sur mon disque SSD.
-Cette option n'est pas activée par défaut, et peu avoir de lourdes conséquences
+Cette option n'est pas activée par défaut, et peut avoir de lourdes conséquences
 en consommation CPU. Le principe est simple les données sont compressées puis
 chiffrées avant d'être écrites sur le disque.
 
