@@ -78,7 +78,7 @@ ce qui aurait pour effet de ralentir la procédure, donc pour accélerer les cho
 je vous propose d'utiliser LUKS.
 
 ```sh
-$ cryptsetup luksOpen --type plain /dev/sda ssd
+$ cryptsetup open --type plain /dev/sda ssd
 # La clé qui va vous être demandée ne porte que peu d'intéret cela va juste servir
 # au chiffrement des données
 $ ddrescue -f /dev/zero /dev/mapper/ssd
@@ -92,11 +92,9 @@ J'ai choisi d'utiliser le mode de démarrage EFI, pour cela il faut créer une
 partition sur le disque nommée `ESP`, cette partition contient les informations
 de démarrage.
 
-> Ne pas confondre avec un `/boot` ! Notez le point de montage différent.
-
 | Type | Nom | Taille | MountPoint | Description |
 | ---- | --- | ------ | ---------- | ----------- |
-| EFI [ef00] | BOOT | 500Mo | /boot/efi | Contiendra les paramètres du bootloader |
+| EFI [ef00] | BOOT | 500Mo | /boot/efi | Contiendra le noyau et les paramètres du bootloader |
 | Linux [8300] | ssd | +100%Free | | Volume chiffré avec LUKS |
 
 ```sh
@@ -124,7 +122,7 @@ Il faut formatter la partition `ESP` en FAT32, pour être compatible avec le
 "standard" UEFI.
 
 ```sh
-$ mkfs.vfat -F32 -L BOOT /dev/sda1
+$ mkfs.vfat -F32 -n BOOT /dev/sda1
 ```
 
 La seconde partition contiendra le volume chiffré `LUKS`.
@@ -249,18 +247,6 @@ $ swapon /dev/mapper/vg-swap
 
 ## Installation du système minimal
 
-Les partitions sont montées comme sur votre système final. Vous pouvez utiliser
-`genfstab` qui va générer votre plan de montage.
-
-```sh
-$ genfstab -U -p /mnt >> /mnt/etc/fstab
-```
-
-Le fichier doit être modifié, seulement pour ajouter le support SSD.
-```
-/dev/mapper/vg-swap swap  swap  defaults,discard 0 0
-```
-
 Vous pouvez à présent démarrer l'installation du système minimal.
 
 ```sh
@@ -283,6 +269,18 @@ $ pacstrap /mnt base base-devel btrfs-progs \
 | [syslinux](http://www.archlinux.org/packages/?arch=any&arch=i686&arch=x86_64&q=syslinux) | Bootloader (j'aime pas Grub avec EFI) |
 | [vim](http://www.archlinux.org/packages/?arch=any&arch=i686&arch=x86_64&q=vim) | Editeur de texte |
 | [zsh](http://www.archlinux.org/packages/?arch=any&arch=i686&arch=x86_64&q=zsh) | Shell alternatif |
+
+Les partitions sont montées comme sur votre système final. Vous pouvez utiliser
+`genfstab` qui va générer votre plan de montage.
+
+```sh
+$ genfstab -U -p /mnt >> /mnt/etc/fstab
+```
+
+Le fichier doit être modifié, seulement pour ajouter le support SSD.
+```
+/dev/mapper/vg-swap swap  swap  defaults,discard 0 0
+```
 
 ## Configuration initiale
 
@@ -319,7 +317,7 @@ $ echo "LANG=\"fr_FR.UTF-8\"" >> /etc/locale.conf
 Définir la timezone :
 
 ```sh
-$ ln -s /usr/share/zone/Europe/Paris /etc/localtime
+$ ln -s /usr/share/zoneinfo/Europe/Paris /etc/localtime
 ```
 
 Changer le nom de la machine :
@@ -337,7 +335,7 @@ $ passwd
 Créer un utilisateur quotidien :
 
 ```sh
-$ adduser -g user -G wheel -m zenithar
+$ useradd -g users -G wheel -m zenithar
 $ passwd zenithar
 ```
 
@@ -352,7 +350,7 @@ configuration.
 $ vim /etc/mkinitcpio.conf
 MODULES="i915"
 ...
-FILES=""
+BINARIES="/usr/bin/btrfsck"
 ...
 HOOKS="... keyboard keymap encrypt lvm2 resume ... filesystems ..."
 ...
@@ -375,9 +373,9 @@ ce n'est que mon avis, beaucoup trop intrusif.
 > L'utilisateur devrait être le seul à pouvoir ouvrir la partition chiffrée,
   même si LUKS permet d'ajouter des clés.
 
-Je trouve de ce fait, le principe de syslinux est plus dans la normalité, il se
-charge de faire démarrer le noyau et c'est tout. Bon je pourrais rajouter des
-trolls sur les dernières vulnérabilités Grub ... Mot de passe inutile ... [CVE-2015-8370](http://hmarco.org/bugs/CVE-2015-8370-Grub2-authentication-bypass.html)
+Je trouve de ce fait, que le principe de syslinux est plus dans la "normalité" :
+il se charge de faire démarrer le noyau et c'est tout. Bon je pourrais rajouter
+des trolls sur les dernières vulnérabilités Grub ... Mot de passe inutile ... [CVE-2015-8370](http://hmarco.org/bugs/CVE-2015-8370-Grub2-authentication-bypass.html)
 
 Vous devez copier le chargeur de démarrage sur la partition `ESP` :
 
@@ -407,13 +405,13 @@ DEFAULT arch
 LABEL arch
         MENU LABEL Arch Linux
         LINUX ../vmlinuz-linux
-        APPEND root=/dev/mapper/vg-arch cryptdevice=/dev/sda2:vg:allow-discards resume=/dev/mapper/vg-swap rw
+        APPEND root=/dev/mapper/vg-arch rootflags=subvol=__active/rootvol cryptdevice=/dev/sda2:vg:allow-discards resume=/dev/mapper/vg-swap rw
         INITRD ../initramfs-linux.img
 
 LABEL archfallback
         MENU LABEL Arch Linux Fallback
         LINUX ../vmlinuz-linux
-        APPEND root=/dev/mapper/vg-arch cryptdevice=/dev/sda2:vg:allow-discards resume=/dev/mapper/vg-swap rw
+        APPEND root=/dev/mapper/vg-arch rootflags=subvol=__active/rootvol cryptdevice=/dev/sda2:vg:allow-discards resume=/dev/mapper/vg-swap rw
         INITRD ../initramfs-linux-fallback.img
 ```
 
@@ -447,7 +445,8 @@ $ exit
 $ cd
 $ umount /mnt/{home,var,boot/efi} # Démontage des volumes BTRFS / ESP
 $ umount /mnt                     # Démontage du root
-$ cryptsetup close ssd            # Démontage du volume LUKS
+$ swapoff /dev/mapper/vg-swap     # Démontage du swap
+$ cryptsetup luksClose ssd        # Démontage du volume LUKS
 $ reboot                          # Let's go !
 ```
 
