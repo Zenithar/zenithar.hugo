@@ -472,4 +472,4 @@ Si cela démarre, vous devriez voir un shell console attendant votre utilisateur
 Ce guide d'installation se termine sur cette étape, cela ne rend pas fonctionnelle
 sur le plan utilisateur votre installation, mais cela correspond à une version `serveur`.
 
-> Je traiterai la suite de l'installation `desktop` dans un post à venir.
+Continuer sur le guide suivant : [Archlinux : environement utilisateur](/post/2016/01/24/archlinux-ssd-luks-lvm-btrfs/)
