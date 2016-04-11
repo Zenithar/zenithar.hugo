@@ -10,8 +10,8 @@ tags:
  - github
 ---
 
-J'ai ouvert mon "framework" personnel sur Github, mais bon n'étant pas
-foncièrement attaché à Github j'ai cherché un moyen de pouvoir `réécrire`
+J'ai ouvert mon "[framework](https://github.com/Zenithar/golang-common)"
+personnel sur Github, mais bon n'étant pas foncièrement attaché à Github j'ai cherché un moyen de pouvoir `réécrire`
 les packages Golang en ajoutant un "proxy".
 
 Cette technique est possible, c'est une fonctionnalité de `go get`.
@@ -30,9 +30,17 @@ La plupart du temps les librairies sont hébergées sur un dépôt de code direc
 "zenithar.org/go/common" -> https://zenithar.org/go/common
 ```
 
+Cela permet d'introduire un niveau d'abstraction indépendant de l'endroit
+où sont stockés les sources. C'est un peu comme un reverse-proxy pour votre package.
+
+> Vous exposerez votre package avec votre 'marque' à la place de l'endroit
+> où se trouve les sources.
+
 ## Mise en place de la redirection
 
 Vous devez créer un fichier `index.html` dans l'arborescence de votre site.
+
+> Pour moi ce fichier est dans le repertoire [/go/common](http://zenithar.org/go/common)
 
 ```html
 <!DOCTYPE html>
@@ -83,3 +91,13 @@ via une URL propre.
 
 Vous pouvez utiliser cette méthode pour publier la documentation de vos projets
 ce qui mets la documentation et le code au même endroit.
+
+## Téléchargement et utilisation du package
+
+```sh
+$ go get -insecure zenithar.org/go/common
+```
+
+Cette commande va télécharger les sources sur le dépôt Github, mais le paquet sera utilisable par l'import `zenithar.org/go/common`.
+
+> *-insecure*, permet de télécharger les sources depuis un serveur HTTPS avec une erreur de certificat (dans mon cas OVH)
