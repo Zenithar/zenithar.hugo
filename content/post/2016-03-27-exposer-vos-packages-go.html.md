@@ -14,11 +14,19 @@ J'ai ouvert mon "framework" personnel sur Github, mais bon n'étant pas
 foncièrement attaché à Github j'ai cherché un moyen de pouvoir `réécrire`
 les packages Golang en ajoutant un "proxy".
 
-Cette technique est possible, c'est une fonctionnalité de `go get`. Par défaut
-un package Go sans préfixe pointe sur Github.
+Cette technique est possible, c'est une fonctionnalité de `go get`.
+Par défaut un package Go sans préfixe indique une dépendance du runtime.
 
 ```
-"namsral/flag" -> https://github.com/namsral/flag
+[<prefix>/]?<path>/<library>
+```
+
+La plupart du temps les librairies sont hébergées sur un dépôt de code directement
+(Github, Gitlab, etc.).
+
+```
+"net/url" -> runtime
+"github.com/namsral/flag" -> https://github.com/namsral/flag
 "zenithar.org/go/common" -> https://zenithar.org/go/common
 ```
 
@@ -74,4 +82,4 @@ Et voilà votre projet Golang est `go-gettable`, hébergé sur Github, et expos�
 via une URL propre.
 
 Vous pouvez utiliser cette méthode pour publier la documentation de vos projets
-ce qui mets la documentation et le code au même endroit. 
+ce qui mets la documentation et le code au même endroit.
