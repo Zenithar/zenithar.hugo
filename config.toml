@@ -21,7 +21,8 @@ theme = "bleak"
   cover = "/images/cover.jpg"
 
   # Google analytics
-  ga = "UA-8114245-4"
+  gravatarHash = "1a2807faf3cca1667ff6f04bf5886eff"
+  googleAnalyticsUserID = "UA-8114245-4"
   twitter = "zenithar"
   github = "zenithar"
   facebook = "zenithar"
