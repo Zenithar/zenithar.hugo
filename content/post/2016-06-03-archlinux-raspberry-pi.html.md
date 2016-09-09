@@ -15,11 +15,10 @@ tags:
 
 J'utilise Archlinux pour générer l'image pour mon RaspberryPI. Il faut commencer par installer ce qu'il manque :
 ```sh
-$> yaourt -S pv qemu
+$> yaourt -S pv
 ```
 
   * `pv` : ajoute une barre de progression lors de l'utilisation via des pipes, trés util pour "voir" l'avancement d'un transfers de flux;
-  * `qemu` : émulateur de machine virtuelle, utilisé pour tester notre image.
 
 ## Construction de l'image
 
@@ -79,14 +78,37 @@ w # Ecrit les partitions sur le volume
 
 Il peut y avoir un message d'erreur au moment de l'écriture de la table, il faut
 recharger les partitions pour que le noyau les reconnaisse.
+
 ```sh
 $> sudo partprobe /dev/loop0
 ```
 
-Un peu de nettoyage ...
+Nous allons maintenant formatter les partitions :
+
 ```sh
-$> umount /mnt/archroot/boot
-$> umount /mnt/archroot/root
+$> sudo mkfs.vfat /dev/loop0p1
+$> sudo mkfs.ext4 /dev/loop0p2
+```
+
+Nous montons les partions afin de pouvoir copier le contenu de l'archive.
+
+```sh
+$> sudo mount /dev/loop0p2 /mnt/arch
+$> sudo mkdir /mnt/arch/boot
+$> sudo mount /dev/loop0p1 /mnt/arch/boot
+```
+
+Et voilà, il suffit de copier le contenu de l'archive `/mnt/arch`:
+
+```sh
+$> cd /mnt/arch
+$> sudo tar zxvpf /tmp/ArchLinuxARM-rpi-2-latest.tar.gz .
+```
+
+Un peu de nettoyage ...
+
+```sh
+$> sudo umount -R /mnt/arch
 $> sudo losetup -d /dev/loop0
 ```
 

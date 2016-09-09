@@ -24,6 +24,7 @@ J'ai ouvert le dépot du thème Ghost porté sur Hugo [Bleak](https://github.com
 # Mes projets
 
 Concrètement pour moi, c'est l'année du `Go` et `Docker` ^^
+
 Concernant les projets :
 
   * [nano-nginx](https://hub.docker.com/r/zenithar/nano-nginx/) sera maintenu
