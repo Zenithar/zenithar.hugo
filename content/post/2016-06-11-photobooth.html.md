@@ -6,7 +6,7 @@ description: "Voici le photobooth Quick & Dirty (sanchez) de mon mariage..."
 slug: photobooth
 tags:
  - python
- - flash
+ - flask
  - raspberry
  - linux
  - github
