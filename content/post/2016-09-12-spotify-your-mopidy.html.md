@@ -4,7 +4,6 @@ date: "2016-09-12"
 title: "Spotify your Mopidy"
 description: "Ajoutez le support Spotify à votre serveur Mopidy."
 slug: spotify-your-mopidy
-image: /images/articles/2016/ncmpcpp.png
 tags:
  - python
  - mopidy
