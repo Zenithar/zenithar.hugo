@@ -67,7 +67,7 @@ Et nous voilà présentement arrivés à destination.
 
 Nous avons atterri à Montréal à 16h00 (UTC+1), ce qui fait 10h00 (UTC-5). Et là
 c'est vraiment bizarre on a l'impression de repartir comme si c'était le matin,
-mais quand arrive 12h00 (heure locale) soit 19h00 (heure française), on sent une
+mais quand arrive 12h00 (heure locale) soit 18h00 (heure française), on sent une
 fatigue plutôt lourde qui arrive, un peu comme quand on rentre du boulot le savoir
 mais à 12h00 (c'est ça le jetlag ?).
 
@@ -85,7 +85,7 @@ L'hôtel était à 700m de l'arrêt de bus.
   * La gentillesse "légendaire" des canadadiens ne semblent pas être une légende;
   * Les TIPS (15% du montant) c'est plutôt étrange d'assumer les pourboires, mais compréhensible;
   * La rue Sainte-Catherine est trop trop trop longue;
-  * Ils ont un problème ou assume complètement [les histoires de caca](http://calendrier.espacepourlavie.ca/histoires-de-crottes);
+  * Ils ont un problème avec, ou assument complètement, [les histoires de caca](http://calendrier.espacepourlavie.ca/histoires-de-crottes);
   * Patrie d'Apple et des Starbucks;
   * "Rogers" c'est le nom du réseau mobile avec Free;
   * La poutine c'est vraiment `dégueulicieux` (pas beau visuellement, mais mangeable), pour info sur la photo c'est une `regular`, mais ça suffit largement;
@@ -95,3 +95,5 @@ L'hôtel était à 700m de l'arrêt de bus.
   * Où sont passés les légumes ?
 
   ![](/images/articles/2016/canada/poutine.jpg)
+
+Bon allez, c'est pas tout mais ça va faire 24h que je suis debout, 5h00 affiché sur mon PC soit 23h00, je vais dormir.
