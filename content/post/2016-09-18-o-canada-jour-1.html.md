@@ -14,7 +14,7 @@ tags:
 
 ![](/images/articles/2016/canada/roadtrip-canada-quebec.jpg)
 
-Nous sommes partis pour notre voyage de noces au Canada, avec l'aide d'un voyagiste [Authentik Canada](http://www.authentikcanada.com). Et franchement je vous le conseille, éfficaces et professionnels.
+Nous sommes partis pour notre voyage de noces au Canada, avec l'aide d'un voyagiste [Authentik Canada](http://www.authentikcanada.com). Et franchement je vous le conseille, éfficace et professionnel.
 
 ## Départ Toulouse
 
@@ -65,11 +65,11 @@ Et nous voilà présentement arrivés à destination.
 
 ## Arrivée Montréal
 
-Nous avons atteri à Montréal à 16h00 (UTC+1), ce qui fait 10h00 (UTC-5). Et là
-c'est vraiment bizarre on à l'impression de repartir comme si c'était le matin,
-mais quant arrive 12h00 (heure locale) soit 19h00 (heure française), on sent une
-fatigue plutôt lourde qui arrive, on peut comme quand on rentre du boulot mais
-à 12h00 (c'est ça le jetlag ?).
+Nous avons atterri à Montréal à 16h00 (UTC+1), ce qui fait 10h00 (UTC-5). Et là
+c'est vraiment bizarre on a l'impression de repartir comme si c'était le matin,
+mais quand arrive 12h00 (heure locale) soit 19h00 (heure française), on sent une
+fatigue plutôt lourde qui arrive, un peu comme quand on rentre du boulot le savoir
+mais à 12h00 (c'est ça le jetlag ?).
 
 Nous avons rejoins le centre ville de Montréal avec une navette (747), comme
 recommandé par AuthentikCanada, nous avons pris un pass 3 jours (18 C$ = 12.3€)
