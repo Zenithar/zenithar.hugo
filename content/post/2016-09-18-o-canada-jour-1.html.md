@@ -14,7 +14,7 @@ tags:
 
 ![](/images/articles/2016/canada/roadtrip-canada-quebec.jpg)
 
-Nous sommes partis pour notre voyage de noces au Canada, avec l'aide d'un voyagiste [Authentik Canada](http://www.authentikcanada.com). Et franchement je vous le conseille, éfficace et professionnel.
+Nous sommes partis pour notre voyage de noces au Canada, avec l'aide d'un voyagiste [Authentik Canada](http://www.authentikcanada.com). Et franchement je vous le conseille, efficace et professionnel.
 
 ## Départ Toulouse
 
@@ -33,7 +33,7 @@ Cette option devient vite rentable puisqu'en fait vous avez droit :
 
 ## Le Vol
 
-Le vol s'est fait à bord d'un Airbus A320, nous sommes partis à 8h20 (UTC+1), bon avec 20 minutes de retard au décollage.
+Le vol s'est fait à bord d'un Airbus A310, nous sommes partis à 8h20 (UTC+1), bon avec 20 minutes de retard au décollage.
 
 Il n'a pas d'écran individuel, comme on m'a souvent précisé sur les longs courriers, mais des écrans centraux avec une prise écouteurs dans le siège.
 Une sélection de 3 films, en commun, a été diffusée :
@@ -49,7 +49,7 @@ J'ai essayé de me connecter en WiFi (dans l'avion), avec un Linux, mais cela n�
 Revenons aux extras de l'option `Plus`:
 
   * Accueil avec une "petite" bouteille de mousseux personnelle ... oui à 8h30 ...;
-  * Kit de confort : couverture polaire, oreillé de cou gonflable, cache oeils, et boule quiès;
+  * Kit de confort : couverture polaire, oreiller de cou gonflable, cache oeils, et boule quiès;
   * Kit divertissement : écouteurs en bois naturel avec la pochette;
 
 Les repas :
