@@ -1,8 +1,8 @@
 ---
 section: post
 date: "2016-09-19"
-title: "Ô Canada : Jour 2 - Montréal"
-description: "Escapade dans Montréal, et découverte d'une ville très typique."
+title: "Ô Canada : Jour 2 & 3 - Montréal"
+description: "Escapade dans Montréal, et découverte d'une ville américano-canadienne."
 slug: o-canada-jour-2
 image: /images/articles/2016/canada/montreal-pano.jpg
 tags:
@@ -18,9 +18,9 @@ tags:
 
 Tout d'abord, établissons une échelle de "must-to-visit", dans l'objectif où vous iriez un jour à Montréal, je vous propose donc cette échelle :
 
-  * "\*" : Si vous avez le temps, ou vous tombez dessus par hasard;
-  * "\*\*" : Vaut le détour;
-  * "\*\*\*": Vaut le voyage !
+  1. `*` : Si vous avez le temps, ou vous tombez dessus par hasard;
+  2. `**` : Vaut le détour;
+  3. `***` : Vaut le voyage !
 
 Ils sont indiqués dans l'ordre chronologique de notre parcours à pieds / métro / bus, plus de 24Km parcourus à pied quand même ^^
 
@@ -32,7 +32,7 @@ Le [métro](http://www.metrodemontreal.com/map-f.html) est plutôt simple à pre
 
 Rien à dire, c'est un quartier plutôt haut en couleur et en magasins libérés ^^
 
-A titre indicatif, `Maître Gims` y donne un concert à [l'Olympia](http://olympiamontreal.com/en/event/maitre-gims/), mais bon je vais m'arréter là sinon il va y avoir de la dérive.
+A titre indicatif, `Maître Gims` y donne un concert à [l'Olympia](http://olympiamontreal.com/en/event/maitre-gims/), mais bon je vais m'arrêter là sinon il va y avoir de la dérive.
 
 > Métro UQAM (Université Quebec à Montréal), c'est un peu le Jean Jaurès de Toulouse ^^
 
@@ -44,7 +44,7 @@ C'est collé au quartier Gai, bon personnellement je n'ai pas trouvé ça très 
 
 Pour moi c'est un centre commercial géant qui s'étend sur 32Km de galerie, il se nomme le [RESO](http://ville.montreal.qc.ca/portal/page?_pageid=7317,79977650&_dad=portal&_schema=PORTAL), nous sommes tombés dessus par hasard en cherchant du métro.
 
-C'est un ensemble de galerie construite pour les périodes d'hiver où le froid ralenti littéralement la vie extérieure.
+C'est un ensemble de galerie construit pour les périodes d'hiver où le froid ralenti littéralement la vie extérieure.
 Si vous cherchez cette ville à Montréal vous pourrez identifier les entrées par ce symbole :
 
 ![Logo du RESO et du Métro](/images/articles/2016/canada/metro-reso.png)
@@ -55,9 +55,9 @@ Ce symbole représente l'entrée du Métro, mais aussi de la ville souterraine.
 
 ### Mont-Royal (\*\*\*)
 
-Nous avons choisis de grimper le Mont-Royal à pieds, nous avons donc mis environ 40 minutes à partir de l'avenue Peel / Sherbrook en trainant la patte (photo / écurueils / pokemons).
+Nous avons choisis de grimper le Mont-Royal à pieds, nous avons donc mis environ 40 minutes à partir de l'avenue Peel / Sherbrook en trainant la patte (photo / écureuils / pokemons).
 
-Une fois arrivé en haut, après avoir croisé une armée d'écureils, et des mouettes à côté du Lac aux Castors (sans castors observés), nous avons atteinds le belvédère, donnant un point de vue exceptionnelle sur la ville de Montréal.
+Une fois arrivé en haut, après avoir croisé une armée d'écureuils, et des mouettes à côté du Lac aux Castors (sans castors observés), nous avons atteinds le belvédère, donnant un point de vue exceptionnel sur la ville de Montréal.
 
 Franchement, cela vaut le détour vous voyez, de là haut, l'étendue et les dimensions d'une ville aux proportions américaines.
 
@@ -66,7 +66,7 @@ Franchement, cela vaut le détour vous voyez, de là haut, l'étendue et les dim
 ### Vieux-Montréal (\*\*)
 
 C'est un peu comme si Montréal était une ville française, j'ai trouvé qu'on retrouvait l'ambiance que l'on a en intra-muros à Saint Malô (route pavée, enseignes forgées, etc.).
-Beaucoup d'artistes et spectacles de rues, ainsi que des animations aux murs de la vielle ville.
+Beaucoup d'artistes et spectacles de rues, ainsi que des animations aux murs de la vieille ville.
 
 Bon comme tout quartier "artistique", on y retrouve des cadavres de retours de fêtes ...
 
@@ -85,6 +85,16 @@ Malheureusement, nous n'avons pas pu tout faire car beaucoup de lieux étaient f
   * [Montréal Biosphère](https://en.wikipedia.org/wiki/Montreal_Biosphère);
   * [Cosmodome](https://fr.wikipedia.org/wiki/Cosmodôme), trop éloigné du centre;
 
+## La voiture
+
+Nous avons récupéré la voiture auprès du loueur, on a eut le droit a un surclassement de véhicule.
+
+> Ce surclassement est a mon avis une fausse promotion, puisque c'est arrivé à tout ceux qui ont fait le voyage.
+
+Résultat, nous avons une [Dodge Grand Caravan](https://www.dodge.ca/en/grandcaravan/overview), pour notre roadtrip.
+
+C'est un `tank` 6 places ... qui a la consommation d'un tank, le plein (~70l) fait 500Km.
+
 ## Ressentis / Impressions / Infos
 
   * Il fait chaud (~28°C à 12h00);
@@ -98,4 +108,6 @@ Malheureusement, nous n'avons pas pu tout faire car beaucoup de lieux étaient f
   * Y a vraiment le WiFi partout !;
   * J'ai mal aux pieds (47k pas au podomètre);
   * Le jetlag est presque amorti;
-  * Première fois au super-marché canadien, => bah comme en France.
+  * Première fois au super-marché canadien, => bah comme en France;
+  * L'essence s'appele l'octane 87, et son prix est différent de station en station, mais aussi de ville en ville;
+  * Le système de gestion des paiement de [Revolut](https://revolut.com) est en panne, plus de possiblités de payer avec !
