@@ -4,7 +4,7 @@ date: "2016-09-21"
 title: "Ô Canada : Jour 4 & 6 - Ottawa"
 description: "Nous avons visité la capitale du Canada."
 slug: o-canada-jour-4-6
-image: /images/articles/2016/canada/ottawa-night.jpg
+image: /images/articles/2016/canada/thumb.ottawa-night.jpg
 tags:
   - authentik
   - canada
@@ -29,17 +29,17 @@ Ces deux villes sont séparées par un pont enjambant la rivière Ottawa, marqua
 
 Nous avons visité la `colline du parlement`, bon c'est une place ...
 
-> Pendant la période de renégociation commerciales entre la Chine et le Canada, il y avait des sympatisants à cette négociation, donc pas mal d'animations autour de la Chine. Ainsi que des manifestants du [Falun Gong](https://fr.wikipedia.org/wiki/Falun_Gong), contre le prélèvements forcés d'organes (oui cela existe !!)
+> Pendant la période de renégociation commerciales entre la Chine et le Canada, il y avait des sympatisants à cette négociation, donc pas mal d'animations autour de la Chine. Ainsi que des manifestants du [Falun Gong](https://fr.wikipedia.org/wiki/Falun_Gong), contre `les prélèvements forcés d'organes` (oui cela existe !!)
 
 ### Marché By
 
 C'est un marché qui a lieu toute la journée.
 
-> Attention à pas trop vous éloigner car le marché est collé aux quartiers "gloques" (toxicomanes, etc.), après tout dépends ce que vous venez chercher.
+> Attention à pas trop vous éloigner car le marché est collé aux quartiers "glauques" (toxicomanes, etc.), après tout dépends ce que vous venez chercher...
 
 ### Canal Rideau
 
-Le [Canal Rideau](https://fr.wikipedia.org/wiki/Canal_Rideau) est un canal aménagé, qui traverse la ville.
+Le [Canal Rideau](https://fr.wikipedia.org/wiki/Canal_Rideau) est un canal aménagé qui traverse la ville.
 Vous pouvez y voir des écluses, mais aussi tout un tas d'animations le long des quais.
 
 > C'est sympa, mais franchement tout était fermé.
@@ -48,7 +48,7 @@ Vous pouvez y voir des écluses, mais aussi tout un tas d'animations le long des
 
 Musée consacré aux constructions avionique du Canada, mais aussi sur les différents travaux et cosmonautes connus du Canada.
 
-> Il faut savoir que le musée ferme ses portes à 17h00, nous y sommes allés pour 16h00, et la bonne surprise c'est qu'à ce moment ci le musée est gratuit. Il faut foncé pour tout voir mais c'est faisable.
+> Il faut savoir que le musée ferme ses portes à 17h00, nous y sommes allés pour 16h00, et la bonne surprise c'est qu'à ce moment ci le musée est gratuit. Il faut foncer pour tout voir mais c'est faisable.
 
 ### Musée national de l'histoire du Canada
 
@@ -59,7 +59,7 @@ C'est un musée qui est à Gatineau, Québec.
 
 ### Repas japonais : C'est Japon à Sushia
 
-Nous avons dîné dans ce [restaurant](http://www.japaninottawa.com/), je vous le conseille si vous aimez les plats traditionnels japonnais (ex: Shabu Shabu).
+Nous avons dîné dans ce [restaurant](http://www.japaninottawa.com/), je vous le conseille si vous aimez les plats traditionnels japonnais (ex: [Shabu Shabu](https://fr.wikipedia.org/wiki/Shabu-shabu), [Sukiyaki](https://fr.wikipedia.org/wiki/Sukiyaki)).
 
 > Attention c'est pas donné >80$ pour deux hors TIPS.
 

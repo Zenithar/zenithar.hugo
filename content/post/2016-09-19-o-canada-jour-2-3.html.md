@@ -4,7 +4,7 @@ date: "2016-09-19"
 title: "Ô Canada : Jour 2 & 3 - Montréal"
 description: "Escapade dans Montréal, et découverte d'une ville américano-canadienne."
 slug: o-canada-jour-2
-image: /images/articles/2016/canada/montreal-head.jpg
+image: /images/articles/2016/canada/thumb.montreal-head.jpg
 tags:
   - authentik
   - canada

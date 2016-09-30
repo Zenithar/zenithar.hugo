@@ -4,7 +4,7 @@ date: "2016-09-23"
 title: "Ô Canada : Jour 7 & 8 - Niagara Falls"
 description: "Une des sept merveilles du monde."
 slug: o-canada-jour-7-8
-image: /images/articles/2016/canada/niagara.jpg
+image: /images/articles/2016/canada/thumb.niagara.jpg
 tags:
   - authentik
   - canada
@@ -23,7 +23,7 @@ tags:
 
 ### La croisière au bords des chutes
 
-La croisière `Hornblower` vous amène au pieds des chutes.
+La croisière [Hornblower](https://www.niagaracruises.com) vous amène au pieds des chutes.
 
 > Durée : 30 minutes. C'est vraiment LE truc à faire ABSOLUMENT. Un imperméable type poncho vous est fourni avant de monter dans le bateau.
 
@@ -39,12 +39,18 @@ C'est Las Vegas ...
 
 > Vu que je n'aime pas les villes fabriquées de toutes pièces, je vais pas vraiment m'étendre, mais pour résumer, c'est un parc d'attraction genre LunaPark mais à l'échelle d'une ville.
 
-## En route vers les mille-iles
+## En route vers les mille-îles
 
 Nous quittons le monde "sauvage" civilisé pour des contrées plus naturelles. 4h10 de voiture, pour 434Km.
 
 ## Ressentis / Impressions / Infos
 
-  * Il fait frais (~8°C à 08h00, 17°C à 12h00);
-  * Tout le monde possède un 4x4;
-  * On parle principalement anglais;
+  * Il fait chaud (25°C à 12h00);
+  * Déçu de l'emplacement des chutes;
+  * On parle principalement anglais, chinois, espagnol, français, etc. (très touristique);
+  * Les chutes ont entre 30 000 et 50 000 ans;
+  * C'est 5 720 m3/s d'eau en haute saison;
+  * La conception naturelle est impressionnante;
+  * L'aménagement humain est décevant ...
+  * Les machines à laver américaines sont plutôt efficaces;
+  * Par contre leurs sèche-linges, c'est comme en France ...

@@ -4,7 +4,7 @@ date: "2016-09-18"
 title: "Ô Canada : Jour 1"
 description: "Premier jour de notre voyage au Canada, et si ta journée durait 6h de plus !"
 slug: o-canada-jour-1
-image: /images/articles/2016/canada/roadtrip-canada-quebec.jpg
+image: /images/articles/2016/canada/thumb.roadtrip-canada-quebec.jpg
 tags:
   - authentik
   - canada

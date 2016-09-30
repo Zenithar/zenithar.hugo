@@ -4,7 +4,7 @@ date: "2016-09-20"
 title: "Ô Canada : Jour 3 & 4 - Mont-Tremblant"
 description: "Un peu de nature après notre virée urbaine."
 slug: o-canada-jour-3-4
-image: /images/articles/2016/canada/Mont-Tremblant-village.jpg
+image: /images/articles/2016/canada/thumb.Mont-Tremblant-village.jpg
 tags:
   - authentik
   - canada
