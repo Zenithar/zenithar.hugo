@@ -1,0 +1,25 @@
+{
+  "name": "zenithar.hugo",
+  "version": "1.0.0",
+  "description": "Myblog using Hugo static website generator",
+  "scripts": {
+    "go": "npm run hugo:server",
+    "hugo:server": "hugo server --buildDrafts --buildFuture",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:prod": "hugo && npm run optimize:html",
+    "optimize:html": "./node_modules/.bin/html-minifier --input-dir ./public/ --output-dir ./public/ --file-ext html -c ./.html-minifier-config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenithar/zenithar.hugo.git"
+  },
+  "author": "Thibault NORMAND",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenithar/zenithar.hugo/issues"
+  },
+  "homepage": "https://github.com/zenithar/zenithar.hugo#readme",
+  "dependencies": {
+    "html-minifier": "^3.2.3"
+  }
+}

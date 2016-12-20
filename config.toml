@@ -6,6 +6,8 @@ summerization = "html_firstparagraph"
 paginate = 9
 theme = "bleak"
 
+SectionPagesMenu = "Main"
+
 [permalinks]
   post = "/post/:year/:month/:day/:slug"
   project = "/project/:year/:month/:day/:slug"
