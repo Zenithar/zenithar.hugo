@@ -13,7 +13,7 @@ tags:
   - mont-tramblant
 ---
 
-![Mont-Tremblant pendant la saison des couleurs.](/images/articles/2016/canada/Mont-Tremblant-village.jpg)
+{{% imgblur prefix="/images/articles/2016/canada/Mont-Tremblant-village" %}}
 
 ## Mont-Tremblant
 

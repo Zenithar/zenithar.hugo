@@ -17,6 +17,8 @@ Voici une recette Vagrant `Vagrantfile`, permettant de déployer une machine vir
 
 # Vagrantfile
 
+Voici le code à mettre dans un fichier `Vagrantfile` :
+
 {{% gist b6498a7aa2d0f918637d %}}
 
 Pour faire simple :
@@ -28,9 +30,9 @@ Pour faire simple :
 
 # Pourquoi "virtualiser" dans une VM ?
 
-Cela permet de garder un environnement propre de développement, mais aussi de production. Le profil de VM est utilisé pour déployer l'environnement de développement, la recette, et la production. Plus besoin de passer une journée à configurer l'environnemt d'un nouvel arrivant dans la société. 
+Cela permet de garder un environnement propre de développement, mais aussi de production. Le profil de VM est utilisé pour déployer l'environnement de développement, la recette, et la production. Plus besoin de passer une journée à configurer l'environnemt d'un nouvel arrivant dans la société.
 
-Il suffit de créer l'instance de la VM à partir du descripteur tout est automatisé. C'est du temps investi au début certes, mais utile ! 
+Il suffit de créer l'instance de la VM à partir du descripteur tout est automatisé. C'est du temps investi au début certes, mais utile !
 
 Pensez au nombre de fois où vous avez explosé votre environnement, et au temps passé à réparer ! L'idée c'est qu'il est plus rapide de refaire depuis le néant que de restaurer un état précédent qui n'est pas toujours égale au vrai état précédent.
 

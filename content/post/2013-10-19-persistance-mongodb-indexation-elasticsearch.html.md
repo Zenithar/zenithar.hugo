@@ -14,6 +14,8 @@ tags:
 
 ---
 
+{{% alert "w3-red w3-card-8 w3-text-white" "Attention !" "Le concept de 'river' a été supprimé d'ElasticSearch, cet article n'est plus à jour." %}}
+
 Je travaille actuellement sur un projet personnel utilisant [MongoDB](http://www.mongodb.org/) comme base de persistance, et j'ai eu besoin de mettre en place un dispositif de recherche multi-critères (geo, fuzzy, etc.), mon choix c'est tout de suite pencher sur [ElasticSearch](http://www.elasticsearch.org/).
 
 ElasticSearch est un moteur de recherche clusterisable, basé sur Lucene. Il fonctionne sous la forme d'un grid d'instance qui équilibre les indexes entre les membres d'un même cluster.

@@ -13,7 +13,7 @@ tags:
   - niagara
 ---
 
-![Niagara](/images/articles/2016/canada/niagara.jpg)
+{{% imgblur prefix="/images/articles/2016/canada/niagara" %}}
 
 ## Niagara
 

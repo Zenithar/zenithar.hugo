@@ -15,7 +15,7 @@ tags:
   - croisière
 ---
 
-![Les mille-îles](/images/articles/2016/canada/mille-iles.jpg)
+{{% imgblur prefix="/images/articles/2016/canada/mille-iles" %}}
 
 ## Les milles-îles
 

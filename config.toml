@@ -9,8 +9,8 @@ theme = "bleak"
 SectionPagesMenu = "Main"
 
 [permalinks]
-  post = "/post/:year/:month/:day/:slug"
-  project = "/project/:year/:month/:day/:slug"
+  post = "/post/:year/:month/:day/:slug/"
+  project = "/project/:year/:month/:day/:slug/"
 
 [indexes]
   tag = "tags"

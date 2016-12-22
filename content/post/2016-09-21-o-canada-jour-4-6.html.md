@@ -13,7 +13,7 @@ tags:
   - ottawa
 ---
 
-![Ottawa de nuit](/images/articles/2016/canada/ottawa-night.jpg)
+{{% imgblur prefix="/images/articles/2016/canada/ottawa-night" %}}
 
 ## Ottawa
 

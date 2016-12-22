@@ -13,7 +13,7 @@ tags:
   - toronto
 ---
 
-![Toronto](/images/articles/2016/canada/toronto.jpg)
+{{% imgblur prefix="/images/articles/2016/canada/toronto" %}}
 
 ## Toronto
 

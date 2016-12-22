@@ -13,7 +13,7 @@ tags:
   - canyon
 ---
 
-![Canyon Saint-Anne](/images/articles/2016/canada/canyon.jpg)
+{{% imgblur prefix="/images/articles/2016/canada/canyon" %}}
 
 ## Le canyon Saint-Anne
 
