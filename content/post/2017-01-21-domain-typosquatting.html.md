@@ -5,6 +5,7 @@ title: "Domain Typosquatting"
 description: "Explication d'un principe de phishing de site internet exploitant la ressemblance des caractères pour tromper l'utilisateur."
 slug: domain-typosquatting
 featured: true
+image: /images/articles/2017/goggle-typo.jpg
 tags:
   - securite
   - dns
@@ -13,6 +14,8 @@ tags:
 ---
 
 > Bonne Année à toutes et à tous !
+
+![Goggle](/images/articles/2017/goggle-typo.jpg)
 
 Il existe plusieurs techniques pour avoir des domaines proches du domaine
 original. Le typosquatting est une manière de crédibiliser un phishing.
@@ -27,7 +30,7 @@ Avant, mais ça c'était avant, on ne pouvait enregistrer.. un domaine auprès d
 > Puis vint l'UTF-8 ...
 
 Depuis quelques années, il est possible d'obtenir des noms de domains utilisant
-l'encodage UTF-8 pour le nom. Ce qui a pour effet de passer de 255 caractères
+l'encodage UTF-8 pour le nom. Ce qui a pour effet de passer de 38 caractères ([a-z0-9\\-\\\_])
 possibles à plus de 1 millions, essentiellement pour pouvoir écrire toutes les
 langues en utilisant un seul encodage.
 
