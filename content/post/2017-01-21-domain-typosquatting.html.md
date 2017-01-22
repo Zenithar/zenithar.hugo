@@ -21,7 +21,7 @@ original. Le typosquatting est une manière de crédibiliser un phishing.
 
 > Il était une fois l'ASCII ...
 
-Avant, mais ça c'était avant, on ne pouvait enregistré un domaine auprès du
+Avant, mais ça c'était avant, on ne pouvait enregistrer.. un domaine auprès du
 `registrar`, des noms de domains contenant que des caractères de la table ASCII.
 
 > Puis vint l'UTF-8 ...
@@ -108,6 +108,6 @@ Usage of ./typogen:
   -s="zenithar": Defines string to alternate
 ```
 
-J'ai implémenté cette librairie a partir du programme Python [dnstwist](https://github.com/elceef/dnstwist).
+J'ai implémenté cette librairie à partir du programme Python [dnstwist](https://github.com/elceef/dnstwist).
 
-Si vous avez de nouvelles stratégies de génération, `Pull requests are welcomed !`.
+Si vous avez de nouvelles stratégies de génération, `Pull requests are welcome !`.
