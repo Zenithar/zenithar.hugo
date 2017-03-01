@@ -9,4 +9,5 @@ tags:
  - golang
  - test
  - design
+lastmod: 2017-03-01T11:27:30+01:00
 ---

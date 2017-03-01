@@ -7,6 +7,7 @@ slug: archlinux-raspberry-pi
 tags:
  - linux
  - raspberry
+lastmod: 2017-03-01T11:27:30+01:00
 ---
 
 > TL;DR => Si vous voulez simplement récupérer l'image, c'est par [ici](https://mega.nz/#!BYEiDADT!n4h-uAuNNqRL4bQifMGB3TvdXNLPYRpv3pzKc92xIso) (2016-06-01).

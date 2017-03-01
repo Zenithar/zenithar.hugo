@@ -8,6 +8,7 @@ tags:
  - linux
  - stage
 
+lastmod: 2017-03-01T11:27:19+01:00
 ---
 
 J'ai découvert une alternative très intéressante à VMWare, elle se nomme [VirtualBox](http://www.virtualbox.org), en effet cet émulateur fonctionne très bien et en plus il est sous licence GPL ^^. A suivre ...

@@ -8,6 +8,7 @@ tags:
  - cmake
  - kde
 
+lastmod: 2017-03-01T11:27:21+01:00
 ---
 
 I’ve made some changes and bug fixes in “[gencmake](http://websvn.kde.org/trunk/KDE/kdesdk/cmake/scripts/gencmake?view=log)” & “[am2cmake](http://websvn.kde.org/trunk/KDE/kdesdk/cmake/scripts/am2cmake?view=log)” script, to convert automake files that use static libraries ‘.la’, and some code clean up.

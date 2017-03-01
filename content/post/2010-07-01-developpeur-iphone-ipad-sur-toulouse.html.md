@@ -8,6 +8,7 @@ tags:
  - iphone
  - job
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 Je suis à la recherche d'un développeur iPhone / iPad, pour un projet professionnel avec un éditeur de logiciel local sur Toulouse.

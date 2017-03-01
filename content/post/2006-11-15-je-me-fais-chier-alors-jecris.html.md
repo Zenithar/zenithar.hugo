@@ -8,6 +8,7 @@ tags:
  - iup
  - toulouse
 
+lastmod: 2017-03-01T11:27:18+01:00
 ---
 
 Bonjour à tous mes lecteurs ^^, je suis  actuellement en cours d'IL1 (Ingénierie Logiciel 1).

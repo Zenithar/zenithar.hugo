@@ -10,6 +10,7 @@ tags:
  - toulouse
  - umbrello
 
+lastmod: 2017-03-01T11:27:19+01:00
 ---
 
 Aujourd'hui, avec la dernière revue, en grande ponte, marque la fin des projets de Master 1ere année de l'IUP de Toulouse.

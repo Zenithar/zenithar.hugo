@@ -6,6 +6,7 @@ slug: fable-the-lost-chapters
 tags:
  - jeux
 
+lastmod: 2017-03-01T11:27:15+01:00
 ---
 
 Et voila, un nouveau jeu ...

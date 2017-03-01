@@ -7,6 +7,7 @@ tags:
  - iup
  - stage
 
+lastmod: 2017-03-01T11:27:16+01:00
 ---
 
 Voila mise en place du domaine terminé (Domaine SAMBA). Un petit changement au programme suite à une découverte : je viens de mettre la main sur un bijou pour le déploiement d'application sur environnement MS, [WPKG](http://wpkg.org/) c'est un programme permettant de déployer des applications sous forme EXE, MSI (différents installeurs supportés) au login de la personne ou par le biais d'un service qui veille et interroge périodiquement un fichier XML conservant tous les profils d'installation.

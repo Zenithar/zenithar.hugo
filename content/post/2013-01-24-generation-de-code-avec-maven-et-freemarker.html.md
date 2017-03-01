@@ -9,6 +9,7 @@ tags:
  - freemarker
  - java
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 J'utilise de plus en plus dans mes applications les évènements Spring car je trouve ça tout simplement pratique et cela offre un découplage simple et efficace des applications.

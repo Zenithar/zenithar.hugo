@@ -10,6 +10,7 @@ tags:
  - uml
  - xmi
 
+lastmod: 2017-03-01T11:27:23+01:00
 ---
 
 Deuxieme plugin pour RoR, permettant cette fois de produire une application RoR, directement depuis un modèle UML exporté en XMI. J'ai défini un profil XMI, ajoutant ainsi des extensions au méta modèle. Le générateur utilise ces informations dans le but d'initialiser les modèles, controleurs, et vues (c'est possible aussi) RoR (Validations automatiques, génération des tests Rspec, etc. ). Bon pour l'instant c'est correct dans le texte, c'est fonctionnel en partie, reste plus qu'à intégrer le tout. J'avoue mettre un petit peu inspiré du dernier partiel d'OCL.

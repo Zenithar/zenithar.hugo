@@ -11,6 +11,7 @@ tags:
  - puremvc
  - uml
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 Bonsoir à tous, ça fait un petit bout de temps que ce modèle traine sur mon PC, je suis en train de faire le ménage en vue de changement de matériel, et j'ai donc décidé de publier ce modèle.

@@ -11,6 +11,7 @@ tags:
  - golang
  - google
 
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Déjà un petit moment que je roule ma bosse avec Go, j'avoue qu'aujourd'hui c'est un peu mon python d'avant ^^

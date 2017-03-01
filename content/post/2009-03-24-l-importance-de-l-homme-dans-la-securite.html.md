@@ -10,6 +10,7 @@ tags:
  - virus
  - zanshin
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 Non je ne vais pas faire un plagiat du livre de K.Mitnick “L’art de la  supercherie”, c’est juste encore une fois des observations issues de mon travail  de tous les jours, mais je vous conseille sa lecture.

@@ -6,6 +6,7 @@ slug: statistiques-visiteurs
 tags:
  - life
 
+lastmod: 2017-03-01T11:27:19+01:00
 ---
 
 Voici la carte de provenance de mes visiteurs :

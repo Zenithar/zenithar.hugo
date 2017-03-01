@@ -8,6 +8,7 @@ tags:
  - linux
  - opensuse
 
+lastmod: 2017-03-01T11:27:18+01:00
 ---
 
 Résolution 2007 n°1 : ça y est c'est fait ! Je suis passé complètement sous Linux, fini Windows, pourquoi ? Après le test de Vista ! J'aime bien ce système cependant, je le trouve vraiment chiant à l'utilisation quotidienne. J'ai donc choisi le "vista killer" OpenSUSE 10.2 comme système alternatif.

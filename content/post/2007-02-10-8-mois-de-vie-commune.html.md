@@ -6,6 +6,7 @@ slug: 8-mois-de-vie-commune
 tags:
  - emi
 
+lastmod: 2017-03-01T11:27:18+01:00
 ---
 
 Je t'aime, et bon courage pour ton concours ma chérie.

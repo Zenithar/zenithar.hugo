@@ -10,6 +10,7 @@ tags:
  - google
  - protobuf
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 Je travaille actuellement pas mal avec [RabbitMQ](http://www.rabbitmq.com), [AKKA](http://akka.io/), et surtout [Protobuf](https://code.google.com/p/protobuf/). Pourquoi Protobuf et pas Jackson ? Et bien c'est simple pour la rapidité de sérialization / déserialisation, mais aussi le portage simple vers d'autres langages supportés par Protobuf Compiler : Java, C, Python par défaut.

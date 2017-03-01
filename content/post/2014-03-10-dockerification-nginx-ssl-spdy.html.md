@@ -14,6 +14,7 @@ tags:
  - nginx
  - spdy
 
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 On entend beaucoup parler de [Docker](https://www.docker.io/) en ce moment que ce soit sur les réseaux sociaux modernes ou plus anciens. Il est clair que cela buzz pas mal autour de cette technologie basé sur [LXC](http://linuxcontainers.org/) (LinuX Container), sorte de super chroot portable.

@@ -13,6 +13,7 @@ tags:
  - nginx
  - suexec
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 Bonsoir à tous, je me suis enfin motivé pour rédiger un multi-post, même si a mon avis un blog n'est pas fait dans cet objectif. (c'est plus le rôle d'un wiki)

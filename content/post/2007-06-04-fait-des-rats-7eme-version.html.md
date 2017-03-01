@@ -7,6 +7,7 @@ tags:
  - fedora
  - linux
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 ![fedora.png](/public/Linux/fedora.png) Attention on ne dit plus Fedora "Core", du fait de la jointure des dépots "Core" & "Extras", qui étaient maintenus par les développeurs RedHat pour "Core", et des contributeurs pour "Extras", mais Fedora 7 (moonlight).

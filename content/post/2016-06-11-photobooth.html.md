@@ -10,6 +10,7 @@ tags:
  - raspberry
  - linux
  - github
+lastmod: 2017-03-01T11:27:30+01:00
 ---
 
 Voici le code du photobooth que j'ai développé pour mon mariage. [RaspiBooth](https://github.com/Zenithar/raspbooth)

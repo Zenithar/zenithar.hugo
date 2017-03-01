@@ -8,6 +8,7 @@ tags:
  - theme
  - wordpress
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 Un nouveau thème, du nettoyage et il pleut ! Ne serait ce pas l'arrivée de l'automne ?

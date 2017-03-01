@@ -7,6 +7,7 @@ tags:
  - opencube
  - stage
 
+lastmod: 2017-03-01T11:27:21+01:00
 ---
 
 Le rapport de stage chez OpenCube vient de passer l'étape de validation, il sera expédié comme prévu.

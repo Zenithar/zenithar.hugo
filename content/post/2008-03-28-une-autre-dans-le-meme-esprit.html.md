@@ -7,6 +7,7 @@ tags:
  - code quality
  - g33k
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 ![WTF - Code Quality](http://static.zenithar.org/wp-content/uploads/wtfm.jpg)

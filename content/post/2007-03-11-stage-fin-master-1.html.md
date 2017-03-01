@@ -9,6 +9,7 @@ tags:
  - stage
  - toulouse
 
+lastmod: 2017-03-01T11:27:19+01:00
 ---
 
 Voila, je vais effectuer mes 5 mois de stage de fin d'études de mon Master 1 chez [OpenCube](http://www.opencubetech.com/). Le stage se déroule en deux parties :

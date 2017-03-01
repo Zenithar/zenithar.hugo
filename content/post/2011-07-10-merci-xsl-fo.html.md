@@ -11,6 +11,7 @@ tags:
  - xsl-fo
  - xslt
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Pour des besoins professionnels, j'ai du apprendre à utiliser XSL-FO, au debut j'ai avais vraiment pas envie, mais bon au final si on a une bonne connaissance HTML / CSS2, on s'en sort sans problème.

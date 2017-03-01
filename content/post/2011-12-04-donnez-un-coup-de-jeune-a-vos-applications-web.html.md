@@ -8,6 +8,7 @@ tags:
  - spring
  - web
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Le développement d'application Web a bien évolué avec l'essor émergeant des nouvelles technologies (HTML5, JS, etc.). Autrefois, la complexité des applications étaient déportée sur le serveur hébergeant le service, avec la montée en puissance des navigateurs et technologies clientes, il est possible d'effectuer une partie du travaille dans le navigateur :

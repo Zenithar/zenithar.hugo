@@ -8,6 +8,7 @@ tags:
  - kde
  - linux
 
+lastmod: 2017-03-01T11:27:19+01:00
 ---
 
 Voici quelques utilitaires que j'utilise sous Linux :

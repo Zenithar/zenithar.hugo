@@ -9,6 +9,7 @@ tags:
  - g33k
  - linux
 
+lastmod: 2017-03-01T11:27:21+01:00
 ---
 
 Une vidéo mettant en oeuvre le nouveau Compize-Fusion, (ex Beryl) sur une Ubuntu.

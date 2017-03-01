@@ -10,6 +10,7 @@ tags:
  - mozilla
  - record
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 Voial j'allais prendre mon ptit firefox 3 comme attendu à 19h00, ben voila mozilla en berne !

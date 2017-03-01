@@ -8,6 +8,7 @@ tags:
  - g33k
  - suexec
 
+lastmod: 2017-03-01T11:27:23+01:00
 ---
 
 Ca y est j'ai enfin réussi à faire tourner la plateforme sous FastCGI + SuEXEC, pour pouvoir exécuter les virtualhosts avec des utilisateurs et groupes différents des uns des autres.

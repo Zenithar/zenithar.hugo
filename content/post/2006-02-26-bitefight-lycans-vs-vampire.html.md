@@ -6,6 +6,7 @@ slug: bitefight-lycans-vs-vampire
 tags:
  - g33k
 
+lastmod: 2017-03-01T11:27:16+01:00
 ---
 
 Par les créateurs du jeu Ogame [BiteFight](http://s2.bitefight.fr/). 

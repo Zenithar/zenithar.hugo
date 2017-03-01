@@ -6,6 +6,7 @@ slug: bonne-annee
 tags:
  - emi
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 Oui ça fait un an, aujourd'hui qu'on est ensemble, déjà... ça passe trop vite ^^ (En même temps, mieux vaut ça que conter les heures ...). Ah lala ! ça fait bizarre d'entendre des personnes de votre famille, dire fait la bise à ta femme de ma part ^^. C'est rigolo, mais j'aime ça !

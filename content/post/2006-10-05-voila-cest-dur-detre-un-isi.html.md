@@ -8,6 +8,7 @@ tags:
  - iup
  - toulouse
 
+lastmod: 2017-03-01T11:27:17+01:00
 ---
 
 Pourquoi on est pas comme tous les autres 20h de cours par semaine ? Non 45h ! J'en ai marre des cours, je me fais chier, l'école est trop "scolaire" même dans ma formation dites professionnalisée. Pourquoi cela ne m'intéresse plus ? Aurais-je perdu ma passion ? ou simplement un raz le bol ...

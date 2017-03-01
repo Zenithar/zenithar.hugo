@@ -9,6 +9,7 @@ tags:
  - gtk
  - opensuse
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 J'ai effectué la mise à jour d'OpenSuSE 11.3 -> 11.4 par le processus de mise à jour depuis le DVD d'installation, j'ai eu un petit soucis par la suite plus aucune application GTK ne fonctionnait correctement (heureusement que je suis sous KDE ^^).

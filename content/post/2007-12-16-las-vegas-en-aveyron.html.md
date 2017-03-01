@@ -9,6 +9,7 @@ tags:
  - noel
  - salmanac
 
+lastmod: 2017-03-01T11:27:23+01:00
 ---
 
 ![Salamanac](http://static.zenithar.org/wp-content/uploads/photo0055.jpg)

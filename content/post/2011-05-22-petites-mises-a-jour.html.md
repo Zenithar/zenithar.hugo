@@ -7,6 +7,7 @@ tags:
  - cv
  - wordle
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
   * Mise à jour du CV

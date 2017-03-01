@@ -6,6 +6,7 @@ slug: la-programmation-objet-evidence-ou-fatalite
 tags:
  - g33k
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 Comment avoir de l'objet en ANSI-C ?

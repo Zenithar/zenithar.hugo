@@ -8,6 +8,7 @@ tags:
  - emi
  - toulouse
 
+lastmod: 2017-03-01T11:27:18+01:00
 ---
 
 Voila un très bon réveillon en Aveyron, chez une amie à ma petite chérie (soirée raclette). De retour à 4h du mat, _Ils ont des chapeaux ronds !_ ... Maintenant retour dans le monde réel, boulot quand tu nous tiens ! En tout cas 2 semaine sans penser, réfléchir, ni travailler pour l'ecole ça fait trop de bien ^^

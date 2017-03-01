@@ -9,6 +9,7 @@ tags:
  - toulouse
  - wii
 
+lastmod: 2017-03-01T11:27:22+01:00
 ---
 
 De retour du TGS (Toulouse Game Show) à ne pas confondre avec le Tokyo Game Show, qui est d'après mes sources 15 fois plus grand en surface ! Au programme, jeux vidéos (Guitar hero, Mario Galaxy, Wii sport, etc ...), mangas (Naruto, Bleach, ...), du cosplay (Personnage matérialisé par des déguisements), du Japan Art, enfin plein de souvenirs.

@@ -9,6 +9,7 @@ tags:
  - design patterns
  - gof
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 On va encore dire que je suis obsédé par les "design patterns" je sais ! Mais bon j'ai toujours pas trouvé une fiche avec les DP bien présentés, je sens que je vais en faire une comme ça, j'aurais ce que je veux ...

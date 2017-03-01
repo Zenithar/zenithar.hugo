@@ -9,6 +9,7 @@ tags:
  - toulouse
  - umbrello
 
+lastmod: 2017-03-01T11:27:18+01:00
 ---
 
 ![](/images/60px-KDE_logo.svg.png) Voici le premier commit-digest où le groupe Umbrello/Kplato apparait.

@@ -8,6 +8,7 @@ tags:
  - node.js
  - tutorial
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Cet article fait suite à la [présentation des concepts Backbone.JS](http://blog.zenithar.org/articles/2012-03-04-backbone-dot-js-presentation.html). Vous devez avoir connaissance d'une base de Javascript pour aborder de manière sereine la partie suivante.

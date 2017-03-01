@@ -11,6 +11,7 @@ tags:
   - dns
   - idna
   - url
+lastmod: 2017-03-01T11:27:30+01:00
 ---
 
 > Bonne Année à toutes et à tous !
@@ -112,5 +113,15 @@ Usage of ./typogen:
 ```
 
 J'ai implémenté cette librairie à partir du programme Python [dnstwist](https://github.com/elceef/dnstwist).
+
+Vous pouvez générer tous les domaines, avec tous les TLDs :
+
+```
+$ typogen -s "zenithar" | tldexpand | resolve >> typo_squatter.csv
+```
+
+> Attention à l'explosion combinatoire ... dans mon cas 588587 combinaisons ^^
+
+Le principe est que si cela résouds vous avez une chance d'être typosquatté !
 
 Si vous avez de nouvelles stratégies de génération, `Pull requests are welcome !`.

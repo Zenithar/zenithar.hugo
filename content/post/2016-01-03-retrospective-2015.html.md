@@ -10,6 +10,7 @@ tags:
  - golang
  - docker
  - securite
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Bonne année à toutes et à tous !

@@ -12,6 +12,7 @@ tags:
  - total
  - toulouse
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 Voila ça fait 6 mois (depuis le 26/02/08) que j'ai commandé ma ligne et ma freebox. Comme prévu je reçois un appel d'un sous traitant de france télécom pour venir me câbler la ligne en Total Freebox, celui ci me donne un rendez-vous, nickel chrome, je me dis lundi (17/03/08) c'est bon j'ai ma ligne.

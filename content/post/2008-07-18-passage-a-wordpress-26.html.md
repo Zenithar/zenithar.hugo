@@ -11,6 +11,7 @@ tags:
  - url
  - wordpress
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 Une mise à jour plutôt sous le signe de la galère ... En général ça se passe sans pb ! Bien pas cette fois !

@@ -9,6 +9,7 @@ tags:
  - pango
  - utf-8
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 Vous avez certainement déja vu ça, dans la configuration suivante :

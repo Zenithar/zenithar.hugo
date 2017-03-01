@@ -8,6 +8,7 @@ tags:
  - glasgow
  - kde
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 Premier jour à la aKademy, découverte de l'université de StrathClyde. Je suis allé au conférence KDE, Trolltech, Mandriva, M.Ubuntu ^^. Journée très intéressante, et riche en rencontres lol, on a rencontré M.Commit Challenger (Laurent Montel), tu m'excuseras Laurent mais si je savais pas que c'était toi, je l'aurais jamais deviné ^^

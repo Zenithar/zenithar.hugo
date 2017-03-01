@@ -6,6 +6,7 @@ slug: des-photos-venues-dailleurs
 tags:
  - crash
 
+lastmod: 2017-03-01T11:27:14+01:00
 ---
 
 je vous présente GuildWars revu et corrigé par Picasso lui même ! 

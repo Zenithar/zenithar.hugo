@@ -9,6 +9,7 @@ tags:
  - sans
  - ssi
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 [![](http://static.zenithar.org/wp-content/uploads/2011/09/facteur_humain.gif)](http://static.zenithar.org/wp-content/uploads/2011/09/facteur_humain.gif)Voila plus de deux ans que j'ai quitté le monde de la sécurité informatique, pour me diriger vers le développement. Et je me pose une simple question : La sécurité informatique est-ce une nécessité ou un paradoxe induit de son utilisation ?

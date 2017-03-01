@@ -7,6 +7,7 @@ tags:
  - life
  - roller
 
+lastmod: 2017-03-01T11:27:21+01:00
 ---
 
 Bon voila tout est dans le titre, puisqu'il y a des gens "sympathiques" qui n'ont qu'objectifs de vous faire chier dans la vie, en volant le fruit du travail, ou les cadeaux des amis, comme un vélo par exemple, j'ai décidé d'apprendre à faire du roller pour ne pas avoir à laisser mon transport dans un local qui ressemble plus à un supermarché ouvert tous les Jeudi ... .

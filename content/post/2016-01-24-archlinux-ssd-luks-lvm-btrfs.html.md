@@ -10,6 +10,7 @@ tags:
  - luks
  - btrfs
  - ssd
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 J'utilise Archlinux depuis plus de 3 ans maintenant comme système d'exploitation

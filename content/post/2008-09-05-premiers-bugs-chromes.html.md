@@ -12,6 +12,7 @@ tags:
  - poc
  - seh
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 Avec la sortie du "nouveau" navigateur de Google qui plus est OpenSource, on voit apparaitre les premiers bugs et [PoC (Proof of Concept)](http://fr.wikipedia.org/wiki/Proof_of_concept).

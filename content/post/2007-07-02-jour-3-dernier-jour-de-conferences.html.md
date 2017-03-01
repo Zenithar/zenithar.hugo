@@ -8,6 +8,7 @@ tags:
  - glasgow
  - kde
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 Nous avons eut aujourd'hui une conférence qui parlaient de nous (students of toulouse IUP school). Ervin a été félicité pour cette innovation, et il semblerait que l'idée soit aller en Inde, ils veulent suivre cette idée d'intégrer des projets OpenSource dans le cursus de l'enseignement à la place de produire des projets académiques [ inutiles ]. Voila remise des aKademy awards, ensuite nous sommes allés dans un pub franchement trop bien le cadre (un peu impérial), mais le concept est pas mal, pas de service en fait on doit aller chercher, commander, juste le plat est amené par le serveur.

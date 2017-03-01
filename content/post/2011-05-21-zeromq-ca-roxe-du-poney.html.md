@@ -12,6 +12,7 @@ tags:
  - soa
  - zmq
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Voici un broker peu traditionnel, car ils sont souvent distribués sous la forme d'une application complète ([ActiveMQ](http://activemq.apache.org/), [RabbitMQ](http://www.rabbitmq.com/), etc.), ici il s'agit d'une librairie C (~2Mo) LGPL et il existe plus d'une vingtaine de bindings (C++, Java, Ruby, Node.JS, ...).

@@ -9,6 +9,7 @@ tags:
  - mvc
  - struts2
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 [![The cake is a lie !](http://static.zenithar.org/wp-content/uploads/2011/05/images.jpeg)](http://static.zenithar.org/wp-content/uploads/2011/05/images.jpeg)

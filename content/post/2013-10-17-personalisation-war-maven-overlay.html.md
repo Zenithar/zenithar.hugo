@@ -10,6 +10,7 @@ tags:
  - java
  - maven
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 Le système de packaging WAR (Web Application Archive) est un format (ZIP) de distribution d'application java web. Il assemble les ressources statiques (html, css, js) avec le code compilé.

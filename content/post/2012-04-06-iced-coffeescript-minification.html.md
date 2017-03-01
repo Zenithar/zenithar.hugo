@@ -8,6 +8,7 @@ tags:
  - uglifyjs
  - minification
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 J'ai recherché un moyen de modifier la sortie du code généré par le compilateur CoffeeScript. En consultant la documentation, j'ai trouvé [ceci](https://github.com/jashkenas/coffee-script/wiki/%5BExtensibility%5D-Hooking-into-the-Command-Line-Compiler)

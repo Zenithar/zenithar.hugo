@@ -7,6 +7,7 @@ tags:
  - migration
  - wordpress
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 Voila je viens de terminer la migration de mon Blog vers WordPress 2.x, lors de la migration DotClear 1.x vers 2.x, j'ai hésité mais voila le développement de DotClear est trop lent, alors je migre vers une autre solution, c'est la loi du marché ^^.

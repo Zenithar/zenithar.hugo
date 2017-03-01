@@ -7,6 +7,7 @@ tags:
  - linux
  - securite
 
+lastmod: 2017-03-01T11:27:16+01:00
 ---
 
 J'ai testé une distribution Linux, basée sur une Slackware Live. Cette distribution est une concentration d'outils sympatique, pour faire mumuse avec le réseau, les paquets ... . Franchement bien faite, y a même le drivers ipw2200, et des outils comme Kismet, aircrack, fragroute ... Enfin un bonne distrib de HaXoR.

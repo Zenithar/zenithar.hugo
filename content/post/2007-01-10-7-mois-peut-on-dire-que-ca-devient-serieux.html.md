@@ -6,6 +6,7 @@ slug: 7-mois-peut-on-dire-que-ca-devient-serieux
 tags:
  - emi
 
+lastmod: 2017-03-01T11:27:18+01:00
 ---
 
 "Tea for two, ..., you & me, and me & you" ...

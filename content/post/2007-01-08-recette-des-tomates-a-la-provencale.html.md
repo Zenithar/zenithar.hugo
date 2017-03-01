@@ -7,6 +7,7 @@ tags:
  - cuisine
  - tomate
 
+lastmod: 2017-03-01T11:27:18+01:00
 ---
 
 Ami cuisto, ou gourmand notoire, viens voir tonton pour qu'il t'explique la recette des tomates à la provencale.

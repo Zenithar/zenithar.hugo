@@ -7,6 +7,7 @@ tags:
  - bookmarklet
  - jquery
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Je suis en pleine découverte de Node.JS, MongoDB et tout. Je manipule forcément du Javascript, et dans certains cas il manque les fonctionnalités de son framework préféré pour utiliser un service REST par exemple.

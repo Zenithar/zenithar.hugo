@@ -8,6 +8,7 @@ tags:
  - toulouse
  - velouse
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 Dans le cadre du programme "nuits des musées", la ville de Toulouse a ouvert les portes de pas mal de musées, en l'occurrence : le museum des histoires naturelles.

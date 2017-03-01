@@ -14,6 +14,7 @@ tags:
  - netgear
  - synchro
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 Je viens de recevoir mon avis d'activation de ligne : hourra enfin !

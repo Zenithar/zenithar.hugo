@@ -6,6 +6,7 @@ slug: get-back-to-work
 tags:
  - g33k
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 [![Compiling](http://static.zenithar.org/wp-content/uploads/compiling.png)](http://static.zenithar.org/wp-content/uploads/compiling.png)

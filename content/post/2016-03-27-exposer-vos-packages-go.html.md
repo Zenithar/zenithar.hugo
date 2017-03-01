@@ -8,6 +8,7 @@ featured: true
 tags:
  - golang
  - github
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 J'ai ouvert mon "[framework](https://github.com/Zenithar/golang-common)"

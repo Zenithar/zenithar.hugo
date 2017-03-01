@@ -10,6 +10,7 @@ tags:
  - toulouse
  - umbrello
 
+lastmod: 2017-03-01T11:27:17+01:00
 ---
 
 ![](/images/60px-KDE_logo.svg.png) Le BE du Master ISI vient de commencer, il s'agit (pour une fois) d'un sujet intéressant : nous reprenons un projet **actif**, développé par les contributeurs [KDE](http://www.kde.org/) [Umbrello](http://uml.sf.net/), le but du projet sera le portage vers QT/KDE 4, l'ajout des fonctionnalités pour utiliser UML 2.0.

@@ -7,6 +7,7 @@ tags:
  - iup
  - stage
 
+lastmod: 2017-03-01T11:27:16+01:00
 ---
 
 Ouah ça fait du bien après tout ça de ce dire, j'ai fini plus de cours, plus de partiels ... Maintenant retour au stage !

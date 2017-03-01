@@ -9,6 +9,7 @@ tags:
  - kde
  - linux
 
+lastmod: 2017-03-01T11:27:22+01:00
 ---
 
 L'atelier KDE de ce mois-ci a eut lieu au centre culturel de Bellegarde. Programme de la journée : bosser, bosser, bosser ! On sent que la sortie de KDE 4 est proche.

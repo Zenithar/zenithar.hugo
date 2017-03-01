@@ -6,6 +6,7 @@ slug: six-mois-damour
 tags:
  - emi
 
+lastmod: 2017-03-01T11:27:18+01:00
 ---
 
 Et voila, ça fait 6 mois aujourd'hui qu'on est ensemble ! 3 mois que l'on vit ensemble ! 1 mois que l'on possède notre appartement ! Et 2 min que je ne lui ai pas fait de bisous ^^

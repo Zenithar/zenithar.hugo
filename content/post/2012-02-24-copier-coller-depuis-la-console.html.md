@@ -10,6 +10,7 @@ tags:
  - copier
  - coller
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Petite découverte de la journée, j'ai eu le besoin de copier un fichier de la console vers un programme "graphique".

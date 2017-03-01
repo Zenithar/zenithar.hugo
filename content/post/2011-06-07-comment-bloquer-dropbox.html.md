@@ -7,6 +7,7 @@ tags:
  - dropbox
  - firewall
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Aujourd'hui de nombreuses solutions de stockage sur le "cloud", sont disponibles cependant elles provoquent des problèmes de sécurité liés au fait qu'il passe les firewalls au travers du port HTTPS (443/TCP).

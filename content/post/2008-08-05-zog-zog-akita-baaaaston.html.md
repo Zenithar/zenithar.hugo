@@ -11,6 +11,7 @@ tags:
  - neko
  - twin
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 Derrière ce titre au combien évocateur se cache biensur l'ogre et le barbare du [donjon de naheulbeuk](http://www.penofchaos.com/warham/donjon.htm). Alors maintenant pourquoi citer ces oeuvres ?

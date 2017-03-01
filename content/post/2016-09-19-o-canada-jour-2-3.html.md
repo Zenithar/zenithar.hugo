@@ -12,6 +12,7 @@ tags:
   - mariage
   - montreal
   - mont-royal
+lastmod: 2017-03-01T11:27:30+01:00
 ---
 
 ![](/images/articles/2016/canada/montreal-pano.jpg)
