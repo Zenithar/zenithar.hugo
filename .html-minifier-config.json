@@ -17,11 +17,12 @@
   "maxLineLength": 0,
   "minifyCSS": false,
   "minifyJS": true,
-  "preserveLineBreaks": true,
+  "preserveLineBreaks": false,
   "preventAttributesEscaping": false,
   "processConditionalComments": true,
   "processScripts": [
-    "text/html"
+    "text/html",
+    "application/ld+json"
   ],
   "removeAttributeQuotes": false,
   "removeComments": true,
