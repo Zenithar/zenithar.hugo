@@ -6,8 +6,7 @@ description: "Mise en place d'une blockchain privée en utilisant le protocole
 Ethereum"
 slug: blockchain-privee-ethereum
 featured: true
-draft: true
-image: /images/articles/2017/ethereum.png
+image: /images/articles/2017/ethereum.jpg
 tags:
   - securite
   - dev
@@ -15,7 +14,7 @@ tags:
   - ethereum
 ---
 
-![Ethereum](/images/articles/2017/ethereum.png)
+![Ethereum](/images/articles/2017/ethereum.jpg)
 
 On entends de plus en plus parler des blochains c'est un `buzzword` à la mode
 mais derrière ce mot se cache un concept très simple (à la base).
