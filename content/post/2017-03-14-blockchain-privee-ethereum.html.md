@@ -62,11 +62,19 @@ bloc ne faisant pas référence à son bloc parent. Ce bloc est nommé bloc de g
 ( `genesis block` en anglais ), sans cela la blockchain ne peut pas
 [danser](https://www.youtube.com/watch?v=qOyF4hR5GoE) correctement (ok c'est nul !).
 
+> Si vous comprenez la capilo-tractation de cette remarque, j'en suis
+désolé.
+
 ## Initialisation du bloc de génèse
+
+Le bloc de génèse est le seul bloc de la chîne a ne pas avoir de
+référence vers un bloc parent.
+Il initialise un certains nombre de contraintes et paramètres qui
+seront appliqués à l'ensemble de la chaîne.
 
 ```json
 {
-    "nonce": "0x2beaf001deadbeef",
+    "nonce": "0xdefec8eddeadbeef",
     "timestamp": "0x0",
     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "extraData": "0x0",
@@ -75,9 +83,6 @@ bloc ne faisant pas référence à son bloc parent. Ce bloc est nommé bloc de g
     "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "coinbase": "0x3333333333333333333333333333333333333333",
     "alloc": {
-      "0xedf0e8c867b633d83b10880dbd57c7d64d30a67d": {
-        "balance": "1000"
-      }
     }
 }
 ```
@@ -94,4 +99,144 @@ bloc ne faisant pas référence à son bloc parent. Ce bloc est nommé bloc de g
 | *coinbase*   | Addresse vers laquelle toutes les récompenses de minages vont. (160bit) |
 | *alloc*      | Liste de compte pré-alloués lors de l'initialisation de la chaîne de bloc. |
 
-## Parity
+## Geth
+
+[Geth](https://github.com/ethereum/go-ethereum) est une
+implémentation en Go du protocole Ethereum. Il en existe d'autres :
+
+  * [Parity](https://github.com/paritytech/parity) (Rust)
+  * [eth](https://github.com/ethereum/cpp-ethereum) (CPP)
+  * ...
+
+Les clients sont souvent spécialisés pour le minage en fonction de
+la facilité à déporter du calcul dans les GPU pour le minage.
+
+Pour une utilisation standard, je vous invite à utiliser Geth ou Parity.
+
+### Initialisation
+
+Pour initialiser une chaîne de blocs, il faut choisir un identifiant,
+cet identifiant devra être fournit à chaque lancement de toutes les
+commandes.
+
+```sh
+$ geth genesis.json --datadir <répertoire de stockage> --networkid 42 init genesis.json
+...
+I0327 11:13:40.936283 cmd/geth/chaincmd.go:132] successfully wrote genesis block and/or chain rule set: ee25f30d007865560325a5efeb12d5191118d760544103f0894f984be92fed4b
+```
+
+Nous venons d'initialiser une chaîne de bloc vide identifiée par le
+numéro `42`.
+
+Il faut créer un compte contenant des `ether` à l'initialisation
+de la chaîne.
+
+Cette étape n'est pas nécessaire vu la difficulté de minage très
+faible, vous allez avoir plus de 1000 ether en quelques minutes de
+minage.
+
+Cependant elle permet de tester rapidement sans attendre d'avoir
+de l'`ether` pour exécuter les contracts.
+
+### Création d'un compte
+
+Il existe une [console Javascript](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console) utilisable depuis la console.
+Cette console fournit un ensemble de commande organisée en package :
+
+  * `admin`: gestion du noeud (connexions, chaînes)
+  * `miner`: gestion du processus de minage
+  * `personal`: gestion des comptes
+  * `txpool`: visualisation de transactions en cours
+  * `debug`: fonctions de développement
+  * `web3`: fonction générale de gestion [d'application Ethereum](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+
+Nous allons manipuler l'API `personal` afin de créer un portefeuille
+qui nous allons approvisionner par la suite.
+
+```sh
+$ geth --datadir <répertoire de stockage> --networkid 42 --nodiscover --maxpeers 0 console
+> personal.newAccount("password");
+"0x2c3940817ce8bbe679251ef11c382c2edafece14"
+>
+```
+
+### Approvisionnement et réinitialisation
+
+Il faut a présent réinitialiser la chaîne pour pouvoir profiter du
+solde.
+
+```sh
+$ cd <répertoire de stockage>
+$ rm -rf chain history
+```
+
+Il faut effacer les données de la chaîne, *PAS LES COMPTES* !
+Il faut d'abord provisionner le compte en modifiant le bloc de
+génèse :
+
+```json
+{
+    "alloc": {
+      "0x2c3940817ce8bbe679251ef11c382c2edafece14": {
+        "balance": "10000000000000000000"
+      }
+    }
+}
+```
+
+Puis réinitialiser la chaîne en gardant le même repertoire de stockage
+contenant les comptes `keystore`.
+
+```sh
+$ geth genesis.json --datadir <répertoire de stockage> --networkid 42 init genesis.json
+...
+I0327 11:17:50.689583 cmd/geth/chaincmd.go:132] successfully wrote genesis block and/or chain rule set: 062b4561d6b8cc4bc2f838eded86384cfd8d47422d39c4b3fdc763e26a283ca8
+```
+
+> Voilà la chaîne est prète !
+
+### Noeud de minage
+
+La chaîne de bloc est prête mais vide, pour pouvoir agir sur la
+structure, il faut des agents de validations de transactions :
+`les mineurs`.
+
+```sh
+$ geth --datadir <répertoire de stockage> --networkid 42 --nodiscover --maxpeers 0 --rpc console
+```
+
+```sh
+$ geth attach
+> miner.setEtherbase(personal.listAccounts[0])
+true
+> miner.start()
+true
+```
+
+A partir de ce moment, le noeud va commencer à miner les blocs et
+construire la chaîne.
+
+
+# Conclusion
+
+Voilà vous avez le minimum syndical pour pouvoir commencer à utiliser
+une chaîne de bloc dans vos applications.
+
+Vous vous rendrez vite compte qu'une chaîne de bloc est loin d'être
+temps réel (~10 min par bloc sur un environnement de production);
+que le `proof of work` peut être génant en fonction du projet (
+consommation électrique, etc.)
+
+N'oubliez pas que cette technologie est récente, et beaucoup de choses
+sont encore à découvrir ...
+
+Personnellement je suis surtout demandeur sur les cotés décentralisés
+du pouvoir de décision, ainsi que sur la transparence des transactions
+permettant d'avoir des dispositifs auditables et réactifs là où
+aujourd'hui un systèmes à plusieurs intervenants est toujours ralenti
+/ cadensé par le moins réactif des acteurs.
+
+Les cas d'usage dans la fintech sont nombreux, mais je reste
+persuadé que la conotation monétaire de la chaîne de bloc peut
+très bien être transposé à d'autres systèmes de valeurs.
+(métriques IoT; droits d'auteurs, de propriété; etc.)
