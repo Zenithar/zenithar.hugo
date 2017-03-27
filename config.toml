@@ -23,7 +23,6 @@ SectionPagesMenu = "Main"
   cover = "/images/cover.jpg"
 
   # Google analytics
-  gravatarHash = "1a2807faf3cca1667ff6f04bf5886eff"
   googleAnalyticsUserID = "UA-8114245-4"
   domainVerification = "fc173d84e3a4de948ed4bda2908afd3e"
   disqus = "zenithar"
