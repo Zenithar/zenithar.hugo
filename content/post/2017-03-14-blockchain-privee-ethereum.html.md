@@ -197,12 +197,14 @@ I0327 11:17:50.689583 cmd/geth/chaincmd.go:132] successfully wrote genesis block
 ### Noeud de minage
 
 La chaîne de bloc est prête mais vide, pour pouvoir agir sur la
-structure, il faut des agents de validations de transactions :
+structure, il faut des agents de validation de transactions :
 `les mineurs`.
 
 ```sh
 $ geth --datadir <répertoire de stockage> --networkid 42 --nodiscover --maxpeers 0 --rpc console
 ```
+
+Dans une autre console, pour éviter les floods du minage.
 
 ```sh
 $ geth attach
