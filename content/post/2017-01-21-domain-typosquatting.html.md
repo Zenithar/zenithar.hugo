@@ -4,7 +4,7 @@ date: "2017-01-21"
 title: "Domain Typosquatting"
 description: "Explication d'un principe de phishing de site internet exploitant la ressemblance des caractères pour tromper l'utilisateur."
 slug: domain-typosquatting
-featured: true
+featured: false
 image: /images/articles/2017/goggle-typo.jpg
 tags:
   - securite

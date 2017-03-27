@@ -55,17 +55,18 @@ processus de traitements.
 
 On qualifie de "privée" une `blockchain qui est gérée par des acteurs privés`.
 
-> L'auditabilité de la blockchain n'implique pas forcément qu'elle soit publique
+> L'auditabilité de la blockchain n'implique pas forcément qu'elle soit publique.
 
 Pour faire cela, il faut initialiser la chaîne de bloc avec un `bloc 0`, seul
 bloc ne faisant pas référence à son bloc parent. Ce bloc est nommé bloc de génèse
-( `genesis block` en anglais ), sans cela la blockchain ne peut pas [danser](https://www.youtube.com/watch?v=qOyF4hR5GoE) correctement (ok c'est nul !).
+( `genesis block` en anglais ), sans cela la blockchain ne peut pas
+[danser](https://www.youtube.com/watch?v=qOyF4hR5GoE) correctement (ok c'est nul !).
 
-## Geth
+## Initialisation du bloc de génèse
 
 ```json
 {
-    "nonce": "0xbadc0feedeadbeef",
+    "nonce": "0x2beaf001deadbeef",
     "timestamp": "0x0",
     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "extraData": "0x0",
@@ -80,5 +81,17 @@ bloc ne faisant pas référence à son bloc parent. Ce bloc est nommé bloc de g
     }
 }
 ```
+
+| Clé          | Description |
+| ------------ | ----------- |
+| *nonce*      | Hash prouvant en utilisant la valeur du `mixhash` qui certains niveau de PoW (Proof of Work) a été atteint pour ce bloc. (64bit) |
+| *timestamp*  | Timestamp UNIX du bloc. |
+| *parentHash* | Address (Keccak 256-bit) du bloc parent incluant `nonce`, et `mixhash`. Dans le cas du bloc de génèse, c'est simplement `0`. |
+| *extraData*  | Paramètre optionnel limité à 32 octets. (nom de chaîne par exemple) |
+| *gasLimit*   | Limite de `gas` globale à toute la chaîne pour la consommation des `smart-contracts` par blocs. |
+| *difficulty* | Niveau de difficulté appliqué lors de la recherche de `nonce`. |
+| *mixhash*    | Hash prouvant en le combinant avec le `nonce` qu'un certains niveau de PoW (Proof of Work) a été atteint pour valider ce bloc. Cela permet de determiner que le bloc a été cryptographiquement miné dans les conditions de l'algorithme mathématique. (256bit)|
+| *coinbase*   | Addresse vers laquelle toutes les récompenses de minages vont. (160bit) |
+| *alloc*      | Liste de compte pré-alloués lors de l'initialisation de la chaîne de bloc. |
 
 ## Parity
