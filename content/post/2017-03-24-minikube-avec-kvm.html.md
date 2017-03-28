@@ -13,6 +13,7 @@ tags:
   - docker
   - devops
   - golang
+lastmod: 2017-03-28T20:05:06+02:00
 ---
 
 ![Kubernetes](/images/articles/2017/kubernetes.png)
@@ -106,6 +107,7 @@ Réseau default marqué en démarrage automatique
 
 $ sudo virsh net-list --all
  Nom                  État      Démarrage automatique Persistent
+lastmod: 2017-03-28T20:05:06+02:00
 ----------------------------------------------------------
  default              actif      yes           yes
  docker-machines      actif      yes           yes

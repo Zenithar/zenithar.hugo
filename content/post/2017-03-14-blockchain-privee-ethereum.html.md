@@ -12,6 +12,7 @@ tags:
   - dev
   - blockchain
   - ethereum
+lastmod: 2017-03-28T20:05:31+02:00
 ---
 
 ![Ethereum](/images/articles/2017/ethereum.jpg)

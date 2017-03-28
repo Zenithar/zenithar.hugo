@@ -12,6 +12,7 @@ tags:
   - nodejs
   - npm
   - securite
+lastmod: 2017-03-28T20:05:42+02:00
 ---
 
 [NPM](https://www.npmjs.com/) pour Node Package Manager est un gestionnaire de
