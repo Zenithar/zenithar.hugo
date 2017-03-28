@@ -67,7 +67,7 @@ désolé.
 
 ## Initialisation du bloc de génèse
 
-Le bloc de génèse est le seul bloc de la chîne a ne pas avoir de
+Le bloc de génèse est le seul bloc de la chaîne a ne pas avoir de
 référence vers un bloc parent.
 Il initialise un certains nombre de contraintes et paramètres qui
 seront appliqués à l'ensemble de la chaîne.
@@ -151,7 +151,7 @@ Cette console fournit un ensemble de commande organisée en package :
   * `web3`: fonction générale de gestion [d'application Ethereum](https://github.com/ethereum/wiki/wiki/JavaScript-API)
 
 Nous allons manipuler l'API `personal` afin de créer un portefeuille
-qui nous allons approvisionner par la suite.
+que nous allons approvisionner par la suite.
 
 ```sh
 $ geth --datadir <répertoire de stockage> --networkid 42 --nodiscover --maxpeers 0 console
@@ -163,15 +163,14 @@ $ geth --datadir <répertoire de stockage> --networkid 42 --nodiscover --maxpeer
 ### Approvisionnement et réinitialisation
 
 Il faut a présent réinitialiser la chaîne pour pouvoir profiter du
-solde.
+solde et effacer les données de la chaîne, *PAS LES COMPTES* !
 
 ```sh
 $ cd <répertoire de stockage>
 $ rm -rf chain history
 ```
 
-Il faut effacer les données de la chaîne, *PAS LES COMPTES* !
-Il faut d'abord provisionner le compte en modifiant le bloc de
+Ensuite provisionner le compte en modifiant le bloc de
 génèse :
 
 ```json
@@ -215,9 +214,8 @@ true
 true
 ```
 
-A partir de ce moment, le noeud va commencer à miner les blocs et
-construire la chaîne.
-
+A partir de ce moment, le noeud va commencer à miner les blocs et construire
+la chaîne.
 
 # Conclusion
 
@@ -242,3 +240,13 @@ Les cas d'usage dans la fintech sont nombreux, mais je reste
 persuadé que la conotation monétaire de la chaîne de bloc peut
 très bien être transposé à d'autres systèmes de valeurs.
 (métriques IoT; droits d'auteurs, de propriété; etc.)
+
+# Connexes
+
+  * [modum.io - IoT + Blockchain](https://modum.io/) - [Github](https://github.com/modum-io)
+  * [Music + Blockchain](https://ujomusic.com/)
+  * [Nation Citizen](https://bitnation.co/)
+  * [Gestion des testaments](https://usbeketrica.com/article/uberise-ton-notaire)
+  * [Billeterie en ligne](https://blockchainfrance.net/2016/03/15/blockchain-pour-le-secteur-de-la-billetterie/)
+  * [Assurances](https://blockchainfrance.net/2016/02/17/assurances-et-blockchain/)
+  * [IBM Hyperledger](https://www.hyperledger.org/) - codé en [Go](https://github.com/hyperledger/) au passage ^^
