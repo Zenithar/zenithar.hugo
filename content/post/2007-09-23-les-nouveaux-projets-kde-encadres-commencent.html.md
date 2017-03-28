@@ -10,6 +10,7 @@ tags:
  - toulouse
  - wilos
 
+lastmod: 2017-03-01T11:27:22+01:00
 ---
 
 Pour mettre fin à cette suite de post concernant Google ^^, je reviens de la réunion de lancement du BE1 de l'IUP de Toulouse, qui relance cette année les projets [KDE](http://www.kde.org/) ainsi que le projet [Wilos](http://www.wilos-project.org/), et [IceScrum](http://www.icescrum.org/).

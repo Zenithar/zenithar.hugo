@@ -9,6 +9,7 @@ tags:
  - kde
  - linux
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 Et voila, mon départ pour Glasgow, pour la aKademy 2007, j'ai fait ma valise, tout est prêt (enfin presque reste plus que la conversion de devises). J'essayerais de vous tenir au courant jours après jours de mes activités à ce rassemblement.

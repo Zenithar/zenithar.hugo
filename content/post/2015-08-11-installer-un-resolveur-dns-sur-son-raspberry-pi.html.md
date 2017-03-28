@@ -12,6 +12,7 @@ tags:
  - infrastructure
  - raspberry
 
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Afin d'optimiser et de fiabiliser votre accès internet à la maison, je vous propose d'installer un resolveur DNS `unbound` comme relai à `dnscrypt-proxy` permettant de faire des requêtes DNS chiffrées (en attendant la généralisation de DNSSEC).

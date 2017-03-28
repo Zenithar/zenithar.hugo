@@ -9,6 +9,7 @@ tags:
  - jeux
  - tgs
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 J'ai fait l'acquisition durant le [TGS](http://www.toulouse-game-show.fr/) (Toulouse Game Show) 2008, de deux nouveaux jeux de plateau qui j'avoue nous ont plus que bien occupé l'après-midi.

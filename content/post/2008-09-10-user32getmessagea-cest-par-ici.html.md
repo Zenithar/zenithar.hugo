@@ -11,6 +11,7 @@ tags:
  - hook
  - intercept
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 Voici un article paru sur le site "[The Ethical Hacker Network](http://www.ethicalhacker.net/)", traitant des possibilités d'interceptions d'appels systèmes.

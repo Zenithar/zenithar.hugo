@@ -10,6 +10,7 @@ tags:
  - ror
  - toulibre
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 Voila ça c'est fait ! Ouf une tâche en moins dans mon rtm (remember the milk) ^^

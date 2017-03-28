@@ -8,6 +8,7 @@ tags:
  - kde
  - linux
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 IceCream est un système permettant la compilation distribuée, c'est à dire qu'elle permet de cumuler la puissance des ordinateurs disponibles pour accélérer la compilation, en exécutant des build parallèles. Voici ce que donne un réseau disposant de icecream.

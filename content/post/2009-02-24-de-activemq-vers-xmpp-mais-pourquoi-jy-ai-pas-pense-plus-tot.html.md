@@ -11,6 +11,7 @@ tags:
  - queue
  - xmpp
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 ![xmpp](http://static.zenithar.org/wp-content/uploads/2009/02/xmpp.png)

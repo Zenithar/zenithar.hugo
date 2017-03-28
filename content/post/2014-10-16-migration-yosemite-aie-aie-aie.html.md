@@ -12,6 +12,7 @@ tags:
  - macbook
  - linux
 
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Bon voilà, après un certains nombre de bétas, le voilà l'OS nouveau est arrivé !

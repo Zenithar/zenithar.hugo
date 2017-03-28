@@ -9,6 +9,7 @@ tags:
  - macosx
  - minecraft
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Suite au précédent article, concernant libnoise, je me suis penché sur la compilation du projet sous MacOSX. Cependant même problème, le support est incomplet à la compilation.

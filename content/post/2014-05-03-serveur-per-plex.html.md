@@ -11,6 +11,7 @@ tags:
  - pms
  - streaming
 
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Comment gérer une médiathèque de musiques, vidéos, séries, films ?

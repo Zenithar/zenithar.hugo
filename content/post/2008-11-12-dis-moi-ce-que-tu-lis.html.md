@@ -12,6 +12,7 @@ tags:
  - misc
  - programmez!
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 Suite à l'article de [Korben](http://www.korben.info/presse-dis-moi-ce-que-tu-lis.html), chaine de post dans lequel on énonce nos lectures (papiers dans mon cas!).

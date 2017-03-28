@@ -8,6 +8,7 @@ tags:
  - dns
  - infrastructure
  - raspberry
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Pour faire suite à l'[installation d'Unbound sur votre réseau personnel](/post/2015/08/11/installer-resolveur-dns-raspberry-pi/), vous pouvez mettre à profit ce dispositif afin de pouvoir filtrer les requêtes de résolution DNS.

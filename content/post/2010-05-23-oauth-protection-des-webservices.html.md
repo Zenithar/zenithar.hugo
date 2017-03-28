@@ -8,6 +8,7 @@ tags:
  - securite
  - webservices
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 [![](http://static.zenithar.org/wp-content/uploads/2010/05/My-Endpoints.png)](http://static.zenithar.org/wp-content/uploads/2010/05/My-Endpoints.png)"_OAuth permet aux utilisateurs de donner, à une application ou un site « consommateur », l'accès à des informations personnelles sur un site "fournisseur" de service. OAuth permet de gérer ces autorisations sans avoir besoin de donner son identité._" [Wikipédia]

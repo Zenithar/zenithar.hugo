@@ -7,6 +7,7 @@ tags:
  - freebsd
  - linux
 
+lastmod: 2017-03-01T11:27:16+01:00
 ---
 
 C'est dommage mais je trouve qu'en ce moment Gentoo commence à s'essouffler au niveau mises à jour, correctifs et autres. 

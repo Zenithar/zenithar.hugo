@@ -11,6 +11,7 @@ tags:
  - url-rewriting
  - wordpress
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 Comme je suis passé à Wordpress 2.6, et que j'ai découvert au même moment que mon hébergeur (tuxfamily.org) avait activé mod_rewrite, j'ai donc eu des petits problèmes à cause des URL type : index.php/post, qui n'étaient plus atteignable (Erreur 404).

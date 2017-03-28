@@ -7,6 +7,7 @@ tags:
  - gentoo
  - linux
 
+lastmod: 2017-03-01T11:27:14+01:00
 ---
 
 [Gentoo Linux -- Where to Get Gentoo Linux](http://www.gentoo.org/main/en/where.xml)

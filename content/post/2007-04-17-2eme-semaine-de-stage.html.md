@@ -7,6 +7,7 @@ tags:
  - opencube
  - stage
 
+lastmod: 2017-03-01T11:27:19+01:00
 ---
 
 Voila ma 2eme semaine de stage se termine, ono programme :

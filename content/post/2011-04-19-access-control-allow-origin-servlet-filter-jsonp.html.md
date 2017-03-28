@@ -9,6 +9,7 @@ tags:
  - servlet
  - webservices
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Voici comment ajouter l'entête HTTP Access-control-allow-origin, bien connu des utilisateurs de JSON, AMF ou tout simplement de service REST.

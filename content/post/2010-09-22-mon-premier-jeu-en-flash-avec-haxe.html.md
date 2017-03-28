@@ -9,6 +9,7 @@ tags:
  - jeu
  - stacker
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 Et voila ça c'est fait ^^. Mon premier jeu en Flash, j'ai utilisé un espèce de meta langage appelé [Haxe](http://haxe.org/) permettant entre autre d'écrire une application et de la faire tourner sous plusieurs environnement C++ / SDL, C++ / iPhone, Flash, JS, etc. (M. Haxe une version Html5 ?)

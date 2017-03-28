@@ -10,6 +10,7 @@ tags:
  - purecss
  - flat
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 Encore une fois, je change de thème, bon cette fois je reste avec [docpad](http://docpad.org). 

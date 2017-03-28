@@ -10,6 +10,7 @@ tags:
  - migration
  - markdown
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 Il y a quelques temps, j'ai fait la migration de [Worpress vers Octopress](/articles/2012-02-18-bye-bye-wordpress.html), cependant je n'étais pas vraiment satisfait. 

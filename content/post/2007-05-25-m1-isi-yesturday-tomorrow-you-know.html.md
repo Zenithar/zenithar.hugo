@@ -8,6 +8,7 @@ tags:
  - master
  - toulouse
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 Voila c'est fait, sans le stage , j'ai mon semestre, ça a été tendu, mais c'est passé ^^. Donc maintenant reste plus qu'a choisir le M2, je pense me diriger vers la modélisation, en fait j'aime ça ...

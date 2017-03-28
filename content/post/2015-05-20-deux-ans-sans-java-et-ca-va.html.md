@@ -11,6 +11,7 @@ tags:
  - securite
  - infrastructure
 
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 J'ai quitté le monde de l'édition logiciel depuis bientôt 2 ans, pour retourner dans le domaine de la sécurité. J'occupe aujourd'hui un poste d'architecte technique au sein d'une équipe d'ingénieur sécurité divisés en deux camps : les offenseurs, et les défenseurs. Mon rôle est de fournir le plus rapidement possible des solutions aux deux "camps" pour attendre leurs objectifs.

@@ -7,6 +7,7 @@ tags:
  - backbone.js
  - coffeescript
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 Cela fait quelques temps déjà que j'utilise Backbone.JS and Friends, et bon je vais essayer de rester objectif sur le retour d'expérience que je compte développer.

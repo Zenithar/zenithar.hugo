@@ -7,12 +7,14 @@ tags:
  - gpg
  - securite
 
+lastmod: 2017-03-01T11:27:22+01:00
 ---
 
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
 Voici une extension Firefox, très sympathique, en effet elle permet de signer/crypter/décrypter un contenu selectionné avec une clé GPG, très pratique quand on utilise souvent le webmail, bon il y atoujours le problème qu'il faut avoir la clé sous la main ! C'est pour quand la signature intégrée dans gmail ? ^^
+lastmod: 2017-03-01T11:27:22+01:00
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v2.0.4-svn0 (GNU/Linux)
 Comment: http://firegpg.tuxfamily.org

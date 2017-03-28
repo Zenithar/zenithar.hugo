@@ -8,6 +8,7 @@ tags:
  - javascript
  - node.js
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Vous n'êtes pas sans savoir (en tout cas ceux qui bossent avec moi le savent ^^), ou alors vous avez vécu sur une autre planète qu'en ce moment (depuis 6mois - 1an), le monde du JavaScript a subit d'énormes mutations. 

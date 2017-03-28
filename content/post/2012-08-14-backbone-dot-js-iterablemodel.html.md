@@ -7,6 +7,7 @@ tags:
  - backbone.js
  - mixin
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 Voici une petite astuce pour rendre vos Modèles Backbone.js, navigable depuis le modèle si celui-ci fait partie d'une collection.
 

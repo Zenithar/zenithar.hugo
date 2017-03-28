@@ -10,6 +10,7 @@ tags:
  - minecraft
  - opensuse
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Je suis en train de rechercher un serveur [MineCraft](http://www.minecraft.net/) en C++, tout googlement je suis tombé sur [MineServer](http://mineserver.be/), seul petit bémol, il nécessite la librairie [libnoise](http://libnoise.sourceforge.net/) qui n'est pas disponible sour OpenSuSE et c'est une galère à compiler depuis les sources (make + libtool), j'ai commencé par mettre à jour libtool, puis bon, j'ai donc reécris le build-system avec CMake. 

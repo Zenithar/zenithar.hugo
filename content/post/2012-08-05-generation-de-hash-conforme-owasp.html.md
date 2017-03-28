@@ -7,6 +7,7 @@ tags:
  - coffeescript
  - owasp
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 Voici un module conforme aux conseils [OWASP](https://www.owasp.org/index.php/Hashing_Java) sur le hashage des mots de passe. Il s'agit d'un module (CommonJS) codé en CoffeeScript.

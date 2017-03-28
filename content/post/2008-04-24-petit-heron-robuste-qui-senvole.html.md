@@ -8,6 +8,7 @@ tags:
  - kubuntu
  - sabayon
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 Je suis en pleine phase de tests de systèmes 64bits, comme toutes mes machines le sont matériellement parlant, je me suis mis en tête d'installer un système 64bits, pour voir ^^.

@@ -13,6 +13,7 @@ tags:
  - pssh
  - ssh
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 It has been a long time, that i was searching a solution to execute a command on multiple SSH server simultaneously. This is [UbuntuGeek](http://www.ubuntugeek.com/execute-commands-simultaneously-on-multiple-servers-using-psshcluster-sshmultixterm.html) who gave me the solution.Cela fait plusieurs temps que je cherche un moyen d'exécuter une commande SSH sur plusieurs serveurs à la fois, et c'est [UbuntuGeek](http://www.ubuntugeek.com/execute-commands-simultaneously-on-multiple-servers-using-psshcluster-sshmultixterm.html) qui m'a donné la solution.

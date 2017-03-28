@@ -6,6 +6,7 @@ slug: desole-mon-blog-je-tai-laisse-a-labandon
 tags:
  - life
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 Et oui, déjà plus de 6 mois que je n'ai rien posté. Pourquoi ? Un gros manque de motivation, beaucoup de boulot, pas de mal de choses ont changés aussi pendant ce temps (changement de boite, de métier, déménagement de DNS, etc.).

@@ -13,6 +13,7 @@ tags:
  - scala
  - play
 
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Voila n'ayons pas honte de dire : 

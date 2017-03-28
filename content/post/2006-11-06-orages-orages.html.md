@@ -7,6 +7,7 @@ tags:
  - crash
  - emi
 
+lastmod: 2017-03-01T11:27:17+01:00
 ---
 
 Mais que se passe-t-il en ce moment ? Tout est motif à hautes paroles ! Y-a-t-il un problème ? ou l'approche du 1er cap (6 mois). Que dois je faire ? Prendre un peu de large pour laisser passer la tempête ou encore affronter au risque de tout perdre ?

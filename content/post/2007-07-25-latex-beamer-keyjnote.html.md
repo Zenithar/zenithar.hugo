@@ -8,6 +8,7 @@ tags:
  - latex
  - stage
 
+lastmod: 2017-03-01T11:27:21+01:00
 ---
 
 Ou comment faire une présentation "qui déchire grave" ^^.

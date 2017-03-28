@@ -8,6 +8,7 @@ tags:
  - kde
  - linux
 
+lastmod: 2017-03-01T11:27:19+01:00
 ---
 
 ![](/images/60px-KDE_logo.svg.png) Tiens ça me rappelle mon abonnement internet ^^.  

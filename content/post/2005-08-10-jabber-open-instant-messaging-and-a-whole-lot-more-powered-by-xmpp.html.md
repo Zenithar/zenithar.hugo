@@ -8,6 +8,7 @@ tags:
  - jabber
  - xmpp
 
+lastmod: 2017-03-01T11:27:14+01:00
 ---
 
 [Jabber: Open Instant Messaging and a Whole Lot More, Powered by XMPP](http://www.jabber.org/)

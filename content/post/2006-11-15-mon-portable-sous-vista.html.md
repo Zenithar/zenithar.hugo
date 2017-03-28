@@ -7,6 +7,7 @@ tags:
  - geek
  - vista
 
+lastmod: 2017-03-01T11:27:18+01:00
 ---
 
 Oui hérésie, non pas complètement j'ai ma Gentoo aussi dessus OW ! Alors pour ceux qui vont dire que je fais mon G33k (sisi y en a au moins une ^^ gros bisous), et bien voici une capture d'écran. Voici mes impressions :

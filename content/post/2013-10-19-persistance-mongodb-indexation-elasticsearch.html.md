@@ -12,6 +12,7 @@ tags:
  - mongodb
  - river
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 {{% alert "w3-red w3-card-8 w3-text-white" "Attention !" "Le concept de 'river' a été supprimé d'ElasticSearch, cet article n'est plus à jour." %}}

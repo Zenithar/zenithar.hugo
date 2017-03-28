@@ -7,6 +7,7 @@ tags:
  - backbone.js
  - coffeescript
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 Cet article va traiter de l'utilisation de CoffeeScript dans le cadre de la réalisation d'une application Backbone.js. 

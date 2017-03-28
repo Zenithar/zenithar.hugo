@@ -7,6 +7,7 @@ tags:
  - iup
  - stage
 
+lastmod: 2017-03-01T11:27:16+01:00
 ---
 
 Afin de gagner de la place et surtout faire des économies d'electricité .... J'ai mis en place un serveur virtualisé avec XEN et IPVS, le domaine 0 (dom0) est une gentoo hardened 2006.1 afin de tirer un maximum des performances de la machine (P4 3Ghz dual core). Sur lequel tourne 3 domaines utilisateurs (domU), 1 basé sur Debian Testing pour héberger un serveur Apache+MySQL+PHP pour le serveur intranet, 1 sur NetBSD pour les tests multi OS sur la machine, et 1 domU Debian pour test avec IPVS pour load balancing entre serveur Apache de domU différents !

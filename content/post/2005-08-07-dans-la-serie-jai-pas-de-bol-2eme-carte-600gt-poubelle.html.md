@@ -6,6 +6,7 @@ slug: dans-la-serie-jai-pas-de-bol-2eme-carte-600gt-poubelle
 tags:
  - crash
 
+lastmod: 2017-03-01T11:27:14+01:00
 ---
 
 Ouiiiiiiiinnnnnn, j'en ai marre elle vient de me lâcher aussi 3 jrs après l'autre. Bizarre, performance 2D intacte mais alors la 3D plaquage texture merdique à souhait. Retour SAV LDLC.

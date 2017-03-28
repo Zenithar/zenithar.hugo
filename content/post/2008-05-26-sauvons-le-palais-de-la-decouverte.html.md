@@ -9,6 +9,7 @@ tags:
  - paris
  - science
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 Si vous ne connaissez pas cet endroit, c'est un musée à Paris qui présente à la manière de l'émission très respectable : "C'est pas sorcier", des phénomènes et expériences scientifiques.

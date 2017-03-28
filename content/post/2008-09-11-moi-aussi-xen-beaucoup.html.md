@@ -12,6 +12,7 @@ tags:
  - ubuntu
  - xen
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 En cherchant à installer un serveur LDAP backup, et surtout en cherchant des images xen toutes faites ^^ je suis tombé sur ce site qui propose des images Xen (raw disk) de distributions Linux 32 et 64 bits les plus utilisées (Ubuntu, Debian, Gentoo, Centos, ...).

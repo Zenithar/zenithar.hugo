@@ -7,6 +7,7 @@ slug: balsamiq-mockups-sous-linux
 tags:
  - linux
  - wine
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 [Balsamiq Mockups](https://balsamiq.com/products/mockups/) est un outil plus que

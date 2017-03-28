@@ -9,6 +9,7 @@ tags:
  - struts
  - tiles
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 Je viens d'être conforonté à un problème particulièrement énervant et difficile à diagnostiquer. C'est pour cela que je vous donne ma solution (il y a peut être mieux mais bon ça marche).

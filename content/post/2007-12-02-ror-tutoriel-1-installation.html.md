@@ -9,6 +9,7 @@ tags:
  - ror
  - ruby
 
+lastmod: 2017-03-01T11:27:22+01:00
 ---
 
 Ce tutoriel traite de la mise en place d'un serveur d'application Ruby on Rails. Nous allons écrire un logiciel de gestion de recettes de cuisine (Kuisine ^^) mais en ruby avec RoR, au menu :

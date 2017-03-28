@@ -9,6 +9,7 @@ tags:
  - opensuse
  - release
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 [![](http://counter.opensuse.org/11.1/small)](http://en.opensuse.org/openSUSE_11.1)

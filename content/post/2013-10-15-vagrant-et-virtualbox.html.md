@@ -10,6 +10,7 @@ tags:
  - virtualisation
  - linux
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 [Vagrant](http://www.vagrantup.com/) est un outil de gestion d'environnement virtualisé, il utilise un script (DSL) pour décrire la configuration de la machine virtuelle qu'il gère. Il est capable de gérer des systèmes de virtualisation gratuits comme VirtualBox, QEmu, mais aussi des commerciaux comme VMWare, ainsi que plus récemment des infrastructures type cloud comme OpenStack et bien d'autres.

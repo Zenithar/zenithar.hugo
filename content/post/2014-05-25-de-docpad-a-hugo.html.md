@@ -12,6 +12,7 @@ tags:
  - hugo
  - tfidf
 
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Je sais ! Je migre encore de solution de génération de site static, mais bon ça s'appelle le progrès. Cette fois migration de Docpad vers Hugo, pour une raison simple : la performance.

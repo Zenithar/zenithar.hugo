@@ -9,6 +9,7 @@ tags:
  - lync
  - skype
  - linux
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Beaucoup d'entreprise utilise des solutions Microsoft (je ne partirai pas sur ce

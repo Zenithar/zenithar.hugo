@@ -11,6 +11,7 @@ tags:
  - lxc
  - docker
 
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Voici une recette Vagrant `Vagrantfile`, permettant de déployer une machine virtuelle utilisant Ubuntu 13.04 (raring), configurée pour héberger des containers LXC.

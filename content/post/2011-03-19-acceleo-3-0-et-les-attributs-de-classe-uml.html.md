@@ -10,6 +10,7 @@ tags:
  - java
  - uml
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Ah lala ça fait depuis quelque temps que j'utilise [Acceleo](http://www.eclipse.org/acceleo/) pour faire pas de mal de chose (Génération de code Java, Docbook, etc.), et bon j'ai été confronté à un problème particulier. Il faut savoir que dans le métamodele UML, la liste des attributs (Property) est marqué comme _unordered_, ce qui a pour effet dans [Acceleo](http://www.eclipse.org/acceleo/) suite à des générations successives de mélanger les attributs de votre classe.

@@ -8,6 +8,7 @@ tags:
  - idea
  - kuisine
 
+lastmod: 2017-03-01T11:27:21+01:00
 ---
 
 N'avez vous pas raz le bol de manger toujours pareil, de ne pas savoir quoi manger alors qu'il y a matière dans votre réfrigérateur (ou celui de votre voisin ^^), ou peu de temps pour préparer ?

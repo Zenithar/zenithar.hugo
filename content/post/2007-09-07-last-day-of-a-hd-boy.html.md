@@ -7,6 +7,7 @@ tags:
  - opencube
  - stage
 
+lastmod: 2017-03-01T11:27:21+01:00
 ---
 
 Et voila dernier jour de stage à OpenCube Technologies, aujourd'hui, j'ai préparé mon départ, rangé mon bureau, y a plus qu'a exécuter les tâches de nettoyage, et à partir.

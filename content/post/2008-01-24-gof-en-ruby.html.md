@@ -8,6 +8,7 @@ tags:
  - gof
  - ruby
 
+lastmod: 2017-03-01T11:27:23+01:00
 ---
 
 Voici un document très utile surtout en ce moment pour moi ^^, l'implémentation du gof (bible des "design patterns") mais en ruby, avec pour chaque DP un exemple.

@@ -8,6 +8,7 @@ tags:
  - plantage
  - serveur
 
+lastmod: 2017-03-01T11:27:27+01:00
 ---
 
 Après un message d'alerte du service de monitoring, je me suis connecté vendredi soir (enfin j'ai essayé ...) au SSH. Réponse claire, nette, et précise : WTF ? Who are you ? go out MF ! ...

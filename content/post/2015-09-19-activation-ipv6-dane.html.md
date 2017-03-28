@@ -10,6 +10,7 @@ tags:
  - infrastructure
  - ipv6
  - securite
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 L'[IPv6](https://fr.wikipedia.org/wiki/IPv6) est une version du protocole IP.

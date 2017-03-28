@@ -8,6 +8,7 @@ tags:
  - ecology
  - green
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 Après une longue période d'inactivité de mon blog, due au travail, à la recherche d'appartement, les travaux d'emménagement et une bonne dose de flemme, je me décide à couper court à ce désert.

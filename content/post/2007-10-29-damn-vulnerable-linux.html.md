@@ -8,6 +8,7 @@ tags:
  - linux
  - securite
 
+lastmod: 2017-03-01T11:27:22+01:00
 ---
 
 DVL (DeViL) est une distribution linux, qui étend les fonctionnalités de BackTrack 2.0 (autre distribution orientée sécurité). Le principe de cette distribution est de mettre à disposition tout un tas d'environnement destiné à l'application directes d'attaques sur du code, des sites vulnérables, etc ... (pour ceux qui n'avaient jamais vu une SQL injection en directe par exemple ^^).

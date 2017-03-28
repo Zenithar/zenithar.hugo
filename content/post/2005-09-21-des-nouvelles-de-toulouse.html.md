@@ -7,6 +7,7 @@ tags:
  - crous
  - toulouse
 
+lastmod: 2017-03-01T11:27:16+01:00
 ---
 
 Et voila après quelques problèmes divers, je suis installé à Toulouse en chambre rénové : résultats Nice = voleurs. 

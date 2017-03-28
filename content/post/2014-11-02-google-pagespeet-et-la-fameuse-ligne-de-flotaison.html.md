@@ -10,6 +10,7 @@ tags:
  - pagespeed
  - tips
 
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Cette règle d'optimisation est plus obscure à comprendre qu'elle n'est simple à corriger.

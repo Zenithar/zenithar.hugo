@@ -12,6 +12,7 @@ tags:
  - safari
  - webkit
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 Cela fait un bon bout de temps que l'on entends parler du "Google browser", et bien ça y est cette fois c'est fait !

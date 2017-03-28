@@ -8,6 +8,7 @@ tags:
  - glasgow
  - guiness
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 Voila déjà une semaine depuis mon retour de Glasgow, première semaine en petit français en France, bien ça me manque quand même un peu (bcp), cette ambiance, cette relation entre "collègue de travail" qui n'est quand même pas commune (croyez moi !). Cette petite "pint" de Guiness Extra Cold au "Council House".

@@ -12,6 +12,7 @@ tags:
  - securite
  - slax
 
+lastmod: 2017-03-01T11:27:26+01:00
 ---
 
 Halte aux [paraskevidékatriaphobe](http://static.zenithar.org/2007/04/13/etes-vous-paraskevidekatriaphobe/) ! Savez vous que BackTrack 4 est sortie ? Sinon je vous l'annonce !

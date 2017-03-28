@@ -12,6 +12,7 @@ tags:
  - docker
  - caddy
  - webhook
+lastmod: 2017-03-01T11:27:29+01:00
 ---
 
 Nous allons mettre en place à l'aide de [Hugo](http://gohugo.io) : générateur

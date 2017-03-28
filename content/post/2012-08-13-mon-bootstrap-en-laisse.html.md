@@ -9,6 +9,7 @@ tags:
  - node.js
  - theme
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 Oui, moi aussi je veux mon [Bootstrap](http://twitter.github.com/bootstrap) ! Voici comment le personnaliser, avec possibilités de mises à jour du framework de base.

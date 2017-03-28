@@ -11,6 +11,7 @@ tags:
   - node.js
   - javascript
   - restler
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 Voici un petit outil permettant d'exporter les tâches associées aux `stories` d'un `sprint` pour un `projet` donné, depuis [IceScrum](http://www.icescrum.org/) vers un format imprimable : postit HTML en l'occurence.

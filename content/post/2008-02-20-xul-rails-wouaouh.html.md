@@ -14,6 +14,7 @@ tags:
  - xul
  - xulrunner
 
+lastmod: 2017-03-01T11:27:23+01:00
 ---
 
 Je cherchais à faire une application dite "Web 2.0" mais avec une interface type "Desktop", c'est à ce moment que j'ai découvert les RDA (Rich Desktop Application). Le principe est d'apporter les avantages d'une application Web sur le bureau de l'utilisateur. Cela permet une meilleure intégration de celle-ci avec le systême client.

@@ -7,6 +7,7 @@ tags:
  - opencube
  - stage
 
+lastmod: 2017-03-01T11:27:19+01:00
 ---
 
 ![opencube.png](/public/images/opencube.png) Et c'est en ce jours de grands vents, que j'annonce : premier jour chez [OpenCube](http://www.opencubetech.com). On voit aussi que ce qu'on apprend en cours, n'est pas toujours inutile ( comme certains le pense hihi ), méthodologie XP, avec réunion hebdomadaire d'avancement, fiches de suivi. J'en connais qui vont être content .... BC !. 

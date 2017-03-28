@@ -8,6 +8,7 @@ tags:
  - ruby
  - toulibre
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 Je suis en train d'écrire ma présentation pour le 28 mai à Toulibre, et voici ce qu'on peut trouver sur le web :

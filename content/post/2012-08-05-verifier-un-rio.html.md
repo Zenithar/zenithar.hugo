@@ -8,6 +8,7 @@ tags:
  - coffeescript
  - free.fr
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 Lors de mon inscription chez Free Mobile, j'ai eu quelques soucis liés à la récupération de mon RIO chez mon ancien opérateur. J'ai du faire la demande 6 ou 7 fois en utilisant le robot, en espérant recevoir le texto de validation, mais je n'ai jamais rien reçu.

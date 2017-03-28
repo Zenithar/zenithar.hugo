@@ -4,13 +4,14 @@ date: "2017-01-21"
 title: "Domain Typosquatting"
 description: "Explication d'un principe de phishing de site internet exploitant la ressemblance des caractères pour tromper l'utilisateur."
 slug: domain-typosquatting
-featured: true
+featured: false
 image: /images/articles/2017/goggle-typo.jpg
 tags:
   - securite
   - dns
   - idna
   - url
+lastmod: 2017-03-01T11:27:30+01:00
 ---
 
 > Bonne Année à toutes et à tous !
@@ -113,5 +114,15 @@ Usage of ./typogen:
 ```
 
 J'ai implémenté cette librairie à partir du programme Python [dnstwist](https://github.com/elceef/dnstwist).
+
+Vous pouvez générer tous les domaines, avec tous les TLDs :
+
+```
+$ typogen -s "zenithar" | tldexpand | resolve >> typo_squatter.csv
+```
+
+> Attention à l'explosion combinatoire ... dans mon cas 588587 combinaisons ^^
+
+Le principe est que si cela résouds vous avez une chance d'être typosquatté !
 
 Si vous avez de nouvelles stratégies de génération, `Pull requests are welcome !`.

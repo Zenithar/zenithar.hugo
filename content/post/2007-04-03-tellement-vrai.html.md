@@ -6,6 +6,7 @@ slug: tellement-vrai
 tags:
  - stage
 
+lastmod: 2017-03-01T11:27:19+01:00
 ---
 
 Amis stagiaires allez voir ceci ...

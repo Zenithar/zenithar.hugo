@@ -13,6 +13,7 @@ tags:
  - samba
  - strongswan
 
+lastmod: 2017-03-01T11:27:24+01:00
 ---
 
 Dans cette série d'articles je vais présenter l'architecture que j'ai mise en place  pour la gestion des utilisateurs et des services mis à disposition.

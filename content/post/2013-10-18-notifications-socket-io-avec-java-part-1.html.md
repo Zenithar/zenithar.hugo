@@ -13,6 +13,7 @@ tags:
  - netty
  - node.js
 
+lastmod: 2017-03-01T11:27:28+01:00
 ---
 
 On parle aujourd'hui de plus en plus de communications bi-directionnelles asynchrones entre le client et le serveur. Ceci est possible grâce à des technologies comme :

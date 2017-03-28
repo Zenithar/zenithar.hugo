@@ -8,6 +8,7 @@ tags:
  - glasgow
  - kde
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 Voilà mon départ pour l'aKademy 2007, depuis Toulouse, après un bref temps passé dans les embouteillages arrivée à Blagnac, premier problème qui intervient : oubli du billet électronique dans la voiture, bon rien de méchant jusque là, mais ce n'est que le début croyez moi  ^^.

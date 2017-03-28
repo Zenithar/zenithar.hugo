@@ -9,6 +9,7 @@ tags:
  - php
  - vtiger
 
+lastmod: 2017-03-01T11:27:21+01:00
 ---
 
 During my training period i had to install [vTigerCRM](http://www.vtiger.com) with Project management module, but it's not compatible with PHP 5.2.X, so i made a patch ^^

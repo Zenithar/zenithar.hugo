@@ -10,6 +10,7 @@ tags:
  - metasploit
  - screencast
 
+lastmod: 2017-03-01T11:27:25+01:00
 ---
 
 Voici un outil plus qu'utile pour nos amis auditeurs, & pentesters. C'est un script d'automatisation d'audit de vulnérabilités et exploitation via metasploit.

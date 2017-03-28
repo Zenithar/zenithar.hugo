@@ -6,6 +6,7 @@ slug: un-an-que-je-te-connais-aujourdhui-a-cette-heure-ci-a-peu-pres
 tags:
  - emi
 
+lastmod: 2017-03-01T11:27:20+01:00
 ---
 
 Je suis monté dans ta chambre, sous un élan porteur incontrôlable, pour te dire ce qui me trottait dans la tête ^^
