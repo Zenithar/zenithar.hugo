@@ -78,8 +78,8 @@ Nous allons donc mettre en place unbound avec les mécanismes DNSSEC afin de gar
 Tout d'abord veuillez procéder à l'installation du service Unboud sur votre Raspberry PI.
 
 ```sh
-#> pacman -S unbound
-#> systemctl enable unbound
+$> pacman -S unbound
+$> systemctl enable unbound
 ```
 
 Il faut ensuite configurer le service avec le fichier de configuration (`/etc/unbound`) suivant :
@@ -98,7 +98,7 @@ Cette configuration permet de mettre en place un serveur DNS local pour un rése
 Vous n'utiliserez plus les DNS de vos fournisseurs d'accès, cependant il est possible que l'accès soit restreint, voir contrôlé, il faut donc mettre en place le chiffrement du traffic DNS à l'aide du proxy DNSCrypt.
 
 ```sh
-#> systemctl start unbound
+$> systemctl start unbound
 ```
 
 ## Installation de DNSCrypt
@@ -106,8 +106,8 @@ Vous n'utiliserez plus les DNS de vos fournisseurs d'accès, cependant il est po
 Nous allons mettre en place le service `dnscrypt-proxy` sur le Raspberry PI.
 
 ```sh
-#> pacman -S dnscrypt-proxy
-#> systemctl enable dnscrypt-proxy
+$> pacman -S dnscrypt-proxy
+$> systemctl enable dnscrypt-proxy
 ```
 
 Vous devez procéder à la configuration (`/etc/conf.d/dnscrypt-proxy`) du proxy DNS :
@@ -117,13 +117,13 @@ Vous devez procéder à la configuration (`/etc/conf.d/dnscrypt-proxy`) du proxy
 Il suffit de démarrer votre relai DNSCrypt.
 
 ```sh
-#> systemctl start dnscrypt-proxy
+$> systemctl start dnscrypt-proxy
 ```
 
 ## Pour terminer
 
 ```sh
-#> netstat -lnp
+$> netstat -lnp
 ```
 
 Vous devriez voir les services `unbound` et `dnscrypt-proxy` s'exécuter.
@@ -136,19 +136,19 @@ udp   0 0 127.0.0.1:9053   0.0.0.0:*               ****/dnscrypt-proxy
 Il suffit de décommenter la ligne 81 de unbound.conf, et de commenter les forward sur OpenDNS.
 
 ```sh
-#> systemctl restart unbound
+$> systemctl restart unbound
 ```
 
 ## Quelques tests
 
 ```sh
-#> drill -D zenithar.org
+$> drill -D zenithar.org
 ```
 
 Vous devriez voir les requêtes ainsi que la résolution DNSSEC effectuée par Unbound au travers de DNSCrypt.
 
 ```sh
-#> drill router.home
+$> drill router.home
 ```
 
 Vous devriez voir l'adresse IP résolue configurée dans vore zone locale.
@@ -175,7 +175,7 @@ WantedBy=sockets.target
 
 Ainsi que le fichier de service `/usr/lib/systemd/system/dnscrypt-proxy.service` :
 
-```
+``` ini
 [Unit]
 Description=DNSCrypt client proxy
 Requires=dnscrypt-proxy.socket
@@ -193,10 +193,10 @@ ExecStart=/usr/bin/dnscrypt-proxy \
 ```
 
 Un petit reload des services :
-```
-#> systemctl daemon-reload
-#> systemctl restart dnscrypt-proxy
-#> systemctl restart unbound
+``` sh
+$> systemctl daemon-reload
+$> systemctl restart dnscrypt-proxy
+$> systemctl restart unbound
 ```
 
 Et refaire les tests.

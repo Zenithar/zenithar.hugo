@@ -15,7 +15,7 @@ lastmod: 2017-03-01T11:27:26+01:00
 Voici une astuce pour vos dépôts GIT permettant de formater le code avant le commit sur le dépôt pour que tous les développeurs utilisent le même référentiel de formatage de code :
 
 A placer dans le .git/hooks/pre-commit
-```
+```sh
 function format_java {
  file="${1}";
  echo "${file}" | grep -ie "^.*\.java$" &gt; /dev/null

@@ -18,7 +18,7 @@ Vous avez certainement déja vu ça, dans la configuration suivante :
 
 Un problème d'affichage des caractères pouvant être mis en évidence par une sortie en ligne de commande suivante :
 
-```
+``` sh
     (firefox-bin:19337): Pango-CRITICAL **: No modules found:
     No builtin or dynamically loaded modules were found.
     PangoFc will not work correctly.
@@ -30,7 +30,7 @@ Un problème d'affichage des caractères pouvant être mis en évidence par une 
 
 Il suffit de saisir les commandes suivantes :
 
-``` 
+``` sh
     -- Mise à jour des modules GTK / GDK / Pango 32 Bits --
     #> gtk-query-immodules-2.0-32 > /etc/gtk-2.0/i686-pc-linux-gnu/gtk.immodules
     #> gdk-pixbuf-query-loaders32 > /etc/gtk-2.0/i686-pc-linux-gnu/gdk-pixbuf.loaders

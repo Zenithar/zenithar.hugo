@@ -138,7 +138,7 @@ log("VirusTotal middleware initialised");
 ```
 
 N'oubliez pas d'activer le support de Javascript dans Tyk, dans le fichier tyk.conf :
-```
+```yaml
 ...
 "enable_jsvm": true
 ...

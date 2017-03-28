@@ -18,14 +18,14 @@ les packages Golang en ajoutant un "proxy".
 Cette technique est possible, c'est une fonctionnalité de `go get`.
 Par défaut un package Go sans préfixe indique une dépendance du runtime.
 
-```
+```sh
 [<prefix>/]?<path>/<library>
 ```
 
 La plupart du temps les librairies sont hébergées sur un dépôt de code directement
 (Github, Gitlab, etc.).
 
-```
+```sh
 "net/url" -> runtime
 "github.com/namsral/flag" -> https://github.com/namsral/flag
 "zenithar.org/go/common" -> https://zenithar.org/go/common

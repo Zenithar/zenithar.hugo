@@ -17,7 +17,7 @@ J'ai recherché un moyen de modifier la sortie du code généré par le compilat
 
 Pour utiliser cette "extension", il suffit d'invoquer la commande de la sorte :
 
-```bash
+``` sh
 coffee -bp -r ./ext.coffee file.coffee
 ```
 

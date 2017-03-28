@@ -66,16 +66,16 @@ Nous allons procéder à la compilation du serveur, et afin de reduire les libra
 
 Pour construire l'image il suffit de lancer la commande suivante :
 
-```
-#> docker build -t zenithar/nano-nginx-builder .
+``` sh
+$> docker build -t zenithar/nano-nginx-builder .
 ```
 
 ### Conteneur réutilisable
 
 Il faut a présent extraire le fichier rootfs.tar de l'image qui a été créée. Pour cela nous allons exécuter la commande suivante :
 
-```
-#> docker run zenithar/nano-nginx-builder cat /rootfs.tar > rootfs.tar
+``` sh
+$> docker run zenithar/nano-nginx-builder cat /rootfs.tar > rootfs.tar
 ```
 
 Cette commande va démarrer le conteneur précedemment construit puis extraire via une redirection de flux, le fichier rootfs.tar. On aurait pu aussi créer un volume puis déplacer le fichier vers le volume pour le récupérer.
@@ -99,8 +99,8 @@ Vous pouvez vous créer une images contenant la configuration commune (SSL).
 
 Le lancement du conteneur sur fait à l'aide de la commande docker (comme toujours) :
 
-```
-#> docker run -t zenithar/nano-nginx -v /var/log/nginx:/var/log/nginx -v /srv/www:/www -v /srv/vhosts:/etc/nginx/sites-available -v /srv/ssl:/etc/nginx/ssl -p 80:80 -p 443:443
+``` sh
+$> docker run -t zenithar/nano-nginx -v /var/log/nginx:/var/log/nginx -v /srv/www:/www -v /srv/vhosts:/etc/nginx/sites-available -v /srv/ssl:/etc/nginx/ssl -p 80:80 -p 443:443
 ```
 
 Cette commande va lancer le serveur NGiNX (/usr/sbin/nginx), rediriger les ports 80/443 du conteneur vers l'hôte, et monter les volumes.

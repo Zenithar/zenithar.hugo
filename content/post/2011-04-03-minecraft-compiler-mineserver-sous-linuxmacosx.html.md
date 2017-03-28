@@ -14,9 +14,9 @@ lastmod: 2017-03-01T11:27:27+01:00
 
 Suite au précédent article, concernant libnoise, je me suis penché sur la compilation du projet sous MacOSX. Cependant même problème, le support est incomplet à la compilation.
 
-Il suffit d'ajouter les flags au compilateur dans les deux fichiers CMakeLists.txt du projet libnoise et mineserver. 
+Il suffit d'ajouter les flags au compilateur dans les deux fichiers CMakeLists.txt du projet libnoise et mineserver.
 
-```
+``` cmake
 IF(APPLE)
   set(CMAKE_CXX_FLAGS "-W -Wall -Wno-unused -pedantic")
   set(CMAKE_CXX_FLAGS_DEBUG "-DDEBUG -g")
@@ -27,17 +27,17 @@ ENDIF()
 Puis tout recompiler :
 
 - libnoise
-```
+``` sh
 $ wget http://static.zenithar.org/wp-content/uploads/2011/04/CMakeLists.txt
 $ vi CMakeLists.txt # Ajouter les lignes précédentes.
-$ mkdir Build 
+$ mkdir Build
 $ cd Build
 $ ccmake -DMAKE_INSTALL_PREFIX=/opt/libnoise ..
 $ make
 $ make install
 ```
 - mineserver
-```
+```sh
 $ vi CMakeLists.txt  # Ajouter les lignes précédentes.
 $ mkdir Build
 $ cd Build

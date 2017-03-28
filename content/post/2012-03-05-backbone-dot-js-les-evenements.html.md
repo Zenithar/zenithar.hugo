@@ -41,7 +41,7 @@ console.log("after readFile");
 
 Produira la sortie suivante :
 
-``` bash
+``` sh
 > node file.js
 after readFile
 file read: 234 bytes
@@ -49,28 +49,28 @@ file read: 234 bytes
 
 On peut remarquer une particularité, la fonction d'appel à la lecture du fichier "fichier.txt", prends en paramètre une fonction dîtes "anonyme" (sans nom).
 
-Cette fonction sera exécutée comme un "callback", lors de la lecture du fichier. 
+Cette fonction sera exécutée comme un "callback", lors de la lecture du fichier.
 
 Il est très important de comprendre ce mécanisme pour la suite de l'article.
 
 ## Evènements Backbone.JS
 
-Les évènements Backbone.JS sont aussi traités de manière asynchrone, on enregistre des "handlers", sur des évènements qui peuvent intervenir n'importe quand. 
+Les évènements Backbone.JS sont aussi traités de manière asynchrone, on enregistre des "handlers", sur des évènements qui peuvent intervenir n'importe quand.
 
-Une bonne application Backbone.JS est une application complètement décorellée et évènementielle. Les composants sont implémentés, et reliés par des messages (event). 
+Une bonne application Backbone.JS est une application complètement décorellée et évènementielle. Les composants sont implémentés, et reliés par des messages (event).
 
 Et je vais encore une fois citer Addy Osmani, pour son article expliquant comment construire une application Web Javascript "scalable", et découplée :
 
   * [Slides: Building Decoupled Large-Scale Applications With JavaScript And jQuery](http://addyosmani.com/blog/jqcon-largescalejs-2012/)
-  
+
 ### Gestion des évènements
 
 La gestion des évènements avec Backbone.JS se fait comme pour jQuery, avec les fonctions "[on](http://documentcloud.github.com/backbone/#Events-on)", "[off](http://documentcloud.github.com/backbone/#Events-off)".
 
-Les évènements sont gérés sous la forme d'un modèle de conception très bien connu aujourd'hui, le modèle Publish / Subscribe (Producteur / Consommateur). 
+Les évènements sont gérés sous la forme d'un modèle de conception très bien connu aujourd'hui, le modèle Publish / Subscribe (Producteur / Consommateur).
 Le bus de dispatch utilisé pour la communication entre les composants se nomme le **médiateur**.
 
-Tous les concepts de Backbone.JS peuvent être à la fois producteur et consommateur. Cependant certains concepts possèdent des mécanismes déjà implémentés de publication. 
+Tous les concepts de Backbone.JS peuvent être à la fois producteur et consommateur. Cependant certains concepts possèdent des mécanismes déjà implémentés de publication.
 Il n'y a pas de consommateur par défaut.
 
 ### Les modèles : [Backbone.Model](http://documentcloud.github.com/backbone/#Model)
@@ -92,8 +92,8 @@ sidebar.on('change:color', function(model, color) {
   $('#sidebar').css({background: color});
 });
 
-// Modification de l'attribut, publication automatique de l'évènement 
-// "change:<attribute-name>". 
+// Modification de l'attribut, publication automatique de l'évènement
+// "change:<attribute-name>".
 sidebar.set({color: 'white'});
 
 // On demande une couleur
@@ -206,7 +206,7 @@ var DocumentView = Backbone.View.extend({
   	// celui qu'on croit quand on l'utilise.
   	_.bindAll(this, "render","open","select");
   },
-  
+
   render: function() {
     $(this.el).html(this.template(this.model.toJSON()));
     return this;
@@ -227,7 +227,7 @@ var DocumentView = Backbone.View.extend({
 
 ### Les évènements personnalisés : [Backbone.Events](http://documentcloud.github.com/backbone/#Events)
 
-Il est tout à fait possible d'ajouter des évènements à tous les objets en utilisant le Mixin Events. 
+Il est tout à fait possible d'ajouter des évènements à tous les objets en utilisant le Mixin Events.
 
 ``` javascript
 var object = {};
@@ -260,7 +260,7 @@ var AddEditView = Backbone.View.extend({
   // On initialise la vue avec le ventilator
   initialize: function(options){
     _.bindAll(this, "editMedication");
-    
+
     // On connecte un évènement "editMedication"
     options.vent.bind("editMedication", this.editMedication);
   },
@@ -314,7 +314,3 @@ Mon prochain article parlera de l'utilisation de CoffeeScript avec Backbone.JS, 
 Bonne soirée à toutes et à tous.
 
 PS : Un grand merci à [jekyll](http://jekyllrb.com/), [octopress](http://octopress.org/) et Git, qui rendent l'écriture des articles sur mon blog vraiment agréable.
-
-
-
-

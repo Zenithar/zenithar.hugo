@@ -58,7 +58,7 @@ MSN Messenger.
 
 Je ne traite ici que de l'installation ArchLinux.
 
-```
+```sh
 $ yaourt -Ss sky linux
 aur/sky 2.0.471-1 [installed] (29) (2.64)
     Lync & Skype for business on Linux
@@ -74,7 +74,7 @@ aur/skypetab-ng-git v0.5.0.fixed.27.g9e5b1ed-1 (44) (0.47)
 
 Il suffit d'installer le paquet `sky` :
 
-```
+```sh
 $ yaourt -S sky
 ```
 
@@ -87,7 +87,7 @@ Et voilà !
 
 Il est possible d'utiliser `pidgin` pour vous connecter au réseau Lync.
 
-```
+```sh
 $ yaourt -Ss pidgin office
 community/pidgin-sipe 1.20.1-1 [installed]
     Third-party Pidgin plugin for Microsoft Office 365/Lync/LCS/OCS
@@ -98,7 +98,7 @@ Avec Pidgin, c'est un peu plus "sportif".
 Il faut modifier le User-Agent du client pidgin pour pouvoir vous connecter,
 je ne sais pas vraiment pourquoi mais sans cela, cela ne se connecte pas.
 
-```
+```sh
 UserAgent : UCCAPI/15.0.4420.1017 OC/15.0.4420.1017
 ```
 
@@ -110,7 +110,7 @@ Dans l'onglet Basic :
 Si vous avez des problèmes de connexions, notamment des erreurs SSL/TLS
 "Read Error", il est conseillé de désactiver les
 
-```
+```sh
 $ export NSS_SSL_CBC_RANDOM_IV=0
 $ pidgin
 ```

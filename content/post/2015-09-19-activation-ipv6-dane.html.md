@@ -70,7 +70,7 @@ vous en référer à la documentation de votre hébergeur de votre zone DNS.
 
 Vous devez ajouter un champs `AAAA` qui correspond à un enregistrement IPv6.
 
-```
+```sh
 blog.  A     176.31.112.5
 blog.  AAAA  2001:41d0:8:3705::1
 ```
@@ -101,7 +101,7 @@ SHA256 Fingerprint=B9:0B:68:C3:21:C8:F9:B0:1C:8D:E0:E1:00:D6:C3:91:45:14:B4:D2:C
 
 Cette empreinte doit être ajoutée dans un champs DNS réservé pour DANE `TLSA` :
 
-```
+```sh
 _443._tcp.blog.zenithar.org. 86400 IN	TLSA	3 0 1 B90B68C321C8F9B01C8DE0E100D6C3914514B4D2CABC296D99739D858CFCB96E
 ```
 
@@ -111,7 +111,7 @@ Note pour les utilisateurs d'OVH : malheureusement le serveur DNS OVH ne support
 pas les enregistrements TLSA, cependant il existe une possiblité d'enregistrer
 le champs à l'aide des type de base du serveur :
 
-```
+```sh
 _443._tcp.blog  IN TYPE52 \# 35 030001b90b68c321c8f9b01c8de0e100d6c3914514b4d2cabc296d99739d858cfcb96e
 ```
 
@@ -119,7 +119,7 @@ Cet enregistrement ajoute le support DANE pour les serveurs DNS qui n'ont pas l'
 champs TLSA.
 
 Vous pouvez vérifier la prise en compte de l'enregistrement :
-```
+```sh
 $ dig +short TYPE52 _443._tcp.blog.zenithar.org
 3 0 1 B90B68C321C8F9B01C8DE0E100D6C3914514B4D2CABC296D99739D85 8CFCB96E
 ```
