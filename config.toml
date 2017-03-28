@@ -6,6 +6,9 @@ summerization = "html_firstparagraph"
 paginate = 9
 theme = "bleak"
 
+PygmentsUseClasses = false
+PygmentsCodeFences = true
+
 SectionPagesMenu = "Main"
 
 [permalinks]

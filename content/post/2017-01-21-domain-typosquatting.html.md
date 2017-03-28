@@ -38,7 +38,8 @@ Le nombre de caractère ayant augmenté on peut utiliser des caractères de lang
  étrangères pour remplacer le caractères ASCII, on parle alors d'`homoglyphe`.
 
 Pour mon domaine `zenithar.org` :
-```
+
+```ini
 zeｎｉthar ('n', 'i')
 ｚеｎｉthar ('z', 'e', 'n', 'i')
 ```
@@ -47,7 +48,7 @@ Heureusement qu'il y a d'encodage Punycode pour traduire un domaine utf8 en ASCI
 
 Cela peut être aussi des homoglyphes composés :
 
-```
+```ini
 mappy.com => rnappy.com ('m' => 'rn')
 opodo.com => opoclo.com ('d' => 'cl')
 ```
@@ -69,7 +70,7 @@ Les fautes de frappes sont les plus utilisées, il s'agit :
 Il suffit d'enregistrer un domaine utilisant une partie du site visé pour le
 phishing :
 
-```
+```ini
 z.enithar.org
 zen.ithar.org
 ```
@@ -78,7 +79,7 @@ zen.ithar.org
 
 L'attaquant peut enregistrer un domaine contenant un TLD différent du domaine ciblé
 
-```
+```ini
 dropbox.com => dropbox.corn
 ```
 
@@ -88,7 +89,7 @@ dropbox.com => dropbox.corn
 
 Il suffit d'enregistrer un domaine contenant un services du domaine ciblé
 
-```
+```ini
 mail.google.com => mail-google.com
 login.banque.com => login-banque.com
 ```
@@ -102,7 +103,7 @@ Encore une fois sur un malentendu ...
 alternatives en utilisant des strategies de générations prédéfinies.
 Ce programme peut être utilisé pour générer des domaines.
 
-```
+```sh
 $ go get zenithar.org/go/typogenerator
 $ go install zenithar.org/go/typogenerator
 $ typogen -h

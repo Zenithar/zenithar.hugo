@@ -159,7 +159,7 @@ Si tout fonctionne bien, votre résolveur DNS local est configuré. Si vous souh
 ### Vous venez de faire la mise à jour et maintenant DNSCrypt fonctionne avec Systemd ?
 
 Il suffit d'éditer le fichier `/usr/lib/systemd/system/dnscrypt-proxy.socket`
-```conf
+```ini
 [Unit]
 Description=dnscrypt-proxy listening socket
 After=network.target
@@ -205,7 +205,7 @@ Et refaire les tests.
 Pour cela, j'ai une solution un peu crade mais elle fonctionne, il faut éditer
 le fichier `/etc/ntp.conf` et y remplacer les DNS par les IPs des pool utilisés :
 
-```conf
+```ini
 # Associate to Arch's NTP pool
 server 195.154.97.57 # 0.arch.pool.ntp.org
 server 212.83.131.33 # 0.arch.pool.ntp.org

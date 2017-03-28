@@ -120,7 +120,7 @@ Un certains nombre de middleware sont officiellement disponibles :
 Caddy fonctionne à l'aide d'un fichier `Caddyfile`, contenant toute la
 configuration du serveur.
 
-```config
+```yaml
 # Addresse d'écoute => toutes interfaces sur le port 2015 (par défaut)
 0.0.0.0:2015
 

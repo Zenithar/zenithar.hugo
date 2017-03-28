@@ -20,7 +20,7 @@ Tous les serveurs de publicités vout être résolus en `127.0.0.1`, ce qui emp�
 
 Ce script va créer un fichier `unbound_ad_servers` qui contiendra les redirections des domaines vers 127.0.0.1. Pour activer la prise en compte du serveur, il faut ajouter :
 
-```conf
+```yaml
 server:
  ...
  include: /etc/unbound/unbound_ad_servers
