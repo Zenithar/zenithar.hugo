@@ -6,6 +6,7 @@ summerization = "html_firstparagraph"
 paginate = 9
 theme = "bleak"
 
+PygmentsStyle = "paraiso-dark"
 PygmentsUseClasses = false
 PygmentsCodeFences = true
 
