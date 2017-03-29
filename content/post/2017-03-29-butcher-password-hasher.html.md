@@ -16,8 +16,8 @@ lastmod: 2017-03-29T10:25:06+02:00
 
 ![Steak Hashé](/images/articles/2017/steak_hashe.png)
 
-Lorsque l'on developpe des applications ayant dans la majorité des cas des
-utilisateurs, sans lesquels nous pouvons nous poser la question de l'utilité
+Lorsque l'on développe des applications ayant dans la majorité des cas des
+utilisateurs, sans lesquels nous pouvons nous poser la question sur l'utilité
 de celles-ci, vient une notion de `compte d'accès` permettant d'identifier un
 utilisateur.
 
@@ -90,8 +90,8 @@ Pour résumer, les fonctions de dérivation peuvent avoir des paramètres :
   * `memory`: une allocation de mémoire nécessaire;
   * `parallelism`: combien de thread de calcul en parallèle;
 
-Ces paramètres vont introduire de la difficulté du condensat, pour `ralentir`
-le calcul, permettant de limiter le calcul par force brute.
+Ces paramètres vont introduire de la difficulté pour `ralentir` le calcul,
+permettant de limiter le calcul par force brute.
 
 De plus, afin de prévenir les attaques par table arc-en-ciel (rainbow table),
 j'ai ajouté un `sel` (512 bits) à tous les algorithmes.
