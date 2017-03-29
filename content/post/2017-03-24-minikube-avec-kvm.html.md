@@ -4,7 +4,7 @@ date: "2017-03-24"
 title: "Kubernetes Minikube avec KVM"
 description: "Déployer Kubernetes en version locale sous Archlinux avec KVM."
 slug: minikube-avec-kvm
-featured: true
+featured: false
 draft: false
 image: /images/articles/2017/kubernetes.png
 tags:

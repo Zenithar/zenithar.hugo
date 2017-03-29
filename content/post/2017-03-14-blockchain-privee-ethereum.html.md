@@ -5,7 +5,7 @@ title: "Blockchain privée sur Ethereum"
 description: "Mise en place d'une blockchain privée en utilisant le protocole
 Ethereum"
 slug: blockchain-privee-ethereum
-featured: true
+featured: false
 image: /images/articles/2017/ethereum.jpg
 tags:
   - securite
