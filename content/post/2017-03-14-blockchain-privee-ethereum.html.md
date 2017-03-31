@@ -15,7 +15,7 @@ tags:
 lastmod: 2017-03-28T20:05:31+02:00
 ---
 
-![Ethereum](/images/articles/2017/ethereum.jpg)
+![Ethereum](/images/articles/2017/ethereum.png)
 
 On entends de plus en plus parler des blochains c'est un `buzzword` à la mode
 mais derrière ce mot se cache un concept très simple (à la base).

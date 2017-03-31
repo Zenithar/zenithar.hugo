@@ -192,7 +192,7 @@ func (s *IdentityService) Login(principal, password string) (string, error) {
 }
 ```
 
-Voilà un bout de code intégré dans la séquence d'identification pour que le
-condensat mot du passe soit mis à jour en fonction des paramètres.
+Voilà un bout de code intégré dans la séquence d'identification pour que
+le condensat mot du passe soit mis à jour en fonction des paramètres.
 
   * [Github](https://github.com/Zenithar/go-butcher)
