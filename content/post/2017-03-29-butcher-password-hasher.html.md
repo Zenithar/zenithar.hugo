@@ -5,7 +5,6 @@ title: "Butcher : Password Hasher"
 description: "Parce qu'il ne faut pas stocker ses mots de passe en clair, ou
 encore simplement condensés en MD5, SHA1."
 slug: butcher-password-hasher
-featured: true
 draft: false
 image: /images/articles/2017/steak_hashe.png
 tags:
