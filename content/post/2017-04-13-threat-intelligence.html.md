@@ -67,20 +67,23 @@ avions identifiés `plus de 150`.
 
 Voici les problèmes rencontrés :
 
-  * `Format non hétérogène`: pas de spécification unique pour gérer des listes
-    observables. Il faut définir des stratégies de collecte paramétrables, ce
-    qui rends le développement du composant de collecte plus complexe. Il existe
-    bien des initiatives comme STIX ou OpenIOC mais cela reste encore trop peu
-    utilisé, c'est souvent trop lourd et le plus recurrent c'est un simple CSV;
+  * `Accès à l'information`: fichier sur serveur WEB / FTP, page HTML,
+    consommation API;
   * `Gestion des fichiers`: en outre du format de l'information (TXT, CSV, XML,
     ...), il y a aussi la compression (TAR, ZIP, etc.);
+  * `Format non hétérogène`: pas de spécification unique pour gérer des listes
+    d'observables. Il faut définir des stratégies de collecte paramétrables, ce
+    qui rends le développement du composant de collecte plus complexe. Il existe
+    bien des initiatives comme [STIX](https://oasis-open.github.io/cti-documentation/)
+    ou [OpenIOC](http://www.openioc.org/) mais cela reste encore trop peu
+    utilisé, c'est souvent trop lourd et le plus souvent c'est un simple CSV;
   * `Pas de garantie de disponibilité`: la source peut avoir des soucis de
     disponibilité, rendant la collecte impossible le temps de la résolution
-    du/des problème(s);
+    du/des problème(s) => rendant aveugle le temps d'indisponibilité;
   * `Questionnement sur la fiabilité`: quel niveau de confiance associé à la
     source ?
-  * `Pas de contrôle d'intégrité`: il est rare de voir une signature associée
-    prouvant l'intégrité et la provenance du fichier collecté;
+  * `Pas de contrôle d'intégrité`: il est rare de voir une signature numérique
+    associée prouvant l'intégrité et la provenance du fichier collecté;
   * `Continuation de service`: c'est un service gratuit, rien ne prouve qu'il va
     le rester, et souvent les sources sont gérées en `best-effort`.
 
@@ -99,7 +102,7 @@ Voici les problèmes rencontrés :
     sécurité, ce qui a pour effet de produire des services autour de
     l'uniformisation des informations provenant de sources publiques, ainsi on
     peut s'apercevoir qu'il s'agit simplement d'un formattage de plusieurs
-    sources publiques qui est vendu.
+    sources publiques qui est vendu, compréhensible si explicité et assumé.
 
 ### Sources Internes
 
@@ -107,29 +110,36 @@ Il est possible aussi d'exploiter les sources d'informations internes comme :
 
   * `Logs des équipements`: IDS / IPS produisent des observables qui peuvent
     être qualifiés `IoC` par analyse statistique simple des fréquences;
-  * `Les incidents detectés`: peuvent aussi servir à alimenter en observable,
-    même si c'est des faux-positifs, il est intéressant de tracer ce fait;
+  * `Les incidents detectés / traités`: peuvent aussi servir à alimenter en
+    observables, même si ce sont des faux-positifs, il est intéressant de tracer
+    ce fait;
   * `Plateforme de soumission`: il est possible de mettre en place des services
     de soumission pour transférer des fichiers suspicieux nécessitant analyse;
   * `SMTP Blackhole`: recupération des campagnes de SPAM, par l'installation de
     services mail volontairement configurés en `Open-Relay` mais controllés;
   * `HoneyPot`: pour la collecter des malwares, mais aussi des tendances de
-    connexions.
+    connexions;
+  * `Quarantaine Antivirus`: les espaces de quarantaines des antivirus sont des
+    viviés a malware, et permettent d'identifier des tendances d'infections.
 
 Voici les problèmes rencontrés :
 
   * `Interaction de services nécessaire`: il n'est pas toujours possible d'avoir
     accès à toutes les informations d'un SI;
-  * `Surveiller les HoneyPots`: la mise en place de tels dispositifs est simple
-    à faire, mais garantir qu'il n'est pas utilisé comme système de rebond est
-    beaucoup plus complexe;
+  * `Le HoneyPots`: la mise en place de tels dispositifs est simple à faire,
+    mais garantir qu'il n'est pas utilisé comme système de rebond pour
+    attaquer les machines légitimes est beaucoup plus complexe;
   * `Analyse de malwares`: pour analyser les fichiers collectés, il faut mettre
     en place tout une infrastructure ou déléguer cette tâche d'analyse à un
     service. Il faut savoir que l'`analyse dynamique` ne fonctionne pas toujours
      à cause des contre-mesures possibles du malware qui va par exemple détecter
     qu'il est dans une VM, et au mieux ne se lancera pas, ou au pire aura un
     comportement complètement différent. On aboutira rapidement à une analyse
-    statique manuelle, ne pouvant pas faire face à la volumétrie.
+    statique manuelle, ne pouvant pas faire face à la volumétrie;
+  * `Coût de l'infrastructure de traitement`: nécessite la connaissance et
+    l'administration des systèmes d'analyses pour produire des données utiles.
+    Cette infrastructure est un coût masqué servant simplement à ajouter
+    une ou deux étiquettes à un observable.
 
 ## Normaliser
 
@@ -147,6 +157,12 @@ rapport au différentes vitesses que composent notre système.
 
 Voici les problèmes rencontrés :
 
+  * `Modèle Acteurs Distribués`: un problème est déjà difficile à résoudre dans un
+    seul système, mais en plus si celui-ci est distribué c'est encore plus
+    complexe;
+  * `Définir un langage inter-composant`: les éléments du système doivent tous
+    être capable de comprendre l'information qu'il va traiter indépendamment de
+    l'étape à laquelle il est appelé;
   * `Modèle unique et extensible`: il faut être capable de transmettre
     l'information provenant des collecteurs de la manière la plus pure possible;
   * `Meta-modélisation`: en ingénierie des modèles, il faut savoir créer des
@@ -154,6 +170,9 @@ Voici les problèmes rencontrés :
     valeur de la données;
   * `Sérialisation et transport`: comment transporter l'information dans le
     modèle, tout en sachant qu'il peut évoluer;
+  * `Compression des unités de travail`: les acteurs travaillent indépendamment
+    des uns des autres, à leur rythme, la file d'intégration peut contenir beaucoup
+    de messages, pour optimiser cela nous avons compresser ces unités de travail;
   * `Pouvoir évoluer avec les versions`: il ne faut pas se retrouver à devoir
     faire une migration de base de données complètes parce qu'on a changé un
     type de donnée, et parce qu'il est impossible de tout prévoir à la conception.
@@ -204,7 +223,11 @@ Voici les problèmes rencontrés :
     de la fausse information. Internet est vivant, il n'attends pas que vous
     ayez fini vos traitements pour muter, évoluer (ex: bail IP dynamique =>
     assignation d'une étiquette attaquant à l'IP alors que la personne ne
-    possède plus le bail ).
+    possède plus le bail );
+  * `Gestion du cache distribué`: un observable déjà augmenté ne doit pas faire
+    perdre du temps à toute l'intégration, il doit être ignoré s'il vient
+    d'être traité. Cependant l'introduction d'un cache peut aussi faire qu'un
+    changement passe inaperçu car la valeur a changée avant l'éviction du cache.
 
 ## Stocker
 
@@ -219,6 +242,10 @@ Voici les problèmes rencontrés :
     de macros Excel qui passe sur un classeur à 10 000 lignes ... (vu sur internet);
   * `Stockage Hybride`: pouvoir requêter de manière complexe tout en gardant
     de performance d'écriture acceptable;
+  * `Modification parallèle et incrémentale`: La nature distribuée du travail fait
+    que l'ordre des traitements sur la donnée finale ne doit faire qu'améliorer
+    la valeur de celle-ci, une opération ne peut dévaluer un observable parce
+    qu'il s'est produit une erreur;
   * `Version community VS enterprise`: beaucoup de produit propose gratuitement
     leurs outils n'ayant que peu de différences sur le papier, mais la réalité
     est tout autre, nous avons eu des problèmes liés à la volumétrie seule,
@@ -286,7 +313,14 @@ Voici les problèmes rencontrés :
   * `Confiance déléguée`: nous avons observé un transfert de confiance au produit
     de collecte et d'analyse mais il faut toujours avoir un oeil critique sur
     la source de l'information. Tout traitement informatique ne peut remplacer
-    la capacité de jugement et d'adaptabilité d'un être humain (pour le moment).
+    la capacité de jugement et d'adaptabilité d'un être humain (pour le moment);
+  * `Supervision`: ce système est distribué sur plusieurs matériels qui doivent
+    être supervisés sur le plan matériel, réseaux, mais aussi applicatif: absence
+    de collecte, collecte identique depuis quelques jours, pas de résolutions DNS,
+    etc;
+  * `Couplage avec le réseau important`: le moindre problème matériel a un impact
+    sur le système, le rendant indisponible, produisant du retard d'intégration,
+     etc.
 
 # Conclusion
 
@@ -299,7 +333,8 @@ Depuis 3 ans, il existe de nombreuses solutions OpenSource, éliminant la charge
 de développement de la solution, tout en gardant une charge pour adapter, mais
 ne supprimera en aucun cas le besoin en infrastructure.
 
-> Je n'irai pas jusqu'à justifier les prix pratiqués par des solutions commercialles
+> Je n'irai pas jusqu'à justifier les prix pratiqués par des solutions commerciales
 > mais il faut comprendre pourquoi c'est aussi cher.
 >
-> C'est le commerce de l'information !
+> C'est le commerce de l'information ! On ne vends pas le produit mais l'information
+> qu'il a traité.
