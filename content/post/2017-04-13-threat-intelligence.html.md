@@ -5,7 +5,7 @@ title: "La 'Threat Intelligence' technique: Attention !"
 description: "Retours sur expérience sur la réalisation d'une solution de CTI"
 slug: threat-intelligence
 draft: true
-featured: true
+featured: false
 image: /images/articles/2017/threat-intelligence.jpg
 tags:
   - cyber
@@ -76,7 +76,7 @@ Voici les problèmes rencontrés :
     qui rends le développement du composant de collecte plus complexe. Il existe
     bien des initiatives comme [STIX](https://oasis-open.github.io/cti-documentation/)
     ou [OpenIOC](http://www.openioc.org/) mais cela reste encore trop peu
-    utilisé, c'est souvent trop lourd et le plus souvent c'est un simple CSV;
+    utilisées, c'est souvent trop lourd et le plus souvent c'est un simple CSV;
   * `Pas de garantie de disponibilité`: la source peut avoir des soucis de
     disponibilité, rendant la collecte impossible le temps de la résolution
     du/des problème(s) => rendant aveugle le temps d'indisponibilité;
@@ -90,8 +90,7 @@ Voici les problèmes rencontrés :
 #### Sources Privées
 
 Certaines entreprises ayant compris la difficulté à corréler les informations
-publiques, vendent des `feeds` d'informations traitées et uniformisés, pas
-toujours avec une valeur ajoutée.
+publiques, vendent des `feeds` d'informations traitées et uniformisés.
 
 Voici les problèmes rencontrés :
 
@@ -166,15 +165,15 @@ Voici les problèmes rencontrés :
   * `Modèle unique et extensible`: il faut être capable de transmettre
     l'information provenant des collecteurs de la manière la plus pure possible;
   * `Meta-modélisation`: en ingénierie des modèles, il faut savoir créer des
-    modèles pour définir des modèles, c'est ce qui a été fait pour garder la
-    valeur de la données;
+    modèles pour définir des modèles, c'est ce qui a été fait pour exprimer la
+    valeur de la données, et la garder tout au lon d processus d'analyse;
   * `Sérialisation et transport`: comment transporter l'information dans le
-    modèle, tout en sachant qu'il peut évoluer;
+    modèle, tout en sachant que ce modêle peut évoluer;
   * `Compression des unités de travail`: les acteurs travaillent indépendamment
     des uns des autres, à leur rythme, la file d'intégration peut contenir beaucoup
-    de messages, pour optimiser cela nous avons compresser ces unités de travail;
+    de messages, pour optimiser cela nous avons compressé ces unités de travail;
   * `Pouvoir évoluer avec les versions`: il ne faut pas se retrouver à devoir
-    faire une migration de base de données complètes parce qu'on a changé un
+    faire une migration de base de données complète parce qu'on a changé un
     type de donnée, et parce qu'il est impossible de tout prévoir à la conception.
 
 ## Améliorer
@@ -184,44 +183,46 @@ améliorations agissent sur la valeur de l'information et son contexte.
 
 Lorsque l'on travaille sur des informations techniques pures, il est rare qu'elles
 se suffisent à elles-mêmes, il faut pour cela créer des liens entre elles. La
-création de ces liens est ce que nous appelons l'amélioration.
+création de ces liens est ce que nous appelons: l'amélioration.
 
 Voici les problèmes rencontrés :
 
   * `Résolution DNS`: les résolutions DNS sont cruciales c'est le seul moyen
     pour obtenir d'un FQDN, le ou les IP associées. Cependant l'inverse n'est pas
     toujours possibles, il faut utiliser des services d'historisation de
-    résolution pour être capable d'avoir dans le temps les résolutions différentes.
+    résolutions pour être capable d'avoir dans le temps les résolutions différentes.
     Il existe des fournisseurs de services pour cela, mais comme d'habitude aux vues
-    de la volumétrie, ce service est inabordable. Il faut donc faire faire
+    de la volumétrie, ces services sont inabordables. Il faut donc faire faire
     les résolutions par le système à l'intégration;
   * `Détecter les domaines et sous-domaines`: les sources fournissent des observables
     qualifiés de domaines, mais il s'agit de sous-domaines, leur prédicat n'est pas
-    faux mais il faut pouvoir detecté, et trouver le domaine parent, sans compter
-    qu'un FQDN peut se cacher derriere ce domaine. Ex: `zenithar.org` mon domaine,
+    faux mais il faut pouvoir le detecté, et trouver le domaine parent, sans compter
+    qu'un FQDN peut aussi se cacher derrière ce domaine. Ex: `zenithar.org` mon domaine,
     mais c'est aussi un FQDN `zenithar.org` => site hébergeant mon CV;
   * `Interrogation WHOIS`: le `Whois` est très utile pour extraire les informations
     d'un domaine, mais le protocole est loin d'être respecté. Il n'a de normé
-    que l'alphabet qui sert à écrire son nom. On se retrouve vite à écrire autant
-     de parser qu'il y a des fournisseurs de whois : logiquement un par TLD,
-     soit aujourd'hui plus de 1500 ...;
+    que l'alphabet qui sert à écrire son nom, et son port de communication (TCP 43). 
+    On se retrouve vite à écrire autant de parser qu'il y a des fournisseurs de 
+    whois : logiquement un par TLD, soit aujourd'hui plus de 1500 ...;
   * `Décomposer des URLs`: sur le papier cela semble simple, mais il n'existe pas
-    vraiment de RegExp permettant d'extraire et de valider une URL;
+    vraiment de RegExp permettant d'extraire et de valider une URL, sans compter
+    IDNA et l'UNICODE;
   * `Géolocalisation des IPs`: Attention c'est pas un système fiable, il ne faut
-    pas avoir une confiance aveugle, et dire : 'les chinois nous attaquent ...';
+    pas avoir une confiance aveugle, et dire : 'les chinois nous attaquent par 
+    votre voisin utilise un noeud TOR de sortie en chine ...';
   * `Détecter les erreurs de classification`: les sources n'ont pas toujours une
     confiance absolue, il faut avouer que ce sont des traitements informatiques
     qui font le travail, scripts développés par un humain qui peut faire des
     erreurs. Nous avions souvent le cas d'URL extraite depuis le code HTML, qui
-    contenaient des simple quotes en fin d'URL. C'est une problèmatique récurrente
-    lié au `web scrapping`; Autre cas les sandbox renvoient les appels de fonction
-    sous le format suivant `getlogicalprocessorinformation@kernel32.dll`, qui
+    contenaient des simples quotes en fin d'URL. C'est une problèmatique récurrente
+    liée au `web scrapping`; Autre cas les sandboxes qui renvoient les appels de fonction
+    sous le format suivant `getlogicalprocessorinformation@kernel32.dll`, format qui
     peut être considéré comme une adresse email syntaxiquement valide !
   * `Améliorer vite !`: il ne faut pas ajouter une latence de traitement à
-    l'information, si nous mettons plus de 24h a traiter un évènement sur 15
+    l'information, si nous mettons plus de 24h à traiter un évènement sur 15
     minutes, l'intérêt peut être du coup limité, et générer dans le pire des cas
     de la fausse information. Internet est vivant, il n'attends pas que vous
-    ayez fini vos traitements pour muter, évoluer (ex: bail IP dynamique =>
+    ayez fini vos traitements pour muter / évoluer (ex: bail IP dynamique =>
     assignation d'une étiquette attaquant à l'IP alors que la personne ne
     possède plus le bail );
   * `Gestion du cache distribué`: un observable déjà augmenté ne doit pas faire
@@ -242,10 +243,13 @@ Voici les problèmes rencontrés :
     de macros Excel qui passe sur un classeur à 10 000 lignes ... (vu sur internet);
   * `Stockage Hybride`: pouvoir requêter de manière complexe tout en gardant
     de performance d'écriture acceptable;
+  * `Big Data == Big Infra`: parce que 3 Raspberry PI en réseau ne suffisent pas;
   * `Modification parallèle et incrémentale`: La nature distribuée du travail fait
     que l'ordre des traitements sur la donnée finale ne doit faire qu'améliorer
-    la valeur de celle-ci, une opération ne peut dévaluer un observable parce
+    la valeur de celle-ci, une opération ne peut pas dévaluer un observable parce
     qu'il s'est produit une erreur;
+  * `Amlérioration par fusion`: les observables sont améliorés par le système de base 
+    de données, pas de lecture => fusion => écriture;
   * `Version community VS enterprise`: beaucoup de produit propose gratuitement
     leurs outils n'ayant que peu de différences sur le papier, mais la réalité
     est tout autre, nous avons eu des problèmes liés à la volumétrie seule,
@@ -261,6 +265,12 @@ Voici les problèmes rencontrés :
     composant pour pallier à la disparition, on comble avec d'autres outils.
     Augmentant la complexité de l'infrastructure et donc les probabilités de
     pannes, bugs, etc;
+  * `Historisation des modifications`: c'est une fonctionnalité très importante 
+    mais elle occasionne un impact très important en infrastucture. 
+    Nous avions utlisé une stratégie CoW (Copy on Write) pour garantir l'intégrité,
+    mais est arrivé les problèmatiques de rétention de données. Nous avons 
+    choisi de garder la dernière version de l'observable.
+  * `Sauvegarde`: Plus il y a de données plus la sauvegarde est importante.
 
 ## Analyser
 
@@ -283,42 +293,42 @@ Voici les problèmes rencontrés :
   * `Gestion de la confidentialité des observables`: effectivement les
     observables sont liés à l'analyse du malware qui lui est contenu dans un
     document parfois officiel, faut-il par extension rendre confidentiel ces
-    `observables` ? ou séparer les niveaux de confidentialité ? Il existe une
-    norme appelé le [TLP](http://blog.marcfredericgomez.fr/ssi-traffic-light-protocol/) (`Traffic Light Protocol`), indiquant le niveau de
-    confidentialité à respecter pour l'information. Il définit 4 niveaux de
+    `observables` ? ou séparer les niveaux de confidentialité ? Il existe un
+    protocole appelé le [TLP](http://blog.marcfredericgomez.fr/ssi-traffic-light-protocol/) (`Traffic Light Protocol`), indiquant le niveau de
+    confidentialité à respecter pour l'échange de l'information. Il définit 4 niveaux de
     confidentialité, mais n'explique pas les logiques de régressions entre un
     observable qualifié par deux entités différentes à des niveaux différents:
-    on purrait dire que la priorité est la confidentialité donc plus c'est haut
-    mieux c'est, mais en mon sens l'objectif de la `threat intelligence` est le
-    partage, contrôlé certes, et encore un fois la confiance rentre en jeu; Si
+    on pourrait dire que la priorité est la confidentialité, donc plus c'est haut
+    mieux c'est. Mais, en mon sens, l'objectif de la `threat intelligence` est le
+    partage, contrôlé certes, où encore un fois la confiance rentre en jeu; Si
     une source publique fiable indique un TLP White (information publique), mais
-    qu'une source privée indique Amber (diffusion restreinte), pourquoi appliquer
+    qu'une source privée peu fiable indique Amber (diffusion restreinte), pourquoi appliquer
     Amber ? Souvent on invoque le GBS (Gros Bon Sens);
   * `Scorer un observable`: la volumétrie fait qu'il faut prioriser les analyses,
     il faut pour cela produire un score permettant d'identifier les observables
     importants des moins importants. Cependant, un calcul trop simple risque de
     ne pas remonter les bonnes interprétations, et trop compliqué sera difficile
-    à expliquer et maintenir;
+    à comprendre, donc expliquer et maintenir;
 
 ## Exploiter
 
-Nous avons analyser l'information pour lui donner sa valeur maximale, il faut
-maintenant passé à l'exploitation technique.
+Nous avons analysé l'information pour lui donner sa valeur maximale, il faut
+maintenant passer à l'exploitation technique.
 
 Voici les problèmes rencontrés :
 
   * `Capacité des produits`: nous pouvons exporter des `data-sets` depuis la
-    base de données, mais malheureusement les outils de surveillance nous sont
+    base de données, mais malheureusement les outils de surveillance ne sont
     souvent pas capables de contenir l'ensemble de l'export;
   * `Confiance déléguée`: nous avons observé un transfert de confiance au produit
     de collecte et d'analyse mais il faut toujours avoir un oeil critique sur
     la source de l'information. Tout traitement informatique ne peut remplacer
     la capacité de jugement et d'adaptabilité d'un être humain (pour le moment);
-  * `Supervision`: ce système est distribué sur plusieurs matériels qui doivent
+  * `Supervision`: ce système est distribué sur plusieurs machines qui doivent
     être supervisés sur le plan matériel, réseaux, mais aussi applicatif: absence
     de collecte, collecte identique depuis quelques jours, pas de résolutions DNS,
     etc;
-  * `Couplage avec le réseau important`: le moindre problème matériel a un impact
+  * `Couplage avec le réseau important`: le moindre problème a un impact
     sur le système, le rendant indisponible, produisant du retard d'intégration,
      etc.
 
