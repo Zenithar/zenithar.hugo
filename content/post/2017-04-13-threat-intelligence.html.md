@@ -4,8 +4,8 @@ date: "2017-04-13"
 title: "La 'Threat Intelligence' technique: Attention !"
 description: "Retours sur expérience sur la réalisation d'une solution de CTI"
 slug: threat-intelligence
-draft: true
-featured: false
+draft: false
+featured: true
 image: /images/articles/2017/threat-intelligence.jpg
 tags:
   - cyber
@@ -239,25 +239,28 @@ par notre infrastructure de `data wrangling`.
 Voici les problèmes rencontrés :
 
   * `Volumétrie`: il s'agit de traiter des millions d'informations par jour,
-    plusieurs fois par jour. Un parle bien de `Big Data`, ce n'est pas un ensemble
-    de macros Excel qui passe sur un classeur à 10 000 lignes ... (vu sur internet);
+    plusieurs fois par jour. Un parle bien de `Big Data`, ce n'est pas un 
+    ensemble de macros Excel qui passe sur un classeur à 10 000 lignes ...;
   * `Stockage Hybride`: pouvoir requêter de manière complexe tout en gardant
     de performance d'écriture acceptable;
-  * `Big Data == Big Infra`: parce que 3 Raspberry PI en réseau ne suffisent pas;
-  * `Modification parallèle et incrémentale`: La nature distribuée du travail fait
-    que l'ordre des traitements sur la donnée finale ne doit faire qu'améliorer
-    la valeur de celle-ci, une opération ne peut pas dévaluer un observable parce
-    qu'il s'est produit une erreur;
-  * `Amlérioration par fusion`: les observables sont améliorés par le système de base 
-    de données, pas de lecture => fusion => écriture;
+  * `Big Data == Big Infra`: parce que 3 Raspberry PI en réseau ne suffisent 
+    pas, les fonctionnements en cluster nécessitent souvent des nombres de 
+    participants impairs (supérieur à 1), 3 machines pour la base de données, 3
+    machines pour l'index de recherche, etc.;
+  * `Modification parallèle et incrémentale`: La nature distribuée du travail 
+    fait que l'ordre des traitements sur la donnée finale ne doit faire 
+    qu'améliorer la valeur de celle-ci, une opération ne peut pas dévaluer un 
+    observable parce qu'il s'est produit une erreur;
+  * `Amlérioration par fusion`: les observables sont améliorés par le système 
+    de base de données, pas de lecture => fusion => écriture;
   * `Version community VS enterprise`: beaucoup de produit propose gratuitement
     leurs outils n'ayant que peu de différences sur le papier, mais la réalité
     est tout autre, nous avons eu des problèmes liés à la volumétrie seule,
     cette limitation n'est pas indiquée clairement. De plus les versions
     `enterprise` sont inaccessibles financierement parlant ...;
-  * `Suivi de version en version community`: en utilisant la version grand public
-    vous n'êtes pas à l'abrit que certaines fonctionnalités disparaissent pour
-    être intégrées en version enterprise uniquement. Tout en sachant qu'il
+  * `Suivi de version en version community`: en utilisant la version grand 
+    public vous n'êtes pas à l'abrit que certaines fonctionnalités disparaissent 
+    pour être intégrées en version enterprise uniquement. Tout en sachant qu'il
     n'existe pas d'alternative viable, ce qui s'appelle du `hold-up
      commercial`;
   * `Mr Bricolage`: les mouvements de fonctionnalités, quand on a pas les moyens
@@ -267,9 +270,9 @@ Voici les problèmes rencontrés :
     pannes, bugs, etc;
   * `Historisation des modifications`: c'est une fonctionnalité très importante 
     mais elle occasionne un impact très important en infrastucture. 
-    Nous avions utlisé une stratégie CoW (Copy on Write) pour garantir l'intégrité,
-    mais est arrivé les problèmatiques de rétention de données. Nous avons 
-    choisi de garder la dernière version de l'observable.
+    Nous avions utlisé une stratégie CoW (Copy on Write) pour garantir l'
+    intégrité, mais sont arrivés les problèmatiques de rétention de données. 
+    Nous avons choisi de garder la dernière version de l'observable.
   * `Sauvegarde`: Plus il y a de données plus la sauvegarde est importante.
 
 ## Analyser
