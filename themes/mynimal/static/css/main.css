@@ -1,0 +1,156 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    padding-top: 55px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+main {
+    margin: auto;
+    padding: 25px;
+    flex: 1 0 auto;
+    max-width: 750px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+/*footer*/
+
+.copyright {
+    margin: 15px 0;
+}
+
+/*home page*/
+
+.intro {
+    margin: 15vh 0;
+}
+
+.intro > h1 {
+    color: #212121;
+    /*font-size: 12vh;*/
+}
+
+.intro > h2 {
+    color: #757575;
+    font-size: 3vmin;
+}
+
+.intro > img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+/*apply accent colour to links*/
+
+a:link, a:visited {
+    color: var(--accent);
+}
+
+a.icon:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent) !important;
+}
+
+/*paginator at bottom of list view*/
+
+.pages {
+    padding: 15px 0;
+}
+
+.pages-icon {
+    padding: 0 15px;
+}
+
+/*list item for posts and projects*/
+
+.item {
+    padding: 10px 0;
+}
+
+.item-tag {
+    background-color: var(--accent);
+}
+
+/*navigation bar icons*/
+
+.navbar-icon {
+    font-size: 125%;
+    display: inline-block !important;
+}
+
+/*coloured borders at top and bottom of the page*/
+
+.navbar.navbar-default {
+    border-top: var(--border-width) solid var(--accent);
+}
+
+footer {
+    border-bottom: var(--border-width) solid var(--accent);
+}
+
+img {
+    max-width: 100%;
+}
+
+/*******************************************************************************
+ * Blur effects
+ ******************************************************************************/
+
+@-webkit-keyframes blurUp {
+   0% {
+     -webkit-filter: blur(15px);
+     -moz-filter: blur(15px);
+     -o-filter: blur(15px);
+     -ms-filter: blur(15px);
+     filter: blur(15px);
+   }
+   100% {
+     -webkit-filter: blur(0px);
+     -moz-filter: blur(0px);
+     -o-filter: blur(0px);
+     -ms-filter: blur(0px);
+     filter: blur(0px);
+   }
+}
+
+@keyframes blurUp {
+  0% {
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+
+.filter-blur-15 {
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+}
+
+.blurUp {
+  -webkit-animation: blurUp 0.5s linear; /* Chrome, Opera 15+, Safari 5+ */
+  animation: blurUp 0.5s linear; /* Chrome, Firefox 16+, IE 10 */
+}

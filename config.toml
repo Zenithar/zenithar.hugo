@@ -2,8 +2,8 @@ baseurl = "https://blog.zenithar.org/"
 
 languageCode = "fr-fr"
 title = "Zenithar'z Blog"
-paginate = 9
-theme = "minimal"
+paginate = 10
+theme = "mynimal"
 
 PygmentsStyle = "paraiso-dark"
 PygmentsUseClasses = false
