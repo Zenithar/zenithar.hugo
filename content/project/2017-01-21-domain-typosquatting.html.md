@@ -1,5 +1,5 @@
 ---
-section: post
+section: project
 date: "2017-01-21"
 title: "Domain Typosquatting"
 description: "Explication d'un principe de phishing de site internet exploitant la ressemblance des caractères pour tromper l'utilisateur."

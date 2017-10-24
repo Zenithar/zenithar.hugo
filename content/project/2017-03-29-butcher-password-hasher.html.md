@@ -1,5 +1,5 @@
 ---
-section: post
+section: project
 date: "2017-03-29"
 title: "Butcher : Password Hasher"
 description: "Parce qu'il ne faut pas stocker ses mots de passe en clair, ou

@@ -3,7 +3,7 @@ baseurl = "https://blog.zenithar.org/"
 languageCode = "fr-fr"
 title = "Zenithar'z Blog"
 paginate = 9
-theme = "bleak"
+theme = "minimal"
 
 PygmentsStyle = "paraiso-dark"
 PygmentsUseClasses = false
@@ -22,7 +22,7 @@ SectionPagesMenu = "Main"
 [params]
   # Warning Keys are case sensitives
   Subtitle = "Il existe moins bien mais c'est plus cher !"
-  description = "Dévéloppeur, bloggeur enthousiaste, curieux de toutes nouvelles technologies liées à la sécurité, l'architecture, et le web."
+  description = "Développeur / Expert en Cyber Sécurité, fou, curieux de toutes nouvelles technologies liées à la cyber-sécurité, l'architecture, et le web."
   cover = "/images/cover.jpg"
 
   # Google analytics
@@ -30,12 +30,20 @@ SectionPagesMenu = "Main"
   domainVerification = "fc173d84e3a4de948ed4bda2908afd3e"
   disqus = "zenithar"
 
+  accent = "green"
+  showBorder = true
+  backgroundColor = "white"
+  font = "Raleway" # should match the name on Google Fonts!
+  highlight = true
+  highlightStyle = "solarized-dark"
+  highlightLanguages = ["go"]
+
   [params.author]
     firstName = "Thibault"
     lastName = "NORMAND"
     gender = "male"
     userName = "zenithar"
-    image = "//www.gravatar.com/avatar/1a2807faf3cca1667ff6f04bf5886eff.png"
+    image = "/images/avatar.jpg"
     website = "http://zenithar.org"
     twitter = "zenithar"
     github = "zenithar"
@@ -43,3 +51,43 @@ SectionPagesMenu = "Main"
     linkedin = "zenithar"
     gplus = "thibault.normand"
     gravatarHash = "1a2807faf3cca1667ff6f04bf5886eff"
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/post/"
+    name = "Posts"
+    weight = 2
+
+[[menu.main]]
+    url = "/project/"
+    name = "Projects"
+    weight = 3
+
+[[menu.icon]]
+    url = "/resume/"
+    name = "user-circle-o"
+    weight = 1
+
+[[menu.icon]]
+    url = "http://www.google.com/recaptcha/mailhide/d?k=01IIc-s5LNYiS-CG_gthn4PA==&c=r5Ctx8RMDz422qmYESfk1g=="
+    name = "envelope-o"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://github.com/Zenithar/"
+    name = "github"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://twitter.com/zenithar/"
+    name = "twitter"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/zenithar/"
+    name = "linkedin"
+    weight = 5

@@ -4,3 +4,6 @@
 [submodule "themes/bleak"]
 	path = themes/bleak
 	url = https://github.com/Zenithar/hugo-theme-bleak.git
+[submodule "themes/minimal"]
+	path = themes/minimal
+	url = https://github.com/calintat/minimal.git
