@@ -10,15 +10,74 @@
         <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
         {{ end }}
         {{ template "_internal/opengraph.html" . }}
-        <!-- Global Site Tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)};
-          gtag('js', new Date());
-
-          gtag('config', '{{ .Site.GoogleAnalytics }}');
+    {{ if .IsPage }}
+        <meta property="og:type" content="article" />
+        <meta property="og:article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
+        {{ range .Params.tags }}<meta property="og:article:tag" content="{{ . }}" />
+        {{ end }}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@{{ .Site.Params.author.twitter }}" />
+        <meta name="twitter:creator" content="@{{ .Site.Params.author.twitter }}" />
+        <meta name="twitter:title" content="{{ .Title }}" />
+        <meta name="twitter:description" content="{{ .Description }}" />
+        <meta name="twitter:url" content="{{ .Permalink }}" />
+    {{ end }}
+    {{ if ne .Site.Params.domainVerification "" }}
+        <meta name="p:domain_verify" content="{{ .Site.Params.domainVerification }}"/>
+    {{ end }}
+        {{ if .IsPage }}
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BlogPosting",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "{{ .Permalink | safeJS }}"
+            },
+            "headline": "{{ .Title | safeJS}}",
+            "description": "{{ printf "%s" .Description }}",
+            "author": {
+                "@type": "Person",
+                "name": "{{ .Site.Params.author.firstName }} {{ .Site.Params.author.lastName }}",
+                "url": "http://profiles.google.com/{{ .Site.Params.author.gplus }}?rel=author",
+                "image": {
+                  "@type": "ImageObject",
+                  "url": "https:{{ .Site.Params.author.image }}",
+                  "height": 80,
+                  "width": 80
+                }
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "{{ .Site.BaseURL }}",
+              "name": "{{ .Site.Title }}",
+              "url": "{{ .Site.BaseURL }}",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https:{{ .Site.Params.author.image }}",
+                "height": 80,
+                "width": 80
+              }
+            },
+            {{ if .Params.image }}"image": {
+              "@type": "ImageObject",
+              "url": "{{ absURL .Params.image }}",
+              "height": 133,
+              "width": 200
+            },{{ else }}
+            "image": {
+              "@type": "ImageObject",
+              "url": "{{ .Site.Params.author.image }}",
+              "height": 80,
+              "width": 80
+            },{{ end }}
+            "datePublished": "{{ .Date.Format "2006-01-02" }}",
+            "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+            "wordCount": {{ .WordCount }},
+            {{ if .Params.tags }}"keywords": {{ .Params.tags | jsonify }} {{ end }}
+        }
         </script>
+    {{ end }}
     </head>
 
     <body>
