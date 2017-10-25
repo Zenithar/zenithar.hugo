@@ -15,7 +15,7 @@ lastmod: 2017-03-29T10:25:06+02:00
 ---
 
 > EDITO:
-> Un certains temps que je n'ai pas poster d'articles, cela a été mouvementé
+> Un certains temps que je n'ai pas posté d'articles, cela a été mouvementé
 > pour moi depuis Avril, j'ai changé d'entreprise quittant pour le coup tout un
 > investissement intellectuel de 3 ans.
 > Voilà, je suis passé à autre chose ^^
@@ -25,8 +25,17 @@ Encore un dispositif d'identification pour Internet, pfff ... encore un !
 > Oui mais non ^^
 
 Aujourd'hui, trop peu de développeurs prennent les précautions inhérentes au
-respects des règles de sécurité. Souvent la `Sécurité` est un domaine perçu
-comme difficile, obscur, voir contraignant.
+respects des règles de sécurité.
+
+Souvent la `Sécurité` est un domaine perçu comme difficile, obscur, voir
+contraignant. Laissant la sécurité être gérée par des contre-mesures
+périmétriques (Firewall, WAF, etc.), cependant le code est le premier lieu pour
+contrôler les risques.
+
+> Auth Basic over HTTP => la Base 64 n'est pas un algorithme de chiffrement ...
+
+Partant de ce constat, j'ai imaginé un dispositif de challenge / response basé
+sur la dérivation de clés.
 
 ```sh
 $ go get -u -v go.zenithar.org/anvil
