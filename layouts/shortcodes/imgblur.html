@@ -1,3 +1,7 @@
-<div style="background-image:url({{ .Get "prefix" }}.low.jpg); background-size: cover; background-repeat: no-repeat;" data-src="{{ .Get "prefix" }}.jpg" class="blured-image w3-card-8 filter-blur-15">
-  <div style="padding-bottom: 66.7%;"></div>
+{{ $prefix := .Get "prefix" }}
+{{ $filename := printf "static/%s.low.jpg" $prefix }}
+{{ $content := readFile $filename }}
+<div class="ratio-box fade-box blurUp" style="padding-bottom: 66%;">
+  <img src="data:image/jpeg;base64,{{ $content | base64Encode }}" />
+	<img data-src="{{ .Get "prefix" }}.jpg" class="lazyload" />
 </div>

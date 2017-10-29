@@ -1,0 +1,102 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  padding-top: 55px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  font-size: 16px !important;
+}
+
+html body {
+  font-family: "Raleway", sans-serif;
+  background-color: "white";
+}
+
+main {
+  margin: auto;
+  padding: 25px;
+  max-width: 750px;
+}
+
+/*footer*/
+
+.copyright {
+  margin: 15px 0;
+}
+
+/*home page*/
+
+.intro {
+  flex-direction: column;
+  > {
+    h1 {
+      color: #212121;
+      font-size: 6vh;
+    }
+    h2 {
+      color: #757575;
+      font-size: 2.5vmin;
+    }
+  }
+}
+
+/*apply accent colour to links*/
+
+a {
+  &:link, &:visited {
+    color: $color-accent;
+  }
+  &.icon:hover {
+    text-decoration: none;
+  }
+  &:hover {
+    color: $color-accent !important;
+  }
+}
+
+/*paginator at bottom of list view*/
+
+.pages {
+  padding: 15px 0;
+}
+
+.pages-icon {
+  padding: 0 15px;
+}
+
+/*list item for posts and projects*/
+
+.item {
+  padding: 10px 0;
+}
+
+.item-tag {
+  background-color: $color-accent;
+}
+
+/*navigation bar icons*/
+
+.navbar-icon {
+  font-size: 125%;
+  display: inline-block !important;
+}
+
+/*coloured borders at top and bottom of the page*/
+
+.navbar.navbar-default {
+  border-top: $border-width solid $color-accent;
+}
+
+footer {
+  border-bottom: $border-width solid $color-accent;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}

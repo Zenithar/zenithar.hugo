@@ -2,13 +2,23 @@
 <html lang="{{ .Site.LanguageCode }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" href="{{ .Site.BaseURL }}js/main.js" as="script" />
+        <link rel="preload" href="{{ .Site.BaseURL }}css/main.css" as="style" />
+        
         <title>{{ .Title }}</title>
-        {{ partial "css" . }} {{ partial "js" . }} {{ .Hugo.Generator }}
+        {{ partial "js" . }} {{ .Hugo.Generator }}
         {{ if .RSSLink }}
         <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
         <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
         {{ end }}
+        <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         {{ template "_internal/opengraph.html" . }}
     {{ if .IsPage }}
         <meta property="og:type" content="article" />
@@ -22,65 +32,20 @@
         <meta name="twitter:description" content="{{ .Description }}" />
         <meta name="twitter:url" content="{{ .Permalink }}" />
     {{ end }}
+
     {{ if ne .Site.Params.domainVerification "" }}
         <meta name="p:domain_verify" content="{{ .Site.Params.domainVerification }}"/>
     {{ end }}
-        {{ if .IsPage }}
-        <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "BlogPosting",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "{{ .Permalink | safeJS }}"
-            },
-            "headline": "{{ .Title | safeJS}}",
-            "description": "{{ printf "%s" .Description }}",
-            "author": {
-                "@type": "Person",
-                "name": "{{ .Site.Params.author.firstName }} {{ .Site.Params.author.lastName }}",
-                "url": "http://profiles.google.com/{{ .Site.Params.author.gplus }}?rel=author",
-                "image": {
-                  "@type": "ImageObject",
-                  "url": "https:{{ .Site.Params.author.image }}",
-                  "height": 80,
-                  "width": 80
-                }
-            },
-            "publisher": {
-              "@type": "Organization",
-              "@id": "{{ .Site.BaseURL }}",
-              "name": "{{ .Site.Title }}",
-              "url": "{{ .Site.BaseURL }}",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https:{{ .Site.Params.author.image }}",
-                "height": 80,
-                "width": 80
-              }
-            },
-            {{ if .Params.image }}"image": {
-              "@type": "ImageObject",
-              "url": "{{ absURL .Params.image }}",
-              "height": 133,
-              "width": 200
-            },{{ else }}
-            "image": {
-              "@type": "ImageObject",
-              "url": "{{ .Site.Params.author.image }}",
-              "height": 80,
-              "width": 80
-            },{{ end }}
-            "datePublished": "{{ .Date.Format "2006-01-02" }}",
-            "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
-            "wordCount": {{ .WordCount }},
-            {{ if .Params.tags }}"keywords": {{ .Params.tags | jsonify }} {{ end }}
-        }
-        </script>
-    {{ end }}
+
+    {{ partial "jsonld.html" . }}
+    {{ partial "criticalpath.html" . }}
     </head>
 
     <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ3JDPK"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
 
         <nav class="navbar navbar-default navbar-fixed-top">
 

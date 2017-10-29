@@ -16,7 +16,10 @@
     {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" }}
     {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
 
-    <h4><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a></h4>
+    <h4><a itemprop="url" href="{{ .Scratch.Get "link" }}">
+      <span itemprop="name">{{ .Title }}</span>
+    </a></h4>
+
     <h5>{{ $.Scratch.Get "subtitle" }}</h5>
     {{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}
 

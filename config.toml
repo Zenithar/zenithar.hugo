@@ -23,7 +23,7 @@ SectionPagesMenu = "Main"
   # Warning Keys are case sensitives
   Subtitle = "Il existe moins bien mais c'est plus cher !"
   description = "Développeur / Expert en Cyber Sécurité, fou, curieux de toutes nouvelles technologies liées à la cyber-sécurité, l'architecture, et le web."
-  cover = "/images/cover.jpg"
+  cover = "https://blog.zenithar.org/images/cover.jpg"
 
   # Google analytics
   googleAnalyticsUserID = "UA-8114245-4"
@@ -34,7 +34,7 @@ SectionPagesMenu = "Main"
   showBorder = true
   backgroundColor = "white"
   font = "Raleway" # should match the name on Google Fonts!
-  highlight = true
+  highlight = false
   highlightStyle = "solarized-dark"
   highlightLanguages = ["go"]
 
@@ -43,7 +43,7 @@ SectionPagesMenu = "Main"
     lastName = "NORMAND"
     gender = "male"
     userName = "zenithar"
-    image = "/images/avatar.jpg"
+    image = "https://blog.zenithar.org/images/avatar.jpg"
     website = "http://zenithar.org"
     twitter = "zenithar"
     github = "zenithar"

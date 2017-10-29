@@ -34,7 +34,7 @@ contrôler les risques.
 
 > Auth Basic over HTTP => la Base 64 n'est pas un algorithme de chiffrement ...
 
-Partant de ce constat, j'ai imaginé un dispositif de challenge / response basé
+Partant de ce constat, j'ai implémenté un dispositif de challenge / response basé
 sur la dérivation de clés.
 
 ```sh

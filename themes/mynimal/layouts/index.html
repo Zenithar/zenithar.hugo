@@ -3,13 +3,9 @@
 <main>
 
     <div class="intro">
-
-        <img class="avatar" src="{{ .Site.Params.author.image }}"></img>
-
-        <h1>{{ .Site.Params.author.firstName }} {{ .Site.Params.author.lastName }}</h1>
-
-        <h2>{{ markdownify .Site.Params.Description }}</h2>
-
+        <img src="/images/avatar.jpg" class="img-circle fade-in one" width="240" height="240" />
+        <h1 class="fade-in one">{{ .Site.Params.author.firstName }} {{ .Site.Params.author.lastName }}</h1>
+        <h2 class="fade-in two">{{ markdownify .Site.Params.Description }}</h2>
     </div>
 
 </main>

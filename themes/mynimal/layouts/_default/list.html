@@ -1,10 +1,16 @@
 {{ partial "header" . }}
 
-<main>
+<main itemscope itemtype="http://schema.org/ItemList" class="fade-in">
 
-    <h2>{{ .Title }}</h2>
+    <h2 itemprop="name">{{ .Title }}</h2>
 
-    {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
+    {{ $paginator := .Paginator 5 }}
+    {{ range $key, $value := $paginator.Pages }}
+    <div itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="position" style="display:none;">{{ $key }}</span>
+      {{ partial "list-item" $value }}
+    </div>
+    {{ end }}
 
 </main>
 

@@ -1,0 +1,41 @@
+@-webkit-keyframes "fadeIn" {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes "fadeIn" {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* fade in animation */
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  &.one {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+  &.two {
+    -webkit-animation-delay: 1.0s;
+    animation-delay: 1.0s;
+  }
+}
