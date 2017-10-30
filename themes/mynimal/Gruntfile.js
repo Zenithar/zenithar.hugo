@@ -17,7 +17,8 @@ module.exports = function(grunt) {
               'node_modules/lazysizes/lazysizes.js'
             ],
             'cssDependencies': [
-              'node_modules/bootstrap/dist/css/bootstrap.css'
+              'node_modules/bootstrap/dist/css/bootstrap.css',
+              'node_modules/font-awesome/css/font-awesome.css'
             ]
         },
         copy: {

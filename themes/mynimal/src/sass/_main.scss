@@ -100,3 +100,13 @@ img {
   display: block;
   margin: 0 auto;
 }
+
+.wf-loading p, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4 {
+    visibility: hidden;
+}
+.wf-active  p, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4 {
+    visibility: visible;
+}
+.wf-inactive    p, .wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4 {
+    visibility: visible;
+}

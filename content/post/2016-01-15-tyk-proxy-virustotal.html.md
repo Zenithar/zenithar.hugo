@@ -148,7 +148,8 @@ Et voilà, il suffit de lancer Tyk, puis de profiter du service VT sans utiliser
 la clé d'API.
 
 ```sh
-[zenithar:~]$ ./tyk --conf=./tyk.conf                                                                                                                                                    INFO[0000] Hostname set:                                
+[zenithar:~]$ ./tyk --conf=./tyk.conf
+INFO[0000] Hostname set:                                
 INFO[0000] Connection dropped, connecting..             
 INFO[0000] Setting up Server                            
 INFO[0000] --> Standard listener (http)                 
