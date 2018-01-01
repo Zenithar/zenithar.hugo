@@ -22,5 +22,8 @@
   "dependencies": {
     "font-awesome": "^4.7.0",
     "html-minifier": "^3.2.3"
+  },
+  "devDependencies": {
+    "sw-precache": "^5.2.0"
   }
 }

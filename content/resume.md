@@ -1,6 +1,6 @@
 ---
 type: "page"
-date: "2017-10-22"
+date: "2018-01-01"
 title: "Thibault NORMAND"
 ---
 
@@ -30,7 +30,8 @@ Retrouvez-moi sur [blog](https://blog.zenithar.org); [facebook](https://www.face
 
   * **Senior Cyber Security Expert / Golang Guru** - Depuis June,2017
 
-    > - Conception et réalisation d'une plateforme d'accès à la vitrine produits. (Go, VueJS)
+    > - Plateforme d'identification et contrôle d'accès distribuée. (AWS, Go / Rust)
+    > - Etude d'intégration d'une blockchain privée (Ethereum)
     > - Audits et Exigences infrastructure sécurité pour projets "Cloud". (AWS)
     > - Mesures de sécurité pour "Privacy by Design" de projets "Cloud" internationaux. (RGPD, ISO270xx)
     > - Audits de code sécurité. (Java / J2EE / NodeJS / Python / Go / Crypto)
@@ -158,84 +159,90 @@ Retrouvez-moi sur [blog](https://blog.zenithar.org); [facebook](https://www.face
 
 > 5: *Expertise*, 4: _Je connais_, 3: _Je peux_, 2: _J'apprends_, 1: _Vraiment si besoin !_
 
-
 - **Fonctionnelles**
 
-  * _(5/5)_ : Creative Thinking; Veille technologique;
-  * _(4/5)_ : Gestion de projet / Scrum Master; Conduite de réunion; Pédagogie / Vulgarisation;
-  * _(3/5)_ : Rédaction publications scientifiques; Présentation en public;
+  * _(5/5)_ : Creative Thinking; Veille technologique; 
+  * _(4/5)_ : Gestion de projet / Scrum Master; Conduite de réunion; Pédagogie / Vulgarisation; 
+  * _(3/5)_ : Rédaction publications scientifiques; Présentation en public; 
 
 - **Sécurité**
 
-  * _(5/5)_ : Programmation défensive; Contre-mesures sécurité; OWASP Top 10; SANS Top 25;
-  * _(4/5)_ : Audit de code; Cryptographie / Chiffrement; Durcissement Logiciel / Conteneur; Cuckoo Sandbox;
-  * _(3/5)_ : Analyse de risque (EBIOS); RGPD; Suricata; Bro IDS; Honeypots (Cowerie / Kippo); DNS / SMTP Sinkhole; QRadar SIEM; Splunk; FileBeat / PacketBeat;
-  * _(2/5)_ : Reverse Engineering; Penetration Testing;
+  * _(5/5)_ : Programmation défensive; Contre-mesures sécurité; OWASP Top 10; SANS Top 25; 
+  * _(4/5)_ : Audit de code; Cryptographie / Chiffrement; Durcissement Logiciel / Conteneur; Cuckoo Sandbox; 
+  * _(3/5)_ : Analyse de risque (EBIOS); RGPD; Suricata; Bro IDS; Honeypots (Cowerie / Kippo); DNS / SMTP Sinkhole; QRadar SIEM; Splunk; FileBeat / PacketBeat; 
+  * _(2/5)_ : Reverse Engineering; Penetration Testing; 
 
 - **Langages**
 
-  * _(5/5)_ : Go; JavaScript; Java;
-  * _(4/5)_ : C/C++; Ruby; Python;
-  * _(3/5)_ : Scala; ASM (x86, ARM7); PHP;
-  * _(2/5)_ : Elixir; Erlang;
+  * _(5/5)_ : Go; JavaScript; Java; 
+  * _(4/5)_ : C/C++; Rust; Ruby; Python; 
+  * _(3/5)_ : Scala; ASM (x86, ARM7); PHP; 
+  * _(2/5)_ : Elixir; Erlang; 
 
 - **Base de données**
 
-  * _(5/5)_ : MongoDB; RethinkDB; Redis;
-  * _(4/5)_ : Neo4j; ElasticSearch; MySQL / MariaDB; PostgreSQL;
-  * _(3/5)_ : Hadoop / HBase; Oracle; SQL Server; DB2;
-  * _(2/5)_ : DGraph / GraphQL;
+  * _(5/5)_ : MongoDB; RethinkDB; Redis; 
+  * _(4/5)_ : Neo4j; ElasticSearch; MySQL / MariaDB; PostgreSQL; 
+  * _(3/5)_ : Hadoop / HBase; Oracle; SQL Server; DB2; 
+  * _(2/5)_ : DGraph / GraphQL; 
 
 - **Système d'exploitation**
 
-  * _(5/5)_ : Linux / Archlinux;
-  * _(4/5)_ : MacOS X;
-  * _(3/5)_ : Windows;
+  * _(5/5)_ : Linux / Archlinux; 
+  * _(4/5)_ : MacOS X; 
+  * _(3/5)_ : Windows; 
 
 - **Affinités FullStack**
 
-  * _(5/5)_ : Développement Backend; DevOps;
-  * _(4/5)_ : Développement Frontend;
-  * _(1/5)_ : UI/UX Designer;
+  * _(5/5)_ : Développement Backend; DevOps; 
+  * _(4/5)_ : Développement Frontend; 
+  * _(1/5)_ : UI/UX Designer; 
 
 - **Backend Framework**
 
-  * _(5/5)_ : Microservices Patterns; Resilience Patterns; gRPC / Protobuf;
-  * _(4/5)_ : NodeJS; Express;
-  * _(3/5)_ : MeteorJS; Ruby on Rails;
-  * _(2/5)_ : Laravel;
+  * _(5/5)_ : Microservices Patterns; Resilience Patterns; gRPC / Protobuf; 
+  * _(4/5)_ : NodeJS; Express; 
+  * _(3/5)_ : MeteorJS; Ruby on Rails; 
+  * _(2/5)_ : Laravel; 
+
+- **Cloud**
+
+  * _(5/5)_ : RabbitMQ; NSQ; ZMQ; WebSocket; 
+  * _(4/5)_ : MQTT; Apache Kafka; Amazon IAM / Cognito; Amazon EC2; 
+  * _(3/5)_ : Amazon SNS; Amazon IoT; Amazon API Gateway / Lambda; CoAP DTLS; 
 
 - **DevOps**
 
-  * _(5/5)_ : Docker; Rancher; Prometheus; Consul; Vault;
-  * _(4/5)_ : Grafana; GitlabCI; Sentry;
-  * _(3/5)_ : Kubernetes; Jenkins;
-  * _(2/5)_ : Ansible; Amazon AWS; Istio / Envoy; Terraform;
+  * _(5/5)_ : Docker; Rancher; Prometheus; Consul; Vault; 
+  * _(4/5)_ : Grafana; GitlabCI; Sentry; 
+  * _(3/5)_ : Kubernetes; Jenkins; Amazon ECS / ECR; 
+  * _(2/5)_ : Ansible; Istio / Envoy; Linkerd; Terraform; 
 
 - **Frontend / UX**
 
-  * _(5/5)_ : AngularJS 1.x;
-  * _(4/5)_ : ES 6/7; TypeScript; AngularJS 2.x; VueJS; WebPack; Bootstrap;
-  * _(3/5)_ : HTML5; CSS3 / SASS / LESS; Web Design;
-  * _(2/5)_ : ReactJS;
+  * _(5/5)_ : AngularJS 1.x; 
+  * _(4/5)_ : ES 6/7; TypeScript; AngularJS 2.x; VueJS; WebPack; Bootstrap; 
+  * _(3/5)_ : HTML5; CSS3 / SASS / LESS; Web Design; 
+  * _(2/5)_ : ReactJS; 
 
 - **Ingénierie des données**
 
-  * _(5/5)_ : Modélisation Sémantique; Préparation des données; Data Wrangling; Data Scraping;
-  * _(4/5)_ : Protégé; Anonymisation; ElasticSearch / LogStash / Kibana;
-  * _(3/5)_ : Traitement du signal; Detection d'anomalies; Statistiques; Python / Jupyter / Pandas; SciKit Learn; Machine learning (SVM, PNN, RF, GBM); H2o;
-  * _(2/5)_ : R; DataViz; D3;
+  * _(5/5)_ : Modélisation Sémantique; Préparation des données; Data Wrangling; Data Scraping; 
+  * _(4/5)_ : Protégé; Anonymisation; ElasticSearch / LogStash / Kibana; 
+  * _(3/5)_ : Traitement du signal; Detection d'anomalies; Statistiques; Python / Jupyter / Pandas; SciKit Learn; Machine learning (SVM, PNN, RF, GBM); H2o; 
+  * _(2/5)_ : R; DataViz; D3; 
 
 - **Blockchain**
 
-  * _(4/5)_ : Ethereum;
-  * _(3/5)_ : IBM Hyperledger;
+  * _(4/5)_ : Ethereum; 
+  * _(3/5)_ : J.P. Morgan Quorum; IBM Hyperledger; 
+  * _(2/5)_ : Solidity; Truffle; ERC20 Token; 
 
 - **Java**
 
-  * _(5/5)_ : Spring (Core, MVC, Security, Data);
-  * _(4/5)_ : Spring Boot; J2EE; Apache Storm;
-  * _(3/5)_ : Apache Spark; Apache Kafka; Zookeeper; Vert.x;
+  * _(5/5)_ : Spring (Core, MVC, Security, Data); 
+  * _(4/5)_ : Spring Boot; J2EE; Apache Storm; 
+  * _(3/5)_ : Apache Spark; Apache Kafka; Zookeeper; Vert.x; 
 
 
 ### Références

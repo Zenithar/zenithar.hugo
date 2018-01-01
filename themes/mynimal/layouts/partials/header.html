@@ -31,6 +31,7 @@
         <meta name="twitter:title" content="{{ .Title }}" />
         <meta name="twitter:description" content="{{ .Description }}" />
         <meta name="twitter:url" content="{{ .Permalink }}" />
+        {{ if .Params.image }}<meta name="twitter:image" content="{{ absURL .Params.image }}">{{ end }}
     {{ end }}
 
     {{ if ne .Site.Params.domainVerification "" }}

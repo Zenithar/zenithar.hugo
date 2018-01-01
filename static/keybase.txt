@@ -6,63 +6,53 @@ I hereby claim:
 
   * I am an admin of https://blog.zenithar.org
   * I am zenithar (https://keybase.io/zenithar) on keybase.
-  * I have a public key with fingerprint F818 31AF F8EB D14B 8AC8  57F1 E872 2773 022E 7155
+  * I have a public key with fingerprint 09BB F8C5 EBC5 26AB D528  CBA1 2A02 A167 5AEB 30CD
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "fingerprint": "f81831aff8ebd14b8ac857f1e8722773022e7155",
-            "host": "keybase.io",
-            "key_id": "e8722773022e7155",
-            "kid": "01012181567bde66d334591cdd0c7f8ad06a9163337d908d936d805b425c33f6fc940a",
-            "uid": "6dfae51c0a98c21de93891af51640819",
-            "username": "zenithar"
-        },
-        "service": {
-            "hostname": "blog.zenithar.org",
-            "protocol": "https:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "01168203f385780d68f9d67afe06332091cb8f92521beeff6b7d262acabf731d13800a",
+      "fingerprint": "09bbf8c5ebc526abd528cba12a02a1675aeb30cd",
+      "host": "keybase.io",
+      "key_id": "2a02a1675aeb30cd",
+      "kid": "01168203f385780d68f9d67afe06332091cb8f92521beeff6b7d262acabf731d13800a",
+      "uid": "6dfae51c0a98c21de93891af51640819",
+      "username": "zenithar"
     },
-    "ctime": 1426547187,
-    "expire_in": 157680000,
-    "prev": "e6c024a1b189122198560519ad8f2bf63550ddfb6af199e91d86caa741f0e433",
-    "seqno": 6,
-    "tag": "signature"
+    "service": {
+      "hostname": "blog.zenithar.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1514811070,
+  "expire_in": 157680000,
+  "prev": "5d121d5ed06b227e6f82f115e4220c1b0c5a58c0abed9e9b8c6caf7fbac588e7",
+  "seqno": 95,
+  "tag": "signature"
 }
 
 which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.0.8
+Version: Keybase OpenPGP v2.0.76
 Comment: https://keybase.io/crypto
 
-yMM6AnicbZJ/TFVlGMcvyI+4IFBo0ALEIy7LCzvv+X2uOp2WlRoEhVGCcH6853L4
-cc/l3B+AcBVqOMkmSFmgMdIp3IE1THDKkMIZEAwRoXSQ5Qgr2ioKgimCncP0v95/
-3r3f5/N83+d59lxdvsxg9PpNfc7uHZ+f4tXftd1pSPHnposRXhGLEHMxkgOXLkm2
-WqBqU2WrAzEjEgMYHHCSxEBeBATPcAJD0hKADI1hNI2jGAZpQJKICclS7HqGZsNz
-dhgvK5qmPTJkUVP/h89ZCqAABRhgAEnRvAgpSsRxgmSBIIqoQEsMJ6IUxwIKx3Fa
-ZFFGZHFKZFCSJzBSwHGJkgSWQDnNzrlkR4kSB0kgoBzLCBgQIYszrFY/CSgCZQCr
-g3aoWrk8qNH7oFV2ZHEq4jYhmuqSBaiPQO/kEcHnKpb4x1i8olo0A5uqOBRBydXC
-WQ6HzW7W0x1FNp0vgHzGI6cMXraK2jC1DBdU7bJiRcxAIwWHrFsDAqNIggYMbUJg
-oU1WYYasEyRNMah29H+gSx8dJaAYwQEeaJ1gGGAZkkJJwHIiI2G8ROEkiYqixFOc
-BFgWskBkKIHjaAJIKCRwHNF7y7cqiJnSyuQsmqVdtlg5h1OFiPtKV5qPwcto8PP1
-1tfBYAwIfbwkrxMhD6Xfq+w9L67MSW90liz6zPwZ92y2aXz6B/ds53n/KevHPe3R
-PRujI0vDBgMGkaRiZG9eIMi+bvNU3UzK7F/cZV/n+8barLAddTs+8sPFK2NrEohs
-+u+nfd2dyWRhgmvzSMjgquSZE62lcY2j3ZPsmujh7qIO5pu6iLsdwhlPR7XUHrF/
-dGZDSW/DXGVf6oHbqQPhaac/SC984rOZmsp3A8uOOIOaLn19buTT5okGnxL3+uFT
-5q0/1Rs3PSg7VpDQsrBrRcXsgyf7w89mxWFhe4rSvl/5zrLe9/peqZ8rVfp+WXf7
-+SHjdbUjrWoz8kVLay2DKG0tE2PuhwcqfdqSEmbvbGw+Ppq8d6G8YrVx7kZTwaRw
-S25jDnG7zzX+vH/Twle5Bz/5497dmMyMRBAVfJ43gfen2NUN/3wH3t5ZI7wV2nRa
-+PbygCeW3WaqWzt1zOvSrQshhYqhd5t0pHW04Jm6iy9dpqiplnbl4mR+2Naew97+
-sUP9R9PHGzdMhza7atcH75kf+rCbqS3AUu/Nu167sCrxWhvvGScOb4kfbq1cEXEy
-+KlDdNvIqbOxEyU997sSAn8M9khBX0KYUv35zsiqourOF5a33w+K9MQcfzX8TefN
-iLy/Wv9NPDlfVbMvKqY+81qFt81rYvGGq2z72FHR706zpXn65QCw+6rh14Ez1ekn
-3OVb4qKmyv8DhYmmTg==
-=6Xex
+yMFIAnicrZK/ixNBFMc36nkaEMTiyCGIDNhICDOzmdnZ/AUiFoKdhXF+vNkMye3G
+3U30vEtnoZ3/gMe1KmgpWgh3HlrYKYid2Bi0UhC0EmfCXWdpNcybz/c77/t4eycO
+R82VpZ3TT8+93rrSeLvzYBJdvdh5uYFUYdZRbwMNYXHAyEBV94fOoB7ChHBBcWxj
+wRKBDRc2NTyRFjCPY4pTopUvUUaJArCWq8RQTqWWyiYxMSQWGEvURtblGZTj0uV1
+sE2VskIzUJpRLpVhVGglCZWYSsITJkHFWBsvHBRVUPjmlKyg4wpf85f+or1/8P+5
+78nCjhsrgRGNZSo0JQbSWKREWkZ4FwuSBrCCMpdr4OnbkLt6IEs0ayNfnToNYbAh
+yT6hRkXWOcA6RZl5g3FZ1IUuRv55UNfjqhfk9fo48DdB9fed+srlxg/TK6ZQVq7I
+UY94UtcuWBNGuoIQnOA2gltjV0LfBYIl3CfCOPwDU2/JDPFBGBjMFaUJcCuoJYRB
+l1KsicKaSSZ8YgUmhVQJzbW0iVVSMyEgQSHbjbxAvZT5PmXmPSuX5bKelIBmu9eO
+RCvN6OjSobBkUfP4yYPVk61G9O37j/et+ZflU+jh1qU/Py/j7Njs7O6Fx6Mnr64P
+f7+724jm259erEWr4sPXzcGjZ9uf7z9f3Tx/59f8zZmP97qtveW/H3Llcg==
+=kOR3
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
