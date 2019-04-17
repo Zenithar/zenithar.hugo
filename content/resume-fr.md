@@ -1,8 +1,10 @@
 ---
 type: "page"
-date: "2019-04-01"
+date: "2019-04-17"
 title: "Thibault NORMAND"
 ---
+
+> English version ? -> Follow this [link](/resume-en)
 
 # Cyber Security Architect / SecOps
 
@@ -21,7 +23,7 @@ title: "Thibault NORMAND"
 
 Retrouvez-moi sur [blog](https://blog.zenithar.org); [facebook](https://www.facebook.com/zenithar); [github](https://github.com/zenithar); [linkedin](https://www.linkedin.com/in/zenithar); [mastodon](https://mamot.fr/@zenithar); [twitter](https://twitter.com/zenithar); 
 
-> Télécharger le [PDF](https://github.com/Zenithar/go-resume/raw/master/signed.pdf).
+> Télécharger le [PDF](https://github.com/Zenithar/go-resume/raw/master/fr_full.pdf).
 
 ### Expérience professionnelle
 

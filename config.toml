@@ -68,7 +68,7 @@ SectionPagesMenu = "Main"
     weight = 3
 
 [[menu.icon]]
-    url = "/resume/"
+    url = "/resume-fr/"
     name = "user-circle-o"
     weight = 1
 
