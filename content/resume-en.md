@@ -4,7 +4,7 @@ date: "2019-04-17"
 title: "Thibault NORMAND"
 ---
 
-> Version française ? -> C'est par [ici](/resume-fr)
+> Version française ? -> C'est par [ici](/resume-fr/)
 
 # Cyber Security Architect / Polyglot Developer / DevSecOps
 

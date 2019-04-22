@@ -4,7 +4,7 @@ date: "2019-04-17"
 title: "Thibault NORMAND"
 ---
 
-> English version ? -> Follow this [link](/resume-en)
+> English version ? -> Follow this [link](/resume-en/)
 
 # Cyber Security Architect / SecOps
 
