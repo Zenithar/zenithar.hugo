@@ -12,8 +12,6 @@ tags:
 
 # How I write a micro-service (part 3)
 
-## Repositories
-
 `Repositories` as Hexagonal architecture defines this component is a `persisence adapter`. It's a technical implementation of a `models` provider. It could be:
 
 - A local provider: database, file;
@@ -28,6 +26,25 @@ $ mkdir internal/repositories/pkg
 $ mkdir internal/repositories/pkg/postgresql
 $ mkdir internal/repositories/pkg/mongodb
 ```
+
+The filesystem should be like it follows:
+
+```shell
+ + internal
+   + helpers
+     - id.go
+	 - password.go
+	 - time.go
+   + models
+     - user.go
+   + repositories
+     - api.go
+     + pkg
+       + postgresql
+       + mongodb
+```
+
+## Adapter Contract 
 
 But before starting to implements the `persistence adapter`, and in order to comply with the `dependency loose coupling` of `The Clean Architecture`, we have to declare the adapter interface first. So that all implementations must be compliant with.
 
@@ -46,23 +63,33 @@ import (
 // UserSearchFilter represents user entity collection search criteria
 type UserSearchFilter struct {
 	UserID    string
+	// Principal hash value must be used
 	Principal string
 }
 
 // User describes user repository contract
 type User interface {
+	// Create a user
 	Create(ctx context.Context, entity *models.User) error
+	// Retrieve an user
 	Get(ctx context.Context, id string) (*models.User, error)
+	// Update selectively an user instance
 	Update(ctx context.Context, entity *models.User) error
+	// Delete an user instance
 	Delete(ctx context.Context, id string) error
-	Search(ctx context.Context, filter *UserSearchFilter, pagination *db.Pagination, sortParams *db.SortParameters) ([]*models.User, int, error)
+	// Search for user entities using filter, pagination and sorts
+	Search(ctx context.Context, filter *UserSearchFilter, p *db.Pagination, s *db.SortParameters) ([]*models.User, int, error)
+	// Retrieve an user by principal hash value
 	FindByPrincipal(ctx context.Context, principal string) (*models.User, error)
 }
 ```
 
-> Don't forget to pass `context.Context` as far as possible in your calls.
+> Don't forget to pass `context.Context` as far as possible in your calls, in case of request cancellation bound to HTTP request.
+> When the caller cancel the HTTP request, the SQL request must be cancelled too, etc.
 
-### Unit Tests
+Our repository implementations must handle entities so that `principal` has to be hashed before using it (for example `FindByPrincipal`)
+
+## Unit Tests
 
 For testing, I've added this go compiler generate step in `api.go`, to build `User` mocks from interface type definition.
 
@@ -72,11 +99,13 @@ For testing, I've added this go compiler generate step in `api.go`, to build `Us
 
 > Repository mocks will be used by service unit tests.
 
-### Integration Tests
+## Integration Tests
 
 These tests are executed using a real backend. 
 
 For example, the `User` integration test generator creates a full test that create, read, update, delete `User` using the `persistence adapter` implementation.
+
+> `Integration tests` will be evicted from default test target using the build tag `integration`
 
 ```go
 //+build integration
@@ -98,8 +127,10 @@ import (
 // User returns user repositories full test scenario builder
 func User(underTest repositories.User) func(*testing.T) {
 	return func(t *testing.T) {
+		// Flag this test that could be run in parallel
 		t.Parallel()
 
+		// Prepare gomega matcher
 		g:= NewGomegaWithT(t)
 
 		// Stub context
@@ -178,9 +209,115 @@ func User(underTest repositories.User) func(*testing.T) {
 }
 ```
 
-### PostgreSQL
+# Persistence implementations
 
-For example as `User` persistence adapter for `PostgreSQL` in `internal/repositories/pkg/postgresql`
+During many years, I have enhanced, rebuild approximatively 30 times my own framework.
+All implementation are using it as foundation, you are free to pickup what you need form it.
+
+> [go.zenithar.org/pkg](https://github.com/Zenithar/go-pkg)
+
+It's [multi-sub-module Golang repository](https://github.com/golang/go/wiki/Modules), so you don't need to pull the entire repository, everything is 
+splitted and versionned independently in a minimal package.
+
+## PostgreSQL
+
+First of all, we need to prepare the PostgreSQL package.
+
+```shell
+$ mkdir internal/repositories/pkg/postgresql/migrations
+$ touch internal/repositories/pkg/postgresql/setup.go
+$ touch internal/repositories/pkg/postgresql/table_user.go
+```
+
+### Schema migrations handling
+
+I'm use to put all the database specific preparation setup in a file nammed `setup.go`.
+This is used to declares all table name constants, but also database migrations that will be embedded in the final
+atifact using `packr`.
+
+> Why `packr` ? Heu because ... not `go-bin-data` ... ?
+
+```go
+package postgresql
+
+import (
+	"github.com/gobuffalo/packr"
+	"github.com/google/wire"
+	"github.com/jmoiron/sqlx"
+	"golang.org/x/xerrors"
+
+	// Load postgresql drivers
+	_ "github.com/jackc/pgx"
+	_ "github.com/jackc/pgx/pgtype"
+	_ "github.com/jackc/pgx/stdlib"
+	_ "github.com/lib/pq"
+
+	migrate "github.com/rubenv/sql-migrate"
+	db "go.zenithar.org/pkg/db/adapter/postgresql"
+)
+
+// ----------------------------------------------------------
+
+var (
+	// UserTableName represents users collection name
+	UserTableName = "users"
+)
+
+// ----------------------------------------------------------
+
+//go:generate packr
+
+// migrations contains all schema migrations
+var migrations = &migrate.PackrMigrationSource{
+	Box: packr.NewBox("./migrations"),
+}
+
+// CreateSchemas create or updates the current database schema
+func CreateSchemas(conn *sqlx.DB) (int, error) {
+	// Migrate schema
+	migrate.SetTable("schema_migration")
+
+	// Run the schema migration from embedded resource
+	n, err := migrate.Exec(conn.DB, conn.DriverName(), migrations, migrate.Up)
+	if err != nil {
+		return 0, xerrors.Errorf("postgresql: could not migrate sql schema, applied %d migrations :%w", n, err)
+	}
+
+	return n, nil
+}
+```
+
+And database schema migrations like it follows :
+
+```sql
+-- +migrate Up
+CREATE TABLE IF NOT EXISTS chapters (
+    id          VARCHAR(32) NOT NULL PRIMARY KEY,
+    name        VARCHAR(50) NOT NULL,
+    meta        JSON        NOT NULL,
+    leader_id   VARCHAR(32) NOT NULL,
+    member_ids  JSON        NOT NULL
+);
+
+-- +migrate Down
+DROP TABLE chapters;
+```
+
+There are 2 "annotations" for migration direction, it is used by your migration tools to apply the correct
+SQL script according the upgrade or downgrade process.
+
+> Meticulous people should have noticed that I load 2 different PostgreSQL drivers (`pq`, and `pgx`).
+
+The rule of internal database migrations says :
+
+* Use automigration for integration tests only
+* Never try to apply automatically migrations on service starts, in case of a cluster there will have code running not 
+  compatible with the updated persistence schema
+* Know what you are doing
+
+### User Persistence Adapter
+
+For example as `User` persistence adapter for `PostgreSQL` in `table_user.go` in `internal/repositories/pkg/postgresql`
 
 ```go
 package postgresql
@@ -196,6 +333,7 @@ import (
     
 	sq "github.com/Masterminds/squirrel"
 	"github.com/jmoiron/sqlx"
+	"golang.org/x/xerrors"
 )
 
 type pgUserRepository struct {
@@ -219,8 +357,9 @@ func NewUserRepository(session *sqlx.DB) repositories.User {
 // -----------------------------------------------------------------------------
 
 func (r *pgUserRepository) Create(ctx context.Context, entity *models.User) error {
+	// Validate entity first
 	if err := entity.Validate(); err != nil {
-		return err
+		return xerrors.Errorf("postgresql: unable to validate entity, creation aborted : %w", err)
 	}
 
 	return r.adapter.Create(ctx, entity)
@@ -229,37 +368,59 @@ func (r *pgUserRepository) Create(ctx context.Context, entity *models.User) erro
 func (r *pgUserRepository) Get(ctx context.Context, realmID, id string) (*models.User, error) {
 	var entity models.User
 
+	// Delegate to my own postgresql adpater
 	if err := r.adapter.WhereAndFetchOne(ctx, map[string]interface{}{
 		"user_id":  id,
 	}, &entity); err != nil {
-		return nil, err
+		return nil, xerrors.Errorf("postgresql: unable to query database: %w", err)
 	}
 
 	return &entity, nil
 }
 
 func (r *pgUserRepository) Update(ctx context.Context, entity *models.User) error {
-	return r.adapter.Update(ctx, map[string]interface{}{
+	// Validate entity first
+	if err := entity.Validate(); err != nil {
+		return xerrors.Errorf("postgresql: unable to validate entity, update aborted : %w", err)
+	}
+
+	// Only update allowed attributes, never, never, did I say never ?
+	// always the full object.
+	if err := r.adapter.Update(ctx, map[string]interface{}{
 		"secret": entity.Secret,
 	}, map[string]interface{}{
 		"user_id":  entity.ID,
-	})
+	}); err != nil {
+		return xerrors.Errorf("postgresql: unable to update entity: %w", err)
+	}
+
+	// No error
+	return nil
 }
 
 func (r *pgUserRepository) Delete(ctx context.Context, realmID, id string) error {
-	return r.adapter.RemoveOne(ctx, map[string]interface{}{
+
+	// Delegate to adapter
+	if err := r.adapter.RemoveOne(ctx, map[string]interface{}{
 		"user_id":  id,
-	})
+	}); err != nil {
+		return xerrors.Errorf("postgresql: unable to remove entity: %w", err)
+	}
+
+	// No error
+	return nil
 }
 
 func (r *pgUserRepository) Search(ctx context.Context, filter *repositories.UserSearchFilter, pagination *db.Pagination, sortParams *db.SortParameters) ([]*models.User, int, error) {
 	var results []*models.User
 
+	// Delegate to adapter
 	count, err := r.adapter.Search(ctx, r.buildFilter(filter), pagination, sortParams, &results)
 	if err != nil {
-		return nil, count, err
+		return nil, count, xerrors.Errorf("postgresql: unable to list entities: %w", err)
 	}
 
+	// Standardize the error on no result to be coherent with all implementations
 	if len(results) == 0 {
 		return results, count, db.ErrNoResult
 	}
@@ -271,10 +432,11 @@ func (r *pgUserRepository) Search(ctx context.Context, filter *repositories.User
 func (r *pgUserRepository) FindByPrincipal(ctx context.Context, realmID string, principal string) (*models.User, error) {
 	var entity models.User
 
+	// Delegate to adapter
 	if err := r.adapter.WhereAndFetchOne(ctx, map[string]interface{}{
 		"principal": principal,
 	}, &entity); err != nil {
-		return nil, err
+		return nil, xerrors.Errorf("postgresql: unable to retrieve entity: %w", err)
 	}
 
 	return &entity, nil
@@ -301,6 +463,8 @@ func (r *pgUserRepository) buildFilter(filter *repositories.UserSearchFilter) in
 	return nil
 }
 ```
+
+### Squad Persistence Adapter
 
 If the `model` can't fit directly in the persistence adapter you have to translate it  as needed
 
@@ -469,7 +633,7 @@ func (r *pgSquadRepository) Update(ctx context.Context, entity *models.Squad) er
 }
 ```
 
-### MongoDB
+## MongoDB
 
 Another example with a `NoSQL persistence adapter`.
 
@@ -563,7 +727,7 @@ func (r *mgoSquadRepository) AddMembers(ctx context.Context, id string, users ..
 		entity.AddMember(u)
 	}
 
-	// Update members
+	// Update members only
 	return r.adapter.Update(ctx, map[string]interface{}{
 		"member_ids": entity.MemberIDs,
 	}, map[string]interface{}{
@@ -594,7 +758,13 @@ func (r *mgoSquadRepository) RemoveMembers(ctx context.Context, id string, users
 
 > Never update a full object without controlling each keys, you must setup update function to update only `updatable` attributes.
 
-## Running integration tests
+## Remote Adapter
+
+Your adapter could be an external service which provides data and is called via a transport protocol (HTTP, gRPC, etc.)
+
+> Mocks could be used to simulate remote access during tests.
+
+# Running integration tests
 
 In order to run integration tests with Golang, you must prepare a `TestMain` . This runner is responsible for building all related `persistence adapter instance` according to requested command line flag. 
 
@@ -617,10 +787,9 @@ import (
 	"testing"
 	"time"
 
-	"go.zenithar.org/pkg/testing/containers/database"
-
 	"go.uber.org/zap"
 	"go.zenithar.org/pkg/log"
+	"go.zenithar.org/pkg/testing/containers/database"
 	"go.zenithar.org/spotigraph/internal/version"
 )
 
@@ -772,13 +941,65 @@ func (container *postgreSQLContainer) Configuration() *Configuration {
 }
 ```
 
+The connection builder that try to connect and build the database schema by running migrations.
+
+```go
+// +build integration
+
+package integration
+
+import (
+	"context"
+
+	"github.com/pkg/errors"
+	"go.uber.org/zap"
+
+	"go.zenithar.org/pkg/log"
+	"go.zenithar.org/pkg/testing/containers/database"
+	"go.zenithar.org/spotigraph/internal/repositories/pkg/postgresql"
+)
+
+func postgreSQLConnection(ctx context.Context) (func(), error) {
+	// Initialize connection and/or container
+	conn, _, err := database.ConnectToPostgreSQL(ctx)
+	if err != nil {
+		return nil, errors.Wrap(err, "unable to initialize database server")
+	}
+
+	// Try to contact server
+	if err = conn.Ping(); err != nil {
+		return nil, errors.Wrap(err, "unable to contact database")
+	}
+
+	// Migrate schema
+	n, err := postgresql.CreateSchemas(conn)
+	if err != nil {
+		return nil, errors.Wrap(err, "unable to initialize database schema")
+	}
+
+	// Log migration
+	log.For(ctx).Info("Applyied migrations to database", zap.Int("level", n))
+
+	// Build repositories
+	userRepositories["postgresql"] = postgresql.NewUserRepository(nil, conn)
+
+	// Return result
+	return func() {
+		log.SafeClose(conn, "unable to close connection")
+	}, nil
+}
+```
+
 > Complete integration test suite could be found here - <https://github.com/Zenithar/go-spotigraph/blob/master/internal/repositories/test/integration/main_test.go>
 
 # Conclusion
 
-At this point, you must be able to `execute` all test suites on your domain as `persistence adapters`. From this point, you should be able to create business service by using these `adapters` via the interface, NOT DIRECTLY via adapter instance.
+At this point, you must be able to `execute` all test suites on your domain as `persistence adapters`. You should be able to create business service by using these `adapters` via the interface, NOT DIRECTLY via adapter instance. All persistence adapters are constraint by contract defined in the `api.go`, from the public side, all adapter user must fit and stick with this interface to be sure to have `port` and `interface` in the `persistence` layer. By doing this you will fit with Hexagonal architecture principles.
 
-# References
+In the next post, we will start to prepare the service by declaring a protocol, and contracts to be used by dispatchers to communicate with business services.
+
+## References
 
 - [Github Spotigraph](https://github.com/Zenithar/go-spotigraph)
-- [Mocking time with Go](https://medium.com/agrea-technogies/mocking-time-with-go-a89e66553e79)
+- [PostgreSQL PGX Driver](https://github.com/jackc/pgx)
+- [PostgreSQL query builder](https://github.com/Masterminds/squirrel)
