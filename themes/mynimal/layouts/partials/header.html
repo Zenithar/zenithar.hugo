@@ -2,21 +2,22 @@
 <html lang="{{ .Site.LanguageCode }}" class="wf-loading">
     <head>
         <meta charset="utf-8">
+        {{- hugo.Generator -}}
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <meta name="supported-color-schemes" content="light dark">
 
         <link rel="preload" href="{{ .Site.BaseURL }}js/main.js" as="script" />
         <link rel="preload" href="{{ .Site.BaseURL }}css/main.css" as="style" />
 
         <title>{{ .Title }}</title>
-        {{ .Hugo.Generator }}
-        {{ if .RSSLink }}
-        <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-        <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-        {{ end }}
+        {{- range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+        {{- end -}}
         <link rel="preconnect" href="https://ajax.googleapis.com/" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         {{ template "_internal/opengraph.html" . }}

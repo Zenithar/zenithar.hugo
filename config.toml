@@ -1,9 +1,13 @@
 baseurl = "https://blog.zenithar.org/"
 
+defaultContentLanguage = "fr"
 languageCode = "fr-fr"
+
 title = "Zenithar'z Blog"
 paginate = 10
 theme = "mynimal"
+
+enableRobotsTXT = true
 
 PygmentsStyle = "paraiso-dark"
 PygmentsUseClasses = false
